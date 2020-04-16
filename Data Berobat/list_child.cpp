@@ -1,6 +1,6 @@
 #include "list_child.h"
 
-void createList(list_child &L) {
+void createListChild(list_child &L) {
     first(L) = NULL;
     last(L) = NULL;
 };
@@ -15,7 +15,7 @@ address_child alokasi_child(infotype_child x) {
     return P;
 };
 
-void insertFirst(list_child &L, address_child P) {
+void insertFirstChild(list_child &L, address_child P) {
     if(first(L) == NULL) {
         last(L) = P;
         first(L) = P;
@@ -26,7 +26,7 @@ void insertFirst(list_child &L, address_child P) {
     };
 };
 
-void printInfo(list_child L) {
+void printInfoChild(list_child L) {
     address_child P = first(L);
 
     while(P != NULL) {
@@ -35,7 +35,7 @@ void printInfo(list_child L) {
     };
 };
 
-address_child findElm(list_child L, infotype_child x) {
+address_child findElmChild(list_child L, infotype_child x) {
     address_child P = first(L);
 
     while(P != NULL) {
@@ -47,7 +47,7 @@ address_child findElm(list_child L, infotype_child x) {
     return NULL;
 };
 
-void insertAfter(address_child &Prec, address_child P) {
+void insertAfterChild(address_child &Prec, address_child P) {
     prev(next(Prec)) = P;
     next(P) = next(Prec);
     prev(P) = Prec;

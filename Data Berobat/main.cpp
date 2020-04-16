@@ -5,6 +5,7 @@ using namespace std;
 #include "list_parent.h"
 
 int main() {
+    // greeting identitas pembuat dan tujuan program //
     cout << "-->> Program Relasi M-N (Pasien dengan Dokter) <<--\n\n\n";
     cout << "Program Name       : Data Berobat" << endl;
     cout << "Program Language   : C++" << endl;
@@ -15,6 +16,7 @@ int main() {
     system("TIMEOUT /T 7 /NOBREAK");
     system("CLS");
 
+    // kamus program //
     list_parent LP;
     list_child LC;
     address_child C;
@@ -35,8 +37,9 @@ int main() {
     int cntDok;
     int cntPas;
 
+    // algoritma main //
     createListParent(LP);
-    createList(LC);
+    createListChild(LC);
 
     while (choose != 0) {
         cout << "Menu Program\n1. -->> Tambah Dokter.\n2. -->> Tambah Pasien.\n3. -->> Tambah relasi Dokter dengan Pasien.\n4. -->> Hapus Dokter.\n5. -->> Hapus Pasien.\n6. -->> Tampilkan seluruh data Dokter dan Pasien.\n7. -->> Tampilkan Dokter yang menangani Pasien.\n8. -->> Tampilkan Pasien yang ditangani Dokter.\n9. -->> Tampilkan status Dokter.\n0. -->> Exit (Program)\nPilih -->> ";
@@ -53,6 +56,7 @@ int main() {
 
         cout << endl;
 
+        // pilih menu program //
         CHOOSEMENU:switch (choose) {
             case 1:
                 int i;
@@ -99,7 +103,7 @@ int main() {
                     cout << "\n\nInput nama Pasien: ";
                     cin >> nPas;
                     C = alokasi_child("ps." + nPas);
-                    insertFirst(LC, C);
+                    insertFirstChild(LC, C);
                     };
                 };
                 system("CLS");
@@ -115,7 +119,7 @@ int main() {
                 P = findElmParent(LP, "dr." + nRelDoc);
                 cout << "Input nama Pasien relasi: ";
                 cin >> nRelPas;
-                C = findElm(LC, "ps." + nRelPas);
+                C = findElmChild(LC, "ps." + nRelPas);
                 R = alokasi(C);
                 insertFirst(child(P),R);
                 system("CLS");
@@ -150,7 +154,7 @@ int main() {
                 printInfoParentOnly(LP);
                 cout << "\n------------------\n" << endl;
                 cout << "\n------PASIEN------\n" << endl;
-                printInfo(LC);
+                printInfoChild(LC);
                 cout << "\n------------------\n" << endl;
                 system("PAUSE");
                 system("CLS");
@@ -185,10 +189,11 @@ int main() {
         };
     };
 
+    // ganti pasien (penambahan fungsionalitas //
     cout << "-->> Ganti Pasien dengan nama Pasien baru! <<--\n";
     cout << "Input nama Pasien: ";
     cin >> rPas;
-    C = findElm(LC, "ps." + rPas);
+    C = findElmChild(LC, "ps." + rPas);
     cout << "Input nama Pasien baru: ";
     cin >> rPasNew;
     info(C) = "ps." + rPasNew;
@@ -198,7 +203,7 @@ int main() {
     while (ryn == "y" || ryn == "Y") {
         cout << "\nMasukan kembali!\nInput nama Pasien: ";
         cin >> rPas;
-        C = findElm(LC, "ps." + rPas);
+        C = findElmChild(LC, "ps." + rPas);
         cout << "Input nama Pasien baru: ";
         cin >> rPasNew;
         info(C) = "ps." + rPasNew;
