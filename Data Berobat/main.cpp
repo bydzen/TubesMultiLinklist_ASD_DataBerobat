@@ -123,7 +123,7 @@ int main() {
                 R = alokasi(C);
                 insertFirst(child(P),R);
                 system("CLS");
-                cout << "\nDokter " << nRelDoc << " telah direlasikan dengan Pasien " << nRelPas << endl;
+                cout << "\nDokter " << nRelDoc << " telah direlasikan dengan Pasien " << nRelPas << ".\n";
                 system("TIMEOUT /T 7");
                 system("CLS");
                 break;
@@ -185,6 +185,18 @@ int main() {
                 cout << "\n------------------\n" << endl;
                 system("PAUSE");
                 system("CLS");
+                break;
+            case 99:
+                system("CLS");
+                cout << "-->> Program Ganti Pasien dengan nama Pasien baru! <<--";
+                cout << "\n\nInput nama Pasien: ";
+                cin >> rPas;
+                C = findElmChild(LC, "ps." + rPas);
+                cout << "Input nama Pasien baru: ";
+                cin >> rPasNew;
+                info(C) = "ps." + rPasNew;
+                system("CLS");
+                cout << "Pasien " << rPas << "digantikan dengan Pasien " << rPasNew << ".\n\n";
                 break;
         };
     };
