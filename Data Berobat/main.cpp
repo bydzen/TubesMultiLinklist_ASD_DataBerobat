@@ -42,7 +42,7 @@ int main() {
     createListChild(LC);
 
     while (choose != 0) {
-        cout << "Menu Program\n1. -->> Tambah Dokter.\n2. -->> Tambah Pasien.\n3. -->> Tambah relasi Dokter dengan Pasien.\n4. -->> Hapus Dokter.\n5. -->> Hapus Pasien.\n6. -->> Tampilkan seluruh data Dokter dan Pasien.\n7. -->> Tampilkan Dokter yang menangani Pasien.\n8. -->> Tampilkan Pasien yang ditangani Dokter.\n9. -->> Tampilkan status Dokter.\n0. -->> Exit (Program)\nPilih -->> ";
+        cout << "Menu Program\n1. -->> Tambah Dokter.\n2. -->> Tambah Pasien.\n3. -->> Tambah relasi Dokter dengan Pasien.\n4. -->> Hapus Dokter.\n5. -->> Hapus Pasien.\n6. -->> Tampilkan seluruh data Dokter dan Pasien.\n7. -->> Tampilkan Dokter yang menangani Pasien.\n8. -->> Tampilkan Pasien yang ditangani Dokter.\n9. -->> Tampilkan status Dokter.\n99.-->> Ganti nama Pasien.\n0. -->> Exit (Program)\nPilih -->> ";
         cin >> choose;
 
         if (choose == 0) {
@@ -187,6 +187,7 @@ int main() {
                 system("CLS");
                 break;
             case 99:
+                // ganti pasien (penambahan fungsionalitas) //
                 system("CLS");
                 cout << "-->> Program Ganti Pasien dengan nama Pasien baru! <<--";
                 cout << "\n\nInput nama Pasien: ";
@@ -201,27 +202,5 @@ int main() {
         };
     };
 
-    // ganti pasien (penambahan fungsionalitas //
-    cout << "-->> Ganti Pasien dengan nama Pasien baru! <<--\n";
-    cout << "Input nama Pasien: ";
-    cin >> rPas;
-    C = findElmChild(LC, "ps." + rPas);
-    cout << "Input nama Pasien baru: ";
-    cin >> rPasNew;
-    info(C) = "ps." + rPasNew;
-    cout << "Ganti relasi pasien? (y/n): ";
-    cin >> ryn;
-
-    while (ryn == "y" || ryn == "Y") {
-        cout << "\nMasukan kembali!\nInput nama Pasien: ";
-        cin >> rPas;
-        C = findElmChild(LC, "ps." + rPas);
-        cout << "Input nama Pasien baru: ";
-        cin >> rPasNew;
-        info(C) = "ps." + rPasNew;
-        cout << "Ganti relasi pasien? (y/n): ";
-        cin >> ryn;
-    };
-
     return 0;
-}
+};
