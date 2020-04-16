@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1587005873 source:c:\users\svnte\documents\data berobat\list_parent.cpp
+	"list_parent.h"
+
+1587003684 c:\users\svnte\documents\data berobat\list_parent.h
+	<iostream>
+	"list_relasi.h"
+
+1587001637 c:\users\svnte\documents\data berobat\list_relasi.h
+	<iostream>
+	"list_relasi.h"
+	"list_child.h"
+
+1586943757 c:\users\svnte\documents\data berobat\list_child.h
+	<iostream>
+
+1587005780 source:c:\users\svnte\documents\data berobat\list_relasi.cpp
+	"list_relasi.h"
+
+1587005650 source:c:\users\svnte\documents\data berobat\main.cpp
+	<iostream>
+	"list_child.h"
+	"list_parent.h"
+
+1586943753 source:c:\users\svnte\documents\data berobat\list_child.cpp
+	"list_child.h"
+
