@@ -4,6 +4,17 @@
 ###### 1. Sultan Kautsar (1303194010)
 ###### 2. Bagas Alfito Prismawan (13031943027)
 
+##### Fungsionalitas program yang telah dicapai:
+###### Penambahan dokter. ✔
+###### Penambahan pasien. ✔
+###### Penentuan relasi dokter dan pasien (dan sebalikknya). ✔
+###### Menghapus data dokter tertentu. ✖
+###### Manghapus data pasien tertentu. ✖
+###### Menampilkan data keseluruhan pasien beserta data dokternya. ✔
+###### Menampilkan data pasien yang ditangani dokter tertentu. ✔
+###### Menampilkan data dokter yang menangani seorang pasien tertentu. ✔
+###### Menampilkan data dokter yang tidak sibuk dan yang paling sibuk. ✔
+
 ##### Screenshot greeting program running. <br>
 ![01](https://github.com/svzax/TubesMultiLinklist_ASD_DataBerobat/blob/master/Data%20Berobat/img/1.png)
 
