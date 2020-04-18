@@ -1,4 +1,5 @@
 ## Data Treatment!
+###### Level: ★★★★
 
 #### This program developed by:
 - Sultan Kautsar (1303194010)
@@ -20,7 +21,7 @@
 ---
 
 #### Screenshot greeting program running. <br>
-![curl -s 'https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README.md' | egrep -o '`\w+`' | tr -d '`' | cowsay -W50](https://github.com/svzax/TubesMultiLinklist_ASD_DataBerobat/blob/master/Data%20Berobat/img/1.png)
+![01](https://github.com/svzax/TubesMultiLinklist_ASD_DataBerobat/blob/master/Data%20Berobat/img/1.png)
 ###### Purpose:
 - To tell, that this is the identity of the maker.
 
