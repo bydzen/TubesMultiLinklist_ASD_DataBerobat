@@ -85,7 +85,7 @@ void removeChild(list_child L, infotype_child x){
 	}
 	else {
 		address_child P = first(L);
-		while ((info(P) == x) && (P != NULL))
+		while ((info(P) != x) && (P != NULL))
 		{
 			P = next(P);
 		}
