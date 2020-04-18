@@ -31,7 +31,6 @@ void printInfo(list_relasi L) {
     cout << endl;
 };
 
-
 void printBusy(list_relasi L) {
     // print status dokter sibuk/tidak //
     int i = 0;

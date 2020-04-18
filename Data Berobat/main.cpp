@@ -145,8 +145,6 @@ int main() {
                 cout << "\n\nInput nama Pasien: ";
                 cin >> delPas;
                 removeChild(LC, "ps." + delPas);
-             //   info(C) = "ps." + rPasNew;
-            //    dealokasi(C);
                 system("CLS");
                 cout << "\nPasien " << delPas << " telah dihapus.\n";
                 system("TIMEOUT /T 7");
