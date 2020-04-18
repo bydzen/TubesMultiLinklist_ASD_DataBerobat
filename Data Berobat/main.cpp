@@ -13,7 +13,7 @@ int main() {
     cout << "Id Creator         : 1303194010     | 1303193027" << endl;
     cout << "Description        : Program data berobat pasien beserta relasinya" << endl;
     cout << "                     dibuat untuk memenuhi tugas besar matakuliah Algoritma dan Struktur Data.\n" << endl;
-    system("TIMEOUT /T 7 /NOBREAK");
+    system("TIMEOUT /T 7");
     system("CLS");
 
     // kamus program //
