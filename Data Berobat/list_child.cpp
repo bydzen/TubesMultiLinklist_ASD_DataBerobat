@@ -104,7 +104,6 @@ void removeChild(list_child L, infotype_child x){
 				Q = next(Q);
 			}
 			deleteAfterChild(L, P, Q);
-			next(Q) = NULL;
 
 		}
 
