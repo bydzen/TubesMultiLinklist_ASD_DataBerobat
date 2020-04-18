@@ -98,11 +98,14 @@ address_parent findElmParent(list_parent L, infotype_parent x) {
 };
 
 void deleteFirstParent(list_parent &L, address_parent &P) {
+
+
     // delete first dokter //
     P = first(L);
     first(L) = next(P);
     info(P) = "";;
 };
+
 
 void deleteAfterParent(list_parent &L, address_parent &P, address_parent Q) {
     // delete after dokter //
@@ -111,13 +114,17 @@ void deleteAfterParent(list_parent &L, address_parent &P, address_parent Q) {
 };
 
 void deleteLastParent(list_parent &L, address_parent &P) {
-    // delete last dokter //
+ // delete last dokter //
 	address_parent  Q = first(L);
 	while (next(Q) != P) {
 		Q = next(Q);
-	};
+	}
+
 	next(Q) = NULL;
-};
+
+;}
+
+
 
 void removeParent(list_parent &L, infotype_parent x){
     if (first(L) == NULL) {
