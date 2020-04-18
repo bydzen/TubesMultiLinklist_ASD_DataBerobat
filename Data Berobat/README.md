@@ -1,4 +1,4 @@
-# Data Treatment
+# Data Treatment (Tugas Besar Algoritma dan Struktur Data)
 
 This project was created to fulfill a large assignment in an algorithm and data structure course. Where is our job to make medical data that is based on multiple lists. This project is carried out by two people to complete a program.
 
@@ -29,7 +29,7 @@ Installing Code::Blocks, can be installed using the following steps.
 Windows: http://sourceforge.net/projects/codeblocks/files/Binaries/20.03/Windows/32bit/codeblocks-20.03mingw-32bit-setup.exe
 ```
 
-Installing Code::Blocks for Linux user(tested in Debian)
+Installing Code::Blocks for Linux user (tested in Debian)
 
 ```
 user@debian$ sudo apt install codeblocks
