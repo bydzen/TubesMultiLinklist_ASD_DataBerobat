@@ -10,8 +10,8 @@
 ###### Penambahan dokter. ✔
 ###### Penambahan pasien. ✔
 ###### Penentuan relasi dokter dan pasien (dan sebalikknya). ✔
-###### Menghapus data dokter tertentu. ✖
-###### Manghapus data pasien tertentu. ✖
+###### Menghapus data dokter tertentu. ✔
+###### Manghapus data pasien tertentu. ✔
 ###### Menampilkan data keseluruhan pasien beserta data dokternya. ✔
 ###### Menampilkan data pasien yang ditangani dokter tertentu. ✔
 ###### Menampilkan data dokter yang menangani seorang pasien tertentu. ✔
