@@ -53,3 +53,52 @@ void insertAfterChild(address_child &Prec, address_child P) {
     prev(P) = Prec;
     next(Prec) = P;
 };
+
+void deleteFirstChild(list_child &L, address_child &P) {
+	first(L) = next(P);
+    next(P) = NULL;
+}
+
+void deleteAfterChild(list_child &L, address_child &P, address_child Q) {
+	next(Q) = next(P);
+	next(P) = NULL;
+}
+
+void deleteLastChild(list_child &L, address_child &P) {
+	address_child  Q = first(L);
+	while (next(Q) != P) {
+		Q = next(Q);
+	}
+	next(Q) = NULL;
+}
+
+void removeChild(list_child L, infotype_child x){
+    if (first(L) == NULL)
+	{
+		cout << "Data Pasien Kosong" << endl;
+	}
+	else {
+		address_child P = first(L);
+		while ((info(P) == x) && (P != NULL))
+		{
+			P = next(P);
+		}
+		if (P == first(L))
+		{
+			deleteFirstChild(L, P);
+		}
+		else if (next(P) == NULL )
+		{
+			deleteLastChild(L, P);
+		}
+		else {
+			address_child Q;
+			Q = first(L);
+			while (next(Q) != P) {
+				Q = next(Q);
+			}
+			deleteAfterChild(L, P, Q);
+		}
+
+	}
+}

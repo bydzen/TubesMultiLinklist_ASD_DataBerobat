@@ -50,7 +50,7 @@ int main() {
             cout << "-->> Greeting from Creators <<--";
             cout << "\n\nThank You for using this program!";
             cout << "\n\nProgram will be returned by zero (0x0)!\nPress: CTRL+C || CTRL+Fn+C to exit instantly\n\nExiting in...";
-            system("TIMEOUT /T 7 /NOBREAK");
+            //system("TIMEOUT /T 7 /NOBREAK");
             exit(0);
         };
 
@@ -139,9 +139,12 @@ int main() {
                 break;
             case 5: //KURANG DELETE PASIEN
                 system("CLS");
-                cout << "-->> Program penghapus data Dokter <<--";
+                cout << "-->> Program penghapus data Pasien <<--";
                 cout << "\n\nInput nama Pasien: ";
                 cin >> delPas;
+                removeChild(LC, "ps." + delPas);
+             //   info(C) = "ps." + rPasNew;
+            //    dealokasi(C);
                 system("CLS");
                 cout << "\nPasien " << delPas << " telah dihapus.\n";
                 system("TIMEOUT /T 7");
