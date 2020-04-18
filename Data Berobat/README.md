@@ -1,5 +1,5 @@
 ## Data Treatment!
-###### Level: ★★★★
+```Level: (5/5)```
 
 #### This program developed by:
 - Sultan Kautsar (1303194010)
