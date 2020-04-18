@@ -4,6 +4,8 @@
 - Sultan Kautsar (1303194010)
 - Bagas Alfito Prismawan (13031943027)
 
+---
+
 #### Fungsionalitas program yang telah dicapai:
 - [x] Penambahan dokter. ```(no error)``` +up to 6 doctor per input.
 - [x] Penambahan pasien. ```(no error)``` +up to 6 patient per input.
@@ -15,10 +17,14 @@
 - [x] Menampilkan data dokter yang menangani seorang pasien tertentu. ```(no error)``` +helpfull interface!
 - [x] Menampilkan data dokter yang tidak sibuk dan yang paling sibuk. ```(not completed)``` +shows doctor busy & count patient.
 
+---
+
 #### Screenshot greeting program running. <br>
-![01](https://github.com/svzax/TubesMultiLinklist_ASD_DataBerobat/blob/master/Data%20Berobat/img/1.png)
+![curl -s 'https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README.md' | egrep -o '`\w+`' | tr -d '`' | cowsay -W50](https://github.com/svzax/TubesMultiLinklist_ASD_DataBerobat/blob/master/Data%20Berobat/img/1.png)
 ###### Purpose:
 - To tell, that this is the identity of the maker.
+
+---
 
 #### Screenshot menu program running. <br>
 ![02](https://github.com/svzax/TubesMultiLinklist_ASD_DataBerobat/blob/master/Data%20Berobat/img/2.png)
@@ -29,11 +35,19 @@
 - Too long (not auto generated);
 - Must be careful when inputting.
 
+---
+
 #### Screenshot busy status program running. <br>
 ![03](https://github.com/svzax/TubesMultiLinklist_ASD_DataBerobat/blob/master/Data%20Berobat/img/3.png)
+
+---
 
 #### Screenshot doctor & patient data program running. <br>
 ![04](https://github.com/svzax/TubesMultiLinklist_ASD_DataBerobat/blob/master/Data%20Berobat/img/4.png)
 
+---
+
 #### Screenshot relation doctor-patient program running. <br>
 ![05](https://github.com/svzax/TubesMultiLinklist_ASD_DataBerobat/blob/master/Data%20Berobat/img/5.png)
+
+---
