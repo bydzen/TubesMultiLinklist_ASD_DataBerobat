@@ -17,15 +17,17 @@
 
 #### Screenshot greeting program running. <br>
 ![01](https://github.com/svzax/TubesMultiLinklist_ASD_DataBerobat/blob/master/Data%20Berobat/img/1.png)
-###### [+] Pros:
-> User can choose which one to do; <br>
-> make it easy (interactive).
-###### [-] Cons:
-> Too long (not auto generated); <br>
-> Must be careful when inputting.
+###### [+] Purpose:
+- To tell, that this is the identity of the maker.
 
 #### Screenshot menu program running. <br>
 ![02](https://github.com/svzax/TubesMultiLinklist_ASD_DataBerobat/blob/master/Data%20Berobat/img/2.png)
+###### [+] Pros:
+- User can choose which one to do;
+- make it easy (interactive).
+###### [-] Cons:
+- Too long (not auto generated);
+- Must be careful when inputting.
 
 #### Screenshot status sibuk program running. <br>
 ![01](https://github.com/svzax/TubesMultiLinklist_ASD_DataBerobat/blob/master/Data%20Berobat/img/3.png)
