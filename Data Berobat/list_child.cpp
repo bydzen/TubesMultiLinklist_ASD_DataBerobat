@@ -108,3 +108,4 @@ void removeChild(list_child &L, infotype_child x) {
 		};
 	};
 };
+
