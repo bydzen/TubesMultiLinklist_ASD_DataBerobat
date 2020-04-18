@@ -1,12 +1,12 @@
-### READ - TUBES MULTILIST DATA BEROBAT (ASD_TUBES_PROJECT)
+## READ - TUBES MULTILIST DATA BEROBAT (ASD_TUBES_PROJECT)
 
-##### Program ini dibuat oleh:
+#### Program ini dibuat oleh:
 ###### 1. Sultan Kautsar (1303194010)
 ###### 2. Bagas Alfito Prismawan (13031943027)
 
 <br>
 
-##### Fungsionalitas program yang telah dicapai:
+#### Fungsionalitas program yang telah dicapai:
 ###### Penambahan dokter. ✔ (no error) [+]up to 6 doctor per input.
 ###### Penambahan pasien. ✔ (no error) [+]up to 6 patient per input.
 ###### Penentuan relasi dokter dan pasien (dan sebalikknya). ✔ (have doctor to patient only)
