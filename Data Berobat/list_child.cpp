@@ -71,7 +71,9 @@ void deleteFirstChild(list_child &L, address_child &P) {
     P = first(L);
     first(L) = next(P);
     P = next(P);
+    next(P) = prev(P);
     prev(P) = NULL;
+
 };
 
 void deleteAfterChild(list_child &L, address_child &P, address_child Q) {
@@ -114,15 +116,8 @@ void removeChild(list_child &L, infotype_child x) {
 				Q = next(Q);
 			};
 			deleteAfterChild(L, P, Q);
-<<<<<<< HEAD
 			cout << "\nPasien " << info(P) << " telah dihapus.\n";
 
 		}
 	}
 }
-
-=======
-		};
-	};
-};
->>>>>>> 548acdd72032581427ad25f0e9ec8f89f9ce1e6e
