@@ -1,4 +1,5 @@
 ## READ - TUBES MULTILIST DATA BEROBAT (ASD_TUBES_PROJECT)
+[Contribution guidelines for this project](docs/CONTRIBUTING.md)
 
 #### This program developed by:
 ###### 1. Sultan Kautsar (1303194010) [ID]
