@@ -87,10 +87,10 @@ user@debian$ sudo gcc
 
 #### Screenshot menu program running.
 ![02](https://github.com/svzax/TubesMultiLinklist_ASD_DataBerobat/blob/master/Data%20Berobat/img/2.png)
-Pros:
+> Pros:
 - User can choose which one to do;
 - make it easy (interactive).
-Cons:
+> Cons:
 - Too long (not auto generated);
 - Must be careful when inputting.
 
@@ -116,17 +116,17 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 * Screenshot greeting program running.
 ![01](https://github.com/svzax/TubesMultiLinklist_ASD_DataBerobat/blob/master/Data%20Berobat/img/1.png)
-Purpose:
+> Purpose:
 - To tell, that this is the identity of the maker.
 
 ---
 
 * Screenshot menu program running. <br>
 ![02](https://github.com/svzax/TubesMultiLinklist_ASD_DataBerobat/blob/master/Data%20Berobat/img/2.png)
-Pros:
+> Pros:
 - User can choose which one to do;
 - make it easy (interactive).
-Cons:
+> Cons:
 - Too long (not auto generated);
 - Must be careful when inputting.
 
