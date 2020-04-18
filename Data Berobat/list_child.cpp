@@ -72,22 +72,22 @@ void deleteFirstChild(list_child &L, address_child &P) {
     first(L) = next(P);
     P = next(P);
     prev(P) = NULL;
-}
+};
 
 void deleteAfterChild(list_child &L, address_child &P, address_child Q) {
     // delete after pasien //
 	next(Q) = next(P);
 	next(P) = NULL;
-}
+};
 
 void deleteLastChild(list_child &L, address_child &P) {
     // delete last pasien //
 	address_child  Q = first(L);
 	while (next(Q) != P) {
 		Q = next(Q);
-	}
+	};
 	next(Q) = NULL;
-}
+};
 
 void removeChild(list_child &L, infotype_child x) {
     // delete pasien //
@@ -114,9 +114,15 @@ void removeChild(list_child &L, infotype_child x) {
 				Q = next(Q);
 			};
 			deleteAfterChild(L, P, Q);
+<<<<<<< HEAD
 			cout << "\nPasien " << info(P) << " telah dihapus.\n";
 
 		}
 	}
 }
 
+=======
+		};
+	};
+};
+>>>>>>> 548acdd72032581427ad25f0e9ec8f89f9ce1e6e
