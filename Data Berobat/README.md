@@ -5,9 +5,9 @@
 - Bagas Alfito Prismawan (13031943027)
 
 #### Fungsionalitas program yang telah dicapai:
-- [x] Penambahan dokter. ```(no error) +up to 6 doctor per input.
-- [x] Penambahan pasien. ```(no error) +up to 6 patient per input.
-- [x] Penentuan relasi dokter dan pasien (dan sebalikknya). ✔ (have doctor to patient only)
+- [x] Penambahan dokter. ```(no error) +up to 6 doctor per input.```
+- [x] Penambahan pasien. ```(no error) +up to 6 patient per input.```
+- [x] Penentuan relasi dokter dan pasien (dan sebalikknya). ```(have doctor to patient only)```
 - [x] Menghapus data dokter tertentu. (no error) +when doctor deleted, relation will be remove automatically!
 - [x] Manghapus data pasien tertentu. (no error) +when patient deleted, relation to doctor will removed!
 - [x] Menampilkan data keseluruhan pasien beserta data dokternya. (no error) +say empty when no elment.
