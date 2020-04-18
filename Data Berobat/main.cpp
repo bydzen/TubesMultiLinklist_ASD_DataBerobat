@@ -100,7 +100,7 @@ int main() {
                     } else {
                         system("CLS");
                     cout << "-->> Program penambah data Pasien <<--";
-                    cout << "\n\nInput nama Pasien: ";
+                    cout << "\n\nInput nama Pasien " << i << ": ";
                     cin >> nPas;
                     C = alokasi_child("ps." + nPas);
                     insertFirstChild(LC, C);
