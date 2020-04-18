@@ -29,11 +29,11 @@
 - Too long (not auto generated);
 - Must be careful when inputting.
 
-#### Screenshot status sibuk program running. <br>
-![01](https://github.com/svzax/TubesMultiLinklist_ASD_DataBerobat/blob/master/Data%20Berobat/img/3.png)
+#### Screenshot busy status program running. <br>
+![03](https://github.com/svzax/TubesMultiLinklist_ASD_DataBerobat/blob/master/Data%20Berobat/img/3.png)
 
-#### Screenshot data dokter & pasien program running. <br>
-![01](https://github.com/svzax/TubesMultiLinklist_ASD_DataBerobat/blob/master/Data%20Berobat/img/4.png)
+#### Screenshot doctor & patient data program running. <br>
+![04](https://github.com/svzax/TubesMultiLinklist_ASD_DataBerobat/blob/master/Data%20Berobat/img/4.png)
 
-#### Screenshot relasi dokter - pasien program running. <br>
-![01](https://github.com/svzax/TubesMultiLinklist_ASD_DataBerobat/blob/master/Data%20Berobat/img/5.png)
+#### Screenshot relation doctor-patient program running. <br>
+![05](https://github.com/svzax/TubesMultiLinklist_ASD_DataBerobat/blob/master/Data%20Berobat/img/5.png)
