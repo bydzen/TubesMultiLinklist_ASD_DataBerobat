@@ -44,7 +44,7 @@ void printBusy(list_relasi L) {
     if (i == 0) {
         cout << " (tidak sibuk)";
     } else if (i > 0) {
-        cout << " (sedang sibuk dengan " << i << " aksi)";
+        cout << " (sedang sibuk dengan " << i << " Pasien)";
     };
 };
 

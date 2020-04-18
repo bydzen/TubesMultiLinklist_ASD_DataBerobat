@@ -17,6 +17,7 @@ typedef struct elmlist_child *address_child;
 struct elmlist_child{
     infotype_child info;
     address_child next;
+
     address_child prev;
 };
 
@@ -38,5 +39,6 @@ void dealokasiChild(address_child &P);
 address_child findElmChild(list_child L, infotype_child x);
 void printInfoChild(list_child L);
 void removeChild(list_child &L, infotype_child x);
+//void printInfoChildRelasi(list_child L);
 
 #endif // LIST_CHILD_H_INCLUDED

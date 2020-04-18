@@ -49,6 +49,7 @@ void printInfoParent(list_parent L) {
     };
 };
 
+
 void printInfoParentOnly(list_parent L) {
     // print nama-nama dokter //
     address_parent P = first(L);

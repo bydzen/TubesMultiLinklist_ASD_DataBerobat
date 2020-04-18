@@ -123,8 +123,10 @@ int main() {
                 cout << "Input nama Pasien relasi: ";
                 cin >> nRelPas;
                 C = findElmChild(LC, "ps." + nRelPas);
+
                 R = alokasi(C);
                 insertFirst(child(P),R);
+
                 system("CLS");
                 cout << "\nDokter " << nRelDoc << " telah direlasikan dengan Pasien " << nRelPas << ".\n";
                 system("TIMEOUT /T 7");
@@ -176,7 +178,7 @@ int main() {
                 system("CLS");
                 cout << "-->> Program menampilkan relasi Pasien terhadap Dokter <<--";
                 cout << "\n\n------PASIEN------\n" << endl;
-                printInfoParent(LP);
+                //printInfoChildRelasi(LC);
                 cout << "\n------------------\n" << endl;
                 system("PAUSE");
                 system("CLS");

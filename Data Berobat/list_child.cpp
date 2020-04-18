@@ -45,6 +45,8 @@ void printInfoChild(list_child L) {
 
 };
 
+
+
 address_child findElmChild(list_child L, infotype_child x) {
     // mencari elemen pasien //
     address_child P = first(L);
@@ -71,7 +73,6 @@ void deleteFirstChild(list_child &L, address_child &P) {
     P = first(L);
     first(L) = next(P);
     P = next(P);
-    next(P) = prev(P);
     prev(P) = NULL;
 
 };
