@@ -1,8 +1,8 @@
 # Data Treatment (ASD_TUBES_PROJECT)
 
 #### This program developed by:
-- Sultan Kautsar (1303194010) [ID]
-- Bagas Alfito Prismawan (13031943027) [ID]
+``` - Sultan Kautsar (1303194010) [ID] ```
+``` - Bagas Alfito Prismawan (13031943027) [ID] ```
 
 <br>
 
