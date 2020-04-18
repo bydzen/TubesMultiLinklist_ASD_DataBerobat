@@ -33,6 +33,7 @@ int main() {
     string rPasNew;
     string delDoc;
     string delPas;
+
     int choose = 1;
     int cntDok;
     int cntPas;

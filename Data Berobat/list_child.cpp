@@ -1,11 +1,13 @@
 #include "list_child.h"
 
 void createListChild(list_child &L) {
+    // membuat list baru pasien //
     first(L) = NULL;
     last(L) = NULL;
 };
 
 address_child alokasi_child(infotype_child x) {
+    // alokasi pasen //
     address_child P = new elmlist_child;
 
     info(P) = x;
@@ -16,6 +18,7 @@ address_child alokasi_child(infotype_child x) {
 };
 
 void insertFirstChild(list_child &L, address_child P) {
+    // insert first pasien //
     if(first(L) == NULL) {
         last(L) = P;
         first(L) = P;
@@ -27,6 +30,7 @@ void insertFirstChild(list_child &L, address_child P) {
 };
 
 void printInfoChild(list_child L) {
+    // print info child/pasien //
     address_child P = first(L);
 
     while(P != NULL) {
@@ -36,6 +40,7 @@ void printInfoChild(list_child L) {
 };
 
 address_child findElmChild(list_child L, infotype_child x) {
+    // mencari elemen pasien //
     address_child P = first(L);
 
     while(P != NULL) {
@@ -48,6 +53,7 @@ address_child findElmChild(list_child L, infotype_child x) {
 };
 
 void insertAfterChild(address_child &Prec, address_child P) {
+    // insert after pasien //
     prev(next(Prec)) = P;
     next(P) = next(Prec);
     prev(P) = Prec;
