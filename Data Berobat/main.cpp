@@ -135,8 +135,6 @@ int main() {
                 cout << "\n\nInput nama Dokter: ";
                 cin >> delDoc;
                 removeParent(LP, "dr." + delDoc);
-                system("CLS");
-                cout << "\nDokter " << delDoc << " telah dihapus.\n";
                 system("TIMEOUT /T 7");
                 system("CLS");
                 break;
@@ -146,7 +144,6 @@ int main() {
                 cout << "\n\nInput nama Pasien: ";
                 cin >> delPas;
                 removeChild(LC, "ps." + delPas);
-
                 system("TIMEOUT /T 7");
                 system("CLS");
                 break;

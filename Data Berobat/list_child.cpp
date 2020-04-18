@@ -122,6 +122,6 @@ void removeChild(list_child &L, infotype_child x) {
 			deleteAfterChild(L, P, Q);
 			cout << "\nPasien " << info(P) << " telah dihapus.\n";
 
-		}
-	}
-}
+		};
+	};
+};

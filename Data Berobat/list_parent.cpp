@@ -98,8 +98,6 @@ address_parent findElmParent(list_parent L, infotype_parent x) {
 };
 
 void deleteFirstParent(list_parent &L, address_parent &P) {
-
-
     // delete first dokter //
     P = first(L);
     first(L) = next(P);
@@ -124,27 +122,32 @@ void deleteLastParent(list_parent &L, address_parent &P) {
 
 ;}
 
-
-
 void removeParent(list_parent &L, infotype_parent x){
     if (first(L) == NULL) {
-		cout << "Data Dokter Kosong." << endl;
+		cout << "\nData Dokter kosong." << endl;
+
 	} else {
 		address_parent P = first(L);
-		while ((info(P) != x) && (P != NULL)) {
+
+		while ((info(P) != x) && (next(P) != NULL)) {
 			P = next(P);
 		};
 
 		if (P == first(L)) {
 			deleteFirstParent(L, P);
+			cout << "\nDokter " << info(P) << " telah dihapus.\n";
 		} else if (next(P) == NULL ) {
 			deleteLastParent(L, P);
-		} else {
-			address_parent Q = first(L);
+			cout << "\nDokter " << info(P) << " telah dihapus.\n";
+		}else {
+			address_parent Q;
+			Q = first(L);
 			while (next(Q) != P) {
 				Q = next(Q);
 			};
 			deleteAfterParent(L, P, Q);
+			cout << "\nDokter " << info(P) << " telah dihapus.\n";
+
 		};
 	};
 };
