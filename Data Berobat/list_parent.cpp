@@ -46,6 +46,8 @@ void printInfoParent(list_parent L) {
             printInfo(child(P));
             P = next(P);
         } while((P) != first(L));
+    } else {
+        cout << "Tidak ada dokter dan relasi.\n";
     };
 };
 
@@ -60,6 +62,8 @@ void printInfoParentOnly(list_parent L) {
             };
             P = next(P);
         } while((P) != first(L));
+    } else {
+        cout << "Tidak ada dokter.\n";
     };
 };
 
@@ -74,6 +78,8 @@ void printBusyParent(list_parent L) {
             printInfo(child(P));
             P = next(P);
         } while((P) != first(L));
+    } else {
+        cout << "Tidak ada dokter.\n";
     };
 };
 
@@ -135,4 +141,3 @@ void removeParent(list_parent &L, infotype_parent x){
 		};
 	};
 };
-

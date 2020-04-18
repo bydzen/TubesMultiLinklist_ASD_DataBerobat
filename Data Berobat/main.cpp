@@ -6,7 +6,7 @@ using namespace std;
 
 int main() {
     // greeting identitas pembuat dan tujuan program //
-    cout << "-->> Program Relasi M-N (Pasien dengan Dokter) <<--\n\n\n";
+    cout << "-->> Program Relasi M-N (Dokter dan Pasien | Data Berobat) <<--\n\n\n";
     cout << "Program Name       : Data Berobat" << endl;
     cout << "Program Language   : C++" << endl;
     cout << "Created by         : Sultan Kautsar | Bagas Alfito Prismawan" << endl;
@@ -50,8 +50,8 @@ int main() {
             system("CLS");
             cout << "-->> Greeting from Creators <<--";
             cout << "\n\nThank You for using this program!";
-            cout << "\n\nProgram will be returned by zero (0x0)!\nPress: CTRL+C || CTRL+Fn+C to exit instantly\n\nExiting in...";
-            //system("TIMEOUT /T 7 /NOBREAK");
+            cout << "\n\nProgram will be returned by zero (0x0)!\nPress: CTRL+C || CTRL+Fn+C || Press any key, to exit instantly.\n\nExiting in...";
+            system("TIMEOUT /T 7");
             exit(0);
         };
 

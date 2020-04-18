@@ -33,6 +33,10 @@ void printInfoChild(list_child L) {
     // print info child/pasien //
     address_child P = first(L);
 
+    if (first(L) == NULL) {
+        cout << "Tidak ada pasien.\n";
+    };
+
     while(P != NULL) {
         cout << "Pasien: " << info(P) << endl;
         P = next(P);
