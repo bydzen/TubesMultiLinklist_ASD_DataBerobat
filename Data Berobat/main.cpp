@@ -15,7 +15,7 @@ int main() {
     cout << "Description        : Program data berobat pasien beserta relasinya" << endl;
     cout << "                     dibuat untuk memenuhi tugas besar matakuliah Algoritma dan Struktur Data.\n" << endl;
     system("TIMEOUT /T 7 /NOBREAK");
-
+    system("TIMEOUT /T 7");
     system("CLS");
 
     // kamus program //
