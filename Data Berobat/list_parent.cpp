@@ -89,22 +89,19 @@ address_parent findElmParent(list_parent L, infotype_parent x) {
 };
 
 void deleteFirstParent(list_parent &L, address_parent &P) {
-	first(L) = next(P);
+    P = first(L);
+    first(L) = next(P);
     next(P) = NULL;
-}
 
+}
 void deleteAfterParent(list_parent &L, address_parent &P, address_parent Q) {
 	next(Q) = next(P);
 	next(P) = NULL;
 }
 
 void deleteLastParent(list_parent &L, address_parent &P) {
-	address_parent  Q = first(L);
-	while (next(Q) != P) {
-		Q = next(Q);
-	}
-	next(Q) = NULL;
-}
+
+;}
 
 void removeParent(list_parent L, infotype_parent x){
     if (first(L) == NULL)

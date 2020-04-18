@@ -1,5 +1,6 @@
 #include <iostream>
 
+
 using namespace std;
 #include "list_child.h"
 #include "list_parent.h"
@@ -14,6 +15,7 @@ int main() {
     cout << "Description        : Program data berobat pasien beserta relasinya" << endl;
     cout << "                     dibuat untuk memenuhi tugas besar matakuliah Algoritma dan Struktur Data.\n" << endl;
     system("TIMEOUT /T 7 /NOBREAK");
+
     system("CLS");
 
     // kamus program //
@@ -145,8 +147,7 @@ int main() {
                 cout << "\n\nInput nama Pasien: ";
                 cin >> delPas;
                 removeChild(LC, "ps." + delPas);
-                system("CLS");
-                cout << "\nPasien " << delPas << " telah dihapus.\n";
+
                 system("TIMEOUT /T 7");
                 system("CLS");
                 break;

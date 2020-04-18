@@ -34,9 +34,15 @@ void printInfoChild(list_child L) {
     address_child P = first(L);
 
     while(P != NULL) {
-        cout << "Pasien: " << info(P) << endl;
-        P = next(P);
+        if(P == NULL){
+            cout<<"Data Kosong";
+
+        }else{
+             cout << "Pasien: " << info(P) << endl;
+            P = next(P);
+        }
     };
+
 };
 
 address_child findElmChild(list_child L, infotype_child x) {
@@ -86,7 +92,8 @@ void deleteLastChild(list_child &L, address_child &P) {
 void removeChild(list_child &L, infotype_child x) {
     // delete pasien //
     if (first(L) == NULL) {
-		cout << "Data Pasien Kosong." << endl;
+		cout << "\nData Pasien Kosong." << endl;
+
 	} else {
 		address_child P = first(L);
 
@@ -96,8 +103,10 @@ void removeChild(list_child &L, infotype_child x) {
 
 		if (P == first(L)) {
 			deleteFirstChild(L, P);
+			cout << "\nPasien " << info(P) << " telah dihapus.\n";
 		} else if (next(P) == NULL ) {
 			deleteLastChild(L, P);
+			cout << "\nPasien " << info(P) << " telah dihapus.\n";
 		}else {
 			address_child Q;
 			Q = first(L);
@@ -105,12 +114,9 @@ void removeChild(list_child &L, infotype_child x) {
 				Q = next(Q);
 			};
 			deleteAfterChild(L, P, Q);
-<<<<<<< HEAD
+			cout << "\nPasien " << info(P) << " telah dihapus.\n";
 
 		}
-=======
-		};
-	};
-};
->>>>>>> 3e49e8ef29c9c348f1723565de39f0a58046f500
+	}
+}
 
