@@ -133,6 +133,7 @@ int main() {
                 cout << "-->> Program penghapus data Dokter <<--";
                 cout << "\n\nInput nama Dokter: ";
                 cin >> delDoc;
+                removeParent(LP, "dr." + delDoc);
                 system("CLS");
                 cout << "\nDokter " << delDoc << " telah dihapus.\n";
                 system("TIMEOUT /T 7");
@@ -144,8 +145,6 @@ int main() {
                 cout << "\n\nInput nama Pasien: ";
                 cin >> delPas;
                 removeChild(LC, "ps." + delPas);
-             //   info(C) = "ps." + rPasNew;
-            //    dealokasi(C);
                 system("CLS");
                 cout << "\nPasien " << delPas << " telah dihapus.\n";
                 system("TIMEOUT /T 7");

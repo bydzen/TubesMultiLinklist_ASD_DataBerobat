@@ -37,6 +37,6 @@ address_child alokasi_child(infotype_child x);
 void dealokasiChild(address_child &P);
 address_child findElmChild(list_child L, infotype_child x);
 void printInfoChild(list_child L);
-void removeChild(list_child L, infotype_child x);
+void removeChild(list_child &L, infotype_child x);
 
 #endif // LIST_CHILD_H_INCLUDED

@@ -87,3 +87,53 @@ address_parent findElmParent(list_parent L, infotype_parent x) {
 
     return NULL;
 };
+
+void deleteFirstParent(list_parent &L, address_parent &P) {
+	first(L) = next(P);
+    next(P) = NULL;
+}
+
+void deleteAfterParent(list_parent &L, address_parent &P, address_parent Q) {
+	next(Q) = next(P);
+	next(P) = NULL;
+}
+
+void deleteLastParent(list_parent &L, address_parent &P) {
+	address_parent  Q = first(L);
+	while (next(Q) != P) {
+		Q = next(Q);
+	}
+	next(Q) = NULL;
+}
+
+void removeParent(list_parent L, infotype_parent x){
+    if (first(L) == NULL)
+	{
+		cout << "Data Dokter Kosong" << endl;
+	}
+	else {
+		address_parent P = first(L);
+		while ((info(P) != x) && (P != NULL))
+		{
+			P = next(P);
+		}
+		if (P == first(L))
+		{
+			deleteFirstParent(L, P);
+		}
+		else if (next(P) == NULL )
+		{
+			deleteLastParent(L, P);
+		}
+		else {
+			address_parent Q = first(L);
+			while (next(Q) != P) {
+				Q = next(Q);
+			}
+			deleteAfterParent(L, P, Q);
+
+		}
+
+	}
+}
+
