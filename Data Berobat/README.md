@@ -1,8 +1,8 @@
 ## READ - TUBES MULTILIST DATA BEROBAT (ASD_TUBES_PROJECT)
 
-#### Program ini dibuat oleh:
-###### 1. Sultan Kautsar (1303194010)
-###### 2. Bagas Alfito Prismawan (13031943027)
+#### This program developed by:
+###### 1. Sultan Kautsar (1303194010) [ID]
+###### 2. Bagas Alfito Prismawan (13031943027) [ID]
 
 <br>
 
@@ -21,9 +21,15 @@
 
 ##### Screenshot greeting program running. <br>
 ![01](https://github.com/svzax/TubesMultiLinklist_ASD_DataBerobat/blob/master/Data%20Berobat/img/1.png)
+###### [+] Pros:
+> User can choose which one to do;
+> make it easy (interactive).
+###### [-] Cons:
+> Too long (not auto generated);
+> must be careful when inputting.
 
 ##### Screenshot menu program running. <br>
-![01](https://github.com/svzax/TubesMultiLinklist_ASD_DataBerobat/blob/master/Data%20Berobat/img/2.png)
+![02](https://github.com/svzax/TubesMultiLinklist_ASD_DataBerobat/blob/master/Data%20Berobat/img/2.png)
 
 ##### Screenshot status sibuk program running. <br>
 ![01](https://github.com/svzax/TubesMultiLinklist_ASD_DataBerobat/blob/master/Data%20Berobat/img/3.png)
