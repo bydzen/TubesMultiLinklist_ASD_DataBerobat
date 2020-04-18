@@ -1,9 +1,8 @@
-## READ - TUBES MULTILIST DATA BEROBAT (ASD_TUBES_PROJECT)
-[Contribution guidelines for this project](docs/CONTRIBUTING.md)
+# Data Treatment (ASD_TUBES_PROJECT)
 
 #### This program developed by:
-###### 1. Sultan Kautsar (1303194010) [ID]
-###### 2. Bagas Alfito Prismawan (13031943027) [ID]
+- Sultan Kautsar (1303194010) [ID]
+- Bagas Alfito Prismawan (13031943027) [ID]
 
 <br>
 
