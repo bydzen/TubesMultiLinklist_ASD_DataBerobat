@@ -66,22 +66,22 @@ void deleteFirstChild(list_child &L, address_child &P) {
     first(L) = next(P);
     P = next(P);
     prev(P) = NULL;
-}
+};
 
 void deleteAfterChild(list_child &L, address_child &P, address_child Q) {
     // delete after pasien //
 	next(Q) = next(P);
 	next(P) = NULL;
-}
+};
 
 void deleteLastChild(list_child &L, address_child &P) {
     // delete last pasien //
 	address_child  Q = first(L);
 	while (next(Q) != P) {
 		Q = next(Q);
-	}
+	};
 	next(Q) = NULL;
-}
+};
 
 void removeChild(list_child &L, infotype_child x) {
     // delete pasien //
@@ -105,12 +105,6 @@ void removeChild(list_child &L, infotype_child x) {
 				Q = next(Q);
 			};
 			deleteAfterChild(L, P, Q);
-<<<<<<< HEAD
-
-		}
-=======
 		};
 	};
 };
->>>>>>> 3e49e8ef29c9c348f1723565de39f0a58046f500
-

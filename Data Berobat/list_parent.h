@@ -35,7 +35,7 @@ address_parent alokasi_parent(infotype_parent x);
 void dealokasiParent(address_parent &P);
 address_parent findElmParent(list_parent L, infotype_parent x);
 void printInfoParent(list_parent L);
-void removeParent(list_parent L, infotype_parent x);
+void removeParent(list_parent &L, infotype_parent x);
 
 void printInfoParentOnly(list_parent L);
 void printBusyParent(list_parent L);

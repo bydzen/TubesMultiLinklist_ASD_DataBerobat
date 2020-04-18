@@ -55,7 +55,9 @@ void printInfoParentOnly(list_parent L) {
 
     if(first(L) != NULL) {
         do {
-            cout << "Dokter: " << info(P) << endl;
+            if (info(P) != "") {
+                cout << "Dokter: " << info(P) << endl;
+            };
             P = next(P);
         } while((P) != first(L));
     };
@@ -76,6 +78,7 @@ void printBusyParent(list_parent L) {
 };
 
 address_parent findElmParent(list_parent L, infotype_parent x) {
+    // mencari elemen dokter //
     address_parent P = first(L);
 
     do {
@@ -89,51 +92,47 @@ address_parent findElmParent(list_parent L, infotype_parent x) {
 };
 
 void deleteFirstParent(list_parent &L, address_parent &P) {
-	first(L) = next(P);
-    next(P) = NULL;
-}
+    // delete first dokter //
+    P = first(L);
+    first(L) = next(P);
+    info(P) = "";;
+};
 
 void deleteAfterParent(list_parent &L, address_parent &P, address_parent Q) {
+    // delete after dokter //
 	next(Q) = next(P);
 	next(P) = NULL;
-}
+};
 
 void deleteLastParent(list_parent &L, address_parent &P) {
+    // delete last dokter //
 	address_parent  Q = first(L);
 	while (next(Q) != P) {
 		Q = next(Q);
-	}
+	};
 	next(Q) = NULL;
-}
+};
 
-void removeParent(list_parent L, infotype_parent x){
-    if (first(L) == NULL)
-	{
-		cout << "Data Dokter Kosong" << endl;
-	}
-	else {
+void removeParent(list_parent &L, infotype_parent x){
+    if (first(L) == NULL) {
+		cout << "Data Dokter Kosong." << endl;
+	} else {
 		address_parent P = first(L);
-		while ((info(P) != x) && (P != NULL))
-		{
+		while ((info(P) != x) && (P != NULL)) {
 			P = next(P);
-		}
-		if (P == first(L))
-		{
+		};
+
+		if (P == first(L)) {
 			deleteFirstParent(L, P);
-		}
-		else if (next(P) == NULL )
-		{
+		} else if (next(P) == NULL ) {
 			deleteLastParent(L, P);
-		}
-		else {
+		} else {
 			address_parent Q = first(L);
 			while (next(Q) != P) {
 				Q = next(Q);
-			}
+			};
 			deleteAfterParent(L, P, Q);
-
-		}
-
-	}
-}
+		};
+	};
+};
 
