@@ -80,6 +80,7 @@ user@debian$ sudo gcc
 - [ ] Menampilkan data pasien yang ditangani dokter tertentu. ```(not completed)``` +only doctor to patient.
 - [x] Menampilkan data dokter yang menangani seorang pasien tertentu. ```(no error)``` +helpfull interface!
 - [ ] Menampilkan data dokter yang tidak sibuk dan yang paling sibuk. ```(not completed)``` +shows doctor busy & count patient.
+- [x] Mengubah nama dari salah satu data pasien ```(no error)``` +correcting when patient is leaving instantly.
 
 ## Built With
 
