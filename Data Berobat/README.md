@@ -1,4 +1,4 @@
-# Data Treatment (Tugas Besar Algoritma dan Struktur Data)
+# Data Treatment (ID: Algoritma dan Struktur Data)
 
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
@@ -73,13 +73,13 @@ user@debian$ sudo gcc
 
 - [x] Penambahan dokter. ```(no error)``` +up to 6 doctor per input.
 - [x] Penambahan pasien. ```(no error)``` +up to 6 patient per input.
-- [x] Penentuan relasi dokter dan pasien dan sebalikknya. ```(not completed)``` +have doctor to patient only
+- [ ] Penentuan relasi dokter dan pasien dan sebalikknya. ```(not completed)``` +have doctor to patient only
 - [x] Menghapus data dokter tertentu. ```(no error)``` +when doctor deleted, relation will be remove automatically!
 - [x] Manghapus data pasien tertentu. ```(no error)``` +when patient deleted, relation to doctor will removed!
 - [x] Menampilkan data keseluruhan pasien beserta data dokternya. ```(no error)``` +say empty when no elment.
-- [x] Menampilkan data pasien yang ditangani dokter tertentu. ```(not completed)``` +only doctor to patient.
+- [ ] Menampilkan data pasien yang ditangani dokter tertentu. ```(not completed)``` +only doctor to patient.
 - [x] Menampilkan data dokter yang menangani seorang pasien tertentu. ```(no error)``` +helpfull interface!
-- [x] Menampilkan data dokter yang tidak sibuk dan yang paling sibuk. ```(not completed)``` +shows doctor busy & count patient.
+- [ ] Menampilkan data dokter yang tidak sibuk dan yang paling sibuk. ```(not completed)``` +shows doctor busy & count patient.
 
 ## Built With
 
@@ -87,7 +87,7 @@ user@debian$ sudo gcc
 * [Code::Blocks](http://www.codeblocks.org/home) - The IDE with all the features.
 * [GitHubDesktop](https://desktop.github.com/) - For commite with my team remotely.
 
-* Screenshot menu program running.
+## Screenshot menu program running.
 ![02](https://github.com/svzax/TubesMultiLinklist_ASD_DataBerobat/blob/master/Data%20Berobat/img/2.png)
 > Pros:
 - User can choose which one to do;
