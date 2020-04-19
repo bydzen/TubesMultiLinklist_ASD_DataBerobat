@@ -10,7 +10,7 @@ Sultan Kautsar - *1303194010* - [Sultan Kautsar](https://github.com/svzax)<br>
 Bagas Alfito Prismawan - *1303193027* - [Bagas Mahier](https://github.com/BagasMahier12a)<br><br>
 
 <p align="center">
-  <img src="img/lottie1.gif">
+  <img weight="300px" height="300px" src="img/lottie1.gif">
 </p>
 
 ## Getting Started
