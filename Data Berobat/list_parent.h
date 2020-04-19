@@ -39,5 +39,6 @@ void removeParent(list_parent &L, infotype_parent x);
 
 void printInfoParentOnly(list_parent L);
 void printBusyParent(list_parent L);
+void printInfoCRel(list_parent L);
 
 #endif // LIST_PARENT_H_INCLUDED

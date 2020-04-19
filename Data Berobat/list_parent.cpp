@@ -43,13 +43,33 @@ void printInfoParent(list_parent L) {
     if(first(L) != NULL) {
         do {
             cout << "Dokter: " << info(P);
-            printInfo(child(P));
+            printInfoRChild(child(P));
             P = next(P);
         } while((P) != first(L));
     } else {
-        cout << "Tidak ada dokter dan relasi.\n";
+        cout << "Tidak ada Dokter dan relasi.\n";
     };
 };
+
+void printInfoCRel(list_parent L) {
+    // print nama dokter dengan pasien relasi //
+    address_parent P = first(L);
+
+    if(first(L) != NULL) {
+        do {
+            printInfoRFChild(child(P));
+            /*char x = printInfoRFChildS(child(P));
+            if (x == "") {
+                    cout << "Tidak ada Pasien";
+            };*/
+            cout << "Dokter: " << info(P);
+            cout << endl;
+            P = next(P);
+        } while((P) != first(L));
+    } else {
+        cout << "Tidak ada Pasien dan relasi.\n";
+    };
+}
 
 void printInfoParentOnly(list_parent L) {
     // print nama-nama dokter //
@@ -63,7 +83,7 @@ void printInfoParentOnly(list_parent L) {
             P = next(P);
         } while((P) != first(L));
     } else {
-        cout << "Tidak ada dokter.\n";
+        cout << "Tidak ada Dokter.\n";
     };
 };
 
@@ -75,7 +95,7 @@ void printBusyParent(list_parent L) {
         do {
             cout << "Dokter: " << info(P);
             printBusy(child(P));
-            printInfo(child(P));
+            printInfoRChild(child(P));
             P = next(P);
         } while((P) != first(L));
     } else {

@@ -20,7 +20,7 @@ void insertFirst(list_relasi &L, address_relasi P) {
     first(L) = P;
 };
 
-void printInfo(list_relasi L) {
+void printInfoRChild(list_relasi L) {
     // print info relasi dengan pasien //
     address_relasi P = first(L);
 
@@ -29,6 +29,16 @@ void printInfo(list_relasi L) {
         P = next(P);
     };
     cout << endl;
+};
+
+void printInfoRFChild(list_relasi L) {
+    // print info relasi dengan pasien //
+    address_relasi P = first(L);
+
+    while(P != NULL) {
+        cout << "Pasien: " << info(info(P)) << ", dengan ";
+        P = next(P);
+    };
 };
 
 void printBusy(list_relasi L) {

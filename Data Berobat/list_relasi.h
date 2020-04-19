@@ -32,7 +32,8 @@ void deleteAfter(address_relasi Prec, address_relasi &P);
 address_relasi alokasi(address_child C);
 void dealokasi(address_relasi &P);
 address_relasi findElm(list_relasi L, address_child C);
-void printInfo(list_relasi L);
+void printInfoRChild(list_relasi L);
+void printInfoRFChild(list_relasi L);
 
 void printBusy(list_relasi L);
 

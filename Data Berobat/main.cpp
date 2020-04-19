@@ -172,7 +172,7 @@ int main() {
                 system("CLS");
                 cout << "-->> Program menampilkan relasi Pasien terhadap Dokter <<--";
                 cout << "\n\n------PASIEN------\n" << endl;
-                printInfoParent(LP);
+                printInfoCRel(LP);
                 cout << "\n------------------\n" << endl;
                 system("PAUSE");
                 system("CLS");
