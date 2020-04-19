@@ -9,7 +9,7 @@ This project was created to fulfill a large assignment in an algorithm and data 
 Sultan Kautsar - *1303194010* - [Sultan Kautsar](https://github.com/svzax)<br>
 Bagas Alfito Prismawan - *1303193027* - [Bagas Mahier](https://github.com/BagasMahier12a)<br>
 
-<span style="display:block;text-align:center";"size:100%">![Test Automation](img/lottie1.gif)</span>
+<span style="display:block;text-align:center;size:100%">![Test Automation](img/lottie1.gif)</span>
 
 ## Getting Started
 
