@@ -86,8 +86,8 @@ user@debian$ sudo gcc
 - [x] Menghapus data dokter tertentu. ```(no error)``` +when doctor deleted, relation will be remove automatically!
 - [x] Manghapus data pasien tertentu. ```(no error)``` +when patient deleted, relation to doctor will removed!
 - [x] Menampilkan data keseluruhan pasien beserta data dokternya. ```(no error)``` +say empty when no elment.
-- [ ] Menampilkan data pasien yang ditangani dokter tertentu. ```(not completed)``` +only doctor to patient.
-- [x] Menampilkan data dokter yang menangani seorang pasien tertentu. ```(no error)``` +helpfull interface!
+- [x] Menampilkan data pasien yang ditangani dokter tertentu. ```(no error)``` +helpful interface!.
+- [x] Menampilkan data dokter yang menangani seorang pasien tertentu. ```(no error)``` +helpful interface!
 - [ ] Menampilkan data dokter yang tidak sibuk dan yang paling sibuk. ```(not completed)``` +shows doctor busy & count patient.
 - [x] Mengubah nama dari salah satu data pasien ```(no error)``` +correcting when patient is leaving instantly.
 
