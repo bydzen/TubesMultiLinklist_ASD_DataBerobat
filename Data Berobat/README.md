@@ -9,7 +9,7 @@ This project was created to fulfill a large assignment in an algorithm and data 
 Sultan Kautsar - *1303194010* - [Sultan Kautsar](https://github.com/svzax)<br>
 Bagas Alfito Prismawan - *1303193027* - [Bagas Mahier](https://github.com/BagasMahier12a)
 
-![Animation](https://assets4.lottiefiles.com/packages/lf20_1LhsaB.json)
+![Lottie Logo animation](images/Introduction_00_sm.gif)
 
 ## Getting Started
 
