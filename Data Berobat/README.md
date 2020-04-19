@@ -7,9 +7,9 @@ This project was created to fulfill a large assignment in an algorithm and data 
 ## Developed By
 
 Sultan Kautsar - *1303194010* - [Sultan Kautsar](https://github.com/svzax)<br>
-Bagas Alfito Prismawan - *1303193027* - [Bagas Mahier](https://github.com/BagasMahier12a)
+Bagas Alfito Prismawan - *1303193027* - [Bagas Mahier](https://github.com/BagasMahier12a)<br>
 
-![Lottie Logo animation](img/lottie1.gif)
+<center>![Lottie Logo animation](img/lottie1.gif)</center>
 
 ## Getting Started
 
