@@ -83,11 +83,11 @@ user@debian$ sudo gcc
 
 ## Built With
 
-* [Bagas Mahier - Co-Author](https://github.com/BagasMahier12a/) - My team for creating this project.
+* [Bagas Mahier; Co-Author](https://github.com/BagasMahier12a/) - My team for creating this project.
 * [Code::Blocks](http://www.codeblocks.org/home) - The IDE with all the features.
-* [GitDesktop](https://desktop.github.com/) - For commite with my team remotely.
+* [GitHubDesktop](https://desktop.github.com/) - For commite with my team remotely.
 
-#### Screenshot menu program running.
+* Screenshot menu program running.
 ![02](https://github.com/svzax/TubesMultiLinklist_ASD_DataBerobat/blob/master/Data%20Berobat/img/2.png)
 > Pros:
 - User can choose which one to do;
@@ -98,7 +98,7 @@ user@debian$ sudo gcc
 
 ## Versioning
 
-We use [GitDesktop](https://desktop.github.comg/) for versioning.
+We use [GitHubDesktop](https://desktop.github.comg/) for versioning.
 
 ## Authors
 
