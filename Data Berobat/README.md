@@ -9,6 +9,9 @@ This project was created to fulfill a large assignment in an algorithm and data 
 Sultan Kautsar - *1303194010* - [Sultan Kautsar](https://github.com/svzax)<br>
 Bagas Alfito Prismawan - *1303193027* - [Bagas Mahier](https://github.com/BagasMahier12a)
 
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets4.lottiefiles.com/packages/lf20_1LhsaB.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+
 ## Getting Started
 
 Form three multi-linked list is used to represent and guarantee the m-n relationship The difference between the multi-linked list form IIIB and the previous one is that the relation list is a child list of the parent element.
