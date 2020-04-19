@@ -1,6 +1,17 @@
-# Data Treatment
+# Data Treatment (ID: Algoritma dan Struktur Data)
+
+[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
 This project was created to fulfill a large assignment in an algorithm and data structure course. Where is our job to make medical data that is based on multiple lists. This project is carried out by two people to complete a program.
+
+## Developed By
+
+Sultan Kautsar - *1303194010* - [Sultan Kautsar](https://github.com/svzax)<br>
+Bagas Alfito Prismawan - *1303193027* - [Bagas Mahier](https://github.com/BagasMahier12a)
+
+<p align="center">
+  <img weight="400px" height="400px" src="img/lottie2.gif">
+</p>
 
 ## Getting Started
 
@@ -29,7 +40,7 @@ Installing Code::Blocks, can be installed using the following steps.
 Windows: http://sourceforge.net/projects/codeblocks/files/Binaries/20.03/Windows/32bit/codeblocks-20.03mingw-32bit-setup.exe
 ```
 
-Installing Code::Blocks for Linux user(tested in Debian)
+Installing Code::Blocks for Linux user (tested in Debian)
 
 ```
 user@debian$ sudo apt install codeblocks
@@ -71,21 +82,22 @@ user@debian$ sudo gcc
 
 - [x] Penambahan dokter. ```(no error)``` +up to 6 doctor per input.
 - [x] Penambahan pasien. ```(no error)``` +up to 6 patient per input.
-- [x] Penentuan relasi dokter dan pasien dan sebalikknya. ```(not completed)``` +have doctor to patient only
+- [ ] Penentuan relasi dokter dan pasien dan sebalikknya. ```(not completed)``` +have doctor to patient only
 - [x] Menghapus data dokter tertentu. ```(no error)``` +when doctor deleted, relation will be remove automatically!
 - [x] Manghapus data pasien tertentu. ```(no error)``` +when patient deleted, relation to doctor will removed!
 - [x] Menampilkan data keseluruhan pasien beserta data dokternya. ```(no error)``` +say empty when no elment.
-- [x] Menampilkan data pasien yang ditangani dokter tertentu. ```(not completed)``` +only doctor to patient.
+- [ ] Menampilkan data pasien yang ditangani dokter tertentu. ```(not completed)``` +only doctor to patient.
 - [x] Menampilkan data dokter yang menangani seorang pasien tertentu. ```(no error)``` +helpfull interface!
-- [x] Menampilkan data dokter yang tidak sibuk dan yang paling sibuk. ```(not completed)``` +shows doctor busy & count patient.
+- [ ] Menampilkan data dokter yang tidak sibuk dan yang paling sibuk. ```(not completed)``` +shows doctor busy & count patient.
+- [x] Mengubah nama dari salah satu data pasien ```(no error)``` +correcting when patient is leaving instantly.
 
 ## Built With
 
-* [Bagas Mahier - Co-Author](https://github.com/BagasMahier12a/) - My team for creating this project.
+* [Bagas Mahier; Co-Author](https://github.com/BagasMahier12a/) - My team for creating this project.
 * [Code::Blocks](http://www.codeblocks.org/home) - The IDE with all the features.
-* [GitDesktop](https://desktop.github.com/) - For commite with my team remotely.
+* [GitHubDesktop](https://desktop.github.com/) - For commite with my team remotely.
 
-#### Screenshot menu program running.
+## Screenshot menu program running.
 ![02](https://github.com/svzax/TubesMultiLinklist_ASD_DataBerobat/blob/master/Data%20Berobat/img/2.png)
 > Pros:
 - User can choose which one to do;
@@ -96,7 +108,7 @@ user@debian$ sudo gcc
 
 ## Versioning
 
-We use [GitDesktop](https://desktop.github.comg/) for versioning.
+We use [GitHubDesktop](https://desktop.github.comg/) for versioning.
 
 ## Authors
 
