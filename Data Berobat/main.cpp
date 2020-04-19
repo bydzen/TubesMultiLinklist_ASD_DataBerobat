@@ -35,17 +35,26 @@ int main() {
     string delDoc;
     string delPas;
 
+    char authGit;
+
     int choose = 1;
     int cntDok;
     int cntPas;
+    int Rdpd;
 
     // algoritma main //
     createListParent(LP);
     createListChild(LC);
 
-    while (choose != 0) {
+    PROGMENU:while (choose != 0) {
+        choose = 1;
         cout << "Menu Program\n1. -->> Tambah Dokter.\n2. -->> Tambah Pasien.\n3. -->> Tambah relasi Dokter dengan Pasien.\n4. -->> Hapus Dokter.\n5. -->> Hapus Pasien.\n6. -->> Tampilkan seluruh data Dokter dan Pasien.\n7. -->> Tampilkan Dokter yang menangani Pasien.\n8. -->> Tampilkan Pasien yang ditangani Dokter.\n9. -->> Tampilkan status Dokter.\n99.-->> Ganti nama Pasien.\n0. -->> Exit (Program)\nPilih -->> ";
         cin >> choose;
+        if (choose != 1 && choose != 2 && choose != 3 && choose != 4 && choose != 5 && choose != 6 && choose != 7 && choose != 8 && choose != 9 && choose != 99 && choose != 0) {
+            system("CLS");
+            choose = 1;
+            goto PROGMENU;
+        }
 
         if (choose == 0) {
             system("CLS");
@@ -53,7 +62,17 @@ int main() {
             cout << "\n\nThank You for using this program!";
             cout << "\n\nProgram will be returned by zero (0x0)!\nPress: CTRL+C || CTRL+Fn+C || Press any key, to exit instantly.\n\nExiting in...";
             system("TIMEOUT /T 7");
-            exit(0);
+            cout << "\nAre you want to visit out team on gitHub? (y/n): ";
+            cin >> authGit;
+            if (authGit == 'y' || authGit == 'Y') {
+                system("start https://github.com/BagasMahier12a");
+                system("start https://github.com/svzax");
+                exit(0);
+            } else if (authGit == 'n' || authGit == 'N') {
+                exit(0);
+            } else {
+                exit(0);
+            };
         };
 
         cout << endl;
@@ -64,8 +83,13 @@ int main() {
                 int i;
                 system("CLS");
                 cout << "-->> Program penambah data Dokter <<--";
+                cout << "\n-->> Input 0 to back <<--";
                 cout << "\n\nBerapa Dokter? (1-6): ";
                 cin >> cntDok;
+                if (cntDok == 0) {
+                    system("CLS");
+                    goto PROGMENU;
+                };
                 for (i = 1; i <= cntDok; i++) {
                     if (cntDok > 6) {
                         cout << "Terlalu banyak, mohon ulangi." << endl;
@@ -90,8 +114,13 @@ int main() {
             case 2:
                 system("CLS");
                 cout << "-->> Program penambah data Pasien <<--";
+                cout << "\n-->> Input 0 to back <<--";
                 cout << "\n\nBerapa Pasien? (1-6): ";
                 cin >> cntPas;
+                if (cntPas == 0) {
+                    system("CLS");
+                    goto PROGMENU;
+                };
                 for (i = 1; i <= cntPas; i++) {
                     if (cntPas > 6) {
                         cout << "Terlalu banyak, mohon ulangi." << endl;
@@ -115,15 +144,40 @@ int main() {
                 break;
             case 3:
                 system("CLS");
-                cout << "-->> Program penambah relasi Dokter dengan Pasien <<--";
-                cout << "\n\nInput nama Dokter: ";
-                cin >> nRelDoc;
-                P = findElmParent(LP, "dr." + nRelDoc);
-                cout << "Input nama Pasien relasi: ";
-                cin >> nRelPas;
-                C = findElmChild(LC, "ps." + nRelPas);
-                R = alokasi(C);
-                insertFirst(child(P),R);
+                cout << "-->> Program penambah relasi Dokter dengan Pasien (dan sebaliknya) <<--";
+                cout << "\n\n1. Dokter - Pasien\n2. Pasien - Dokter\n0. Back\nPilih -->> ";
+                cin >> Rdpd;
+                if (Rdpd == 0) {
+                    system("CLS");
+                    goto PROGMENU;
+                };
+                if (Rdpd == 1) {
+                    system("CLS");
+                    cout << "-->> Program penambah relasi Dokter dengan Pasien <<--";
+                    cout << "\n\nInput nama Dokter: ";
+                    cin >> nRelDoc;
+                    P = findElmParent(LP, "dr." + nRelDoc);
+                    cout << "Input nama Pasien relasi: ";
+                    cin >> nRelPas;
+                    C = findElmChild(LC, "ps." + nRelPas);
+                    R = alokasi(C);
+                    insertFirst(child(P),R);
+                } else if (Rdpd == 2) {
+                    system("CLS");
+                    cout << "-->> Program penambah relasi Pasien dengan Dokter <<--";
+                    cout << "\n\nInput nama Pasien: ";
+                    cin >> nRelPas;
+                    C = findElmChild(LC, "ps." + nRelPas);
+                    cout << "Input nama Dokter relasi: ";
+                    cin >> nRelDoc;
+                    P = findElmParent(LP, "dr." + nRelDoc);
+                    R = alokasi(C);
+                    insertFirst(child(P),R);
+                } else {
+                    system("CLS");
+                    choose = 3;
+                    goto CHOOSEMENU;
+                };
                 system("CLS");
                 cout << "\nDokter " << nRelDoc << " telah direlasikan dengan Pasien " << nRelPas << ".\n";
                 system("TIMEOUT /T 7");
@@ -132,8 +186,13 @@ int main() {
             case 4: //KURANG DELETE DOKTER
                 system("CLS");
                 cout << "-->> Program penghapus data Dokter <<--";
+                cout << "\n-->> Input 0 to back <<--";
                 cout << "\n\nInput nama Dokter: ";
                 cin >> delDoc;
+                if (delDoc == "0") {
+                    system("CLS");
+                    goto PROGMENU;
+                };
                 removeParent(LP, "dr." + delDoc);
                 system("TIMEOUT /T 7");
                 system("CLS");
@@ -141,8 +200,13 @@ int main() {
             case 5: //KURANG DELETE PASIEN
                 system("CLS");
                 cout << "-->> Program penghapus data Pasien <<--";
+                cout << "\n-->> Input 0 to back <<--";
                 cout << "\n\nInput nama Pasien: ";
                 cin >> delPas;
+                if (delPas == "0") {
+                    system("CLS");
+                    goto PROGMENU;
+                };
                 removeChild(LC, "ps." + delPas);
                 system("TIMEOUT /T 7");
                 system("CLS");
@@ -190,8 +254,13 @@ int main() {
                 // ganti pasien (penambahan fungsionalitas) //
                 system("CLS");
                 cout << "-->> Program Ganti Pasien dengan nama Pasien baru! <<--";
+                cout << "\n-->> Input 0 to back <<--";
                 cout << "\n\nInput nama Pasien: ";
                 cin >> rPas;
+                if (rPas == "0") {
+                    system("CLS");
+                    goto PROGMENU;
+                };
                 C = findElmChild(LC, "ps." + rPas);
                 cout << "Input nama Pasien baru: ";
                 cin >> rPasNew;
