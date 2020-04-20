@@ -91,7 +91,7 @@ user@debian$ sudo gcc
 - [x] Menampilkan data dokter yang tidak sibuk dan yang paling sibuk. ```(not completed)``` +shows doctor busy & count patient.
 - [x] Mengubah nama dari salah satu data pasien ```(no error)``` +correcting when patient is leaving instantly.
 <br>
-Other requirements:
+Other requirements:<br>
 - [ ] Pasien tidak boleh relasi > 5 dokter ```(not completed)``` +break in include (maybe in relation.h).
 
 ## Built With
