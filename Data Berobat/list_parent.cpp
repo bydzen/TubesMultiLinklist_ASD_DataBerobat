@@ -62,7 +62,9 @@ void printInfoCRel(list_parent L) {
             if (x == "") {
                     cout << "Tidak ada Pasien";
             };*/
-            cout << "Dokter: " << info(P);
+            if (info(P) != "") {
+                cout << "Dokter: " << info(P);
+            };
             cout << endl;
             P = next(P);
         } while((P) != first(L));
@@ -121,7 +123,7 @@ void deleteFirstParent(list_parent &L, address_parent &P) {
     // delete first dokter //
     P = first(L);
     first(L) = next(P);
-    info(P) = "";;
+    info(P) = "";
 };
 
 
@@ -142,24 +144,32 @@ void deleteLastParent(list_parent &L, address_parent &P) {
 
 ;}
 
-void removeParent(list_parent &L, infotype_parent x){
+void removeParent(list_parent &L, infotype_parent x) {
+    // delete dokter //
+    bool NPfound = false;
+
     if (first(L) == NULL) {
 		cout << "\nData Dokter kosong." << endl;
 
 	} else {
 		address_parent P = first(L);
 
-		while ((info(P) != x) && (next(P) != NULL)) {
+		while ((info(P) != x) && (next(P) != first(L))) {
 			P = next(P);
 		};
 
+		if (next(P) == first(L) && info(P) != x) {
+            NPfound = true;
+            goto NPFOUND;
+		};
+
 		if (P == first(L)) {
+            cout << "\nDokter " << info(P) << " telah dihapus.\n";
 			deleteFirstParent(L, P);
-			cout << "\nDokter " << info(P) << " telah dihapus.\n";
 		} else if (next(P) == NULL ) {
 			deleteLastParent(L, P);
 			cout << "\nDokter " << info(P) << " telah dihapus.\n";
-		}else {
+		} else {
 			address_parent Q;
 			Q = first(L);
 			while (next(Q) != P) {
@@ -169,5 +179,8 @@ void removeParent(list_parent &L, infotype_parent x){
 			cout << "\nDokter " << info(P) << " telah dihapus.\n";
 
 		};
+	};
+	NPFOUND:if (NPfound != false) {
+        cout << "\nData Dokter " << x << " tidak ditemukan.\n";
 	};
 };

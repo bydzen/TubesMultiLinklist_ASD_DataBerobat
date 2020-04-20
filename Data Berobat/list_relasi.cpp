@@ -35,10 +35,12 @@ void printInfoRFChild(list_relasi L) {
     // print info relasi dengan pasien //
     address_relasi P = first(L);
 
+    cout << endl;
     while(P != NULL) {
-        cout << "Pasien: " << info(info(P)) << ", dengan ";
+        cout << "Pasien: " << info(info(P)) << "\n";
         P = next(P);
     };
+    cout << "        -> ";
 };
 
 void printBusy(list_relasi L) {

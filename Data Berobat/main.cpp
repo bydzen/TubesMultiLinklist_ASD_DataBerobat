@@ -54,7 +54,7 @@ int main() {
             system("CLS");
             choose = 1;
             goto PROGMENU;
-        }
+        };
 
         if (choose == 0) {
             system("CLS");
@@ -162,6 +162,8 @@ int main() {
                     C = findElmChild(LC, "ps." + nRelPas);
                     R = alokasi(C);
                     insertFirst(child(P),R);
+                    system("CLS");
+                    cout << "\nDokter " << nRelDoc << " telah direlasikan dengan Pasien " << nRelPas << ".\n";
                 } else if (Rdpd == 2) {
                     system("CLS");
                     cout << "-->> Program penambah relasi Pasien dengan Dokter <<--";
@@ -173,13 +175,13 @@ int main() {
                     P = findElmParent(LP, "dr." + nRelDoc);
                     R = alokasi(C);
                     insertFirst(child(P),R);
+                    system("CLS");
+                    cout << "\nPasien " << nRelPas << " telah direlasikan dengan Dokter " << nRelDoc << ".\n";
                 } else {
                     system("CLS");
                     choose = 3;
                     goto CHOOSEMENU;
                 };
-                system("CLS");
-                cout << "\nDokter " << nRelDoc << " telah direlasikan dengan Pasien " << nRelPas << ".\n";
                 system("TIMEOUT /T 7");
                 system("CLS");
                 break;
