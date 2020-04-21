@@ -1,12 +1,13 @@
+// include needed //
 #include "list_parent.h"
 
 void createListParent(list_parent &L) {
-    // membuat list null //
+    // create new parent list //
     first(L) = NULL;
 };
 
 address_parent alokasi_parent(infotype_parent x) {
-    // alokasi dokter //
+    // allocate parent list //
     address_parent P;
 
     P = new elmlist_parent;
@@ -18,7 +19,7 @@ address_parent alokasi_parent(infotype_parent x) {
 };
 
 void insertFirstParent(list_parent &L, address_parent P) {
-    // insert first dokter //
+    // insert first parent list //
     address_parent Q;
 
     if(first(L) == NULL) {
@@ -37,7 +38,7 @@ void insertFirstParent(list_parent &L, address_parent P) {
 
 
 void printInfoParent(list_parent L) {
-    // print nama dokter dengan pasien relasi //
+    // print info parent list //
     address_parent P = first(L);
 
     if(first(L) != NULL) {
@@ -52,7 +53,7 @@ void printInfoParent(list_parent L) {
 };
 
 void printInfoCRel(list_parent L) {
-    // print nama dokter dengan pasien relasi //
+    // print info parent list with list child relation //
     address_parent P = first(L);
 
     if(first(L) != NULL) {
@@ -74,7 +75,7 @@ void printInfoCRel(list_parent L) {
 }
 
 void printInfoParentOnly(list_parent L) {
-    // print nama-nama dokter //
+    // print info parent list //
     address_parent P = first(L);
 
     if(first(L) != NULL) {
@@ -90,7 +91,7 @@ void printInfoParentOnly(list_parent L) {
 };
 
 void printBusyParent(list_parent L) {
-    // print nama-nama dokter dan status kesibukan //
+    // print busy of parent list with list child relation //
     address_parent P = first(L);
 
     if(first(L) != NULL) {
@@ -106,7 +107,7 @@ void printBusyParent(list_parent L) {
 };
 
 address_parent findElmParent(list_parent L, infotype_parent x) {
-    // mencari elemen dokter //
+    // find the element of parent list //
     address_parent P = first(L);
 
     do {
@@ -120,7 +121,7 @@ address_parent findElmParent(list_parent L, infotype_parent x) {
 };
 
 void deleteFirstParent(list_parent &L, address_parent &P) {
-    // delete first dokter //
+    // delete first parent list //
     P = first(L);
     first(L) = next(P);
     info(P) = "";
@@ -128,29 +129,27 @@ void deleteFirstParent(list_parent &L, address_parent &P) {
 
 
 void deleteAfterParent(list_parent &L, address_parent &P, address_parent Q) {
-    // delete after dokter //
+    // delete after parent list //
 	next(Q) = next(P);
 	next(P) = NULL;
 };
 
 void deleteLastParent(list_parent &L, address_parent &P) {
- // delete last dokter //
+ // delete last parent list //
 	address_parent  Q = first(L);
+
 	while (next(Q) != P) {
 		Q = next(Q);
-	}
-
+	};
 	next(Q) = NULL;
-
-;}
+};
 
 void removeParent(list_parent &L, infotype_parent x) {
-    // delete dokter //
+    // remove parent list from element //
     bool NPfound = false;
 
     if (first(L) == NULL) {
 		cout << "\nData Dokter kosong." << endl;
-
 	} else {
 		address_parent P = first(L);
 
@@ -171,16 +170,17 @@ void removeParent(list_parent &L, infotype_parent x) {
 			cout << "\nDokter " << info(P) << " telah dihapus.\n";
 		} else {
 			address_parent Q;
+
 			Q = first(L);
 			while (next(Q) != P) {
 				Q = next(Q);
 			};
 			deleteAfterParent(L, P, Q);
 			cout << "\nDokter " << info(P) << " telah dihapus.\n";
-
 		};
 	};
+
 	NPFOUND:if (NPfound != false) {
-        cout << "\nData Dokter " << x << " tidak ditemukan.\n";
+    cout << "\nData Dokter " << x << " tidak ditemukan.\n";
 	};
 };

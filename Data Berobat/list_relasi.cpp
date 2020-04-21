@@ -1,27 +1,29 @@
+// include needed //
 #include "list_relasi.h"
 
 void createList(list_relasi &L) {
-    // membuat list relasi baru //
+    // create new list relation //
     first(L) = NULL;
 };
 
 address_relasi alokasi(address_child C) {
-    // alokasi relasi //
+    // allocate list relation //
     address_relasi P = new elmlist_relasi;
 
     info(P) = C;
     next(P) = NULL;
+
     return P;
 };
 
 void insertFirst(list_relasi &L, address_relasi P) {
-    // insert first relasi //
+    // insert first list relation //
     next(P) = first(L);
     first(L) = P;
 };
 
 void printInfoRChild(list_relasi L) {
-    // print info relasi dengan pasien //
+    // print info relation list with child list //
     address_relasi P = first(L);
 
     while(P != NULL) {
@@ -32,7 +34,7 @@ void printInfoRChild(list_relasi L) {
 };
 
 void printInfoRFChild(list_relasi L) {
-    // print info relasi dengan pasien //
+    // print info child list with parent list //
     address_relasi P = first(L);
 
     cout << endl;
@@ -44,7 +46,7 @@ void printInfoRFChild(list_relasi L) {
 };
 
 void printBusy(list_relasi L) {
-    // print status dokter sibuk/tidak //
+    // print busy of parent list with child list//
     int i = 0;
     address_relasi P = first(L);
 
@@ -61,7 +63,7 @@ void printBusy(list_relasi L) {
 };
 
 address_relasi findElm(list_relasi L, address_child C) {
-    // mencari elemen relasi pasien //
+    // find the element of relation list //
     address_relasi P = first(L);
 
     while(P != NULL) {
@@ -75,7 +77,7 @@ address_relasi findElm(list_relasi L, address_child C) {
 };
 
 void insertAfter(address_relasi &Prec, address_relasi P) {
-    // insert after  relasi parent //
+    // insert after relation list //
     next(P) = next(Prec);
     next(Prec) = P;
 };

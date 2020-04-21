@@ -1,12 +1,11 @@
+// include needed //
 #include <iostream>
-
-
-using namespace std;
 #include "list_child.h"
 #include "list_parent.h"
+using namespace std;
 
 int main() {
-    // greeting identitas pembuat dan tujuan program //
+    // greeting author identity and purpose the program //
     cout << "-->> Program Relasi M-N (Dokter dan Pasien | Data Berobat) <<--\n\n\n";
     cout << "Program Name       : Data Berobat" << endl;
     cout << "Program Language   : C++" << endl;
@@ -17,13 +16,17 @@ int main() {
     system("TIMEOUT /T 7");
     system("CLS");
 
-    // kamus program //
+    // dictionary variable //
+    // all list //
     list_parent LP;
     list_child LC;
+
+    // all address //
     address_child C;
     address_parent P;
     address_relasi R;
 
+    // all string //
     string nDok;
     string nPas;
     string nRelDoc;
@@ -35,17 +38,20 @@ int main() {
     string delDoc;
     string delPas;
 
+    // character //
     char authGit;
 
+    // all integer //
     int choose = 1;
     int cntDok;
     int cntPas;
     int Rdpd;
 
-    // algoritma main //
+    // main algorithm started //
     createListParent(LP);
     createListChild(LC);
 
+    // menu of program //
     PROGMENU:while (choose != 0) {
         choose = 1;
         cout << "Menu Program\n1. -->> Tambah Dokter.\n2. -->> Tambah Pasien.\n3. -->> Tambah relasi Dokter dengan Pasien.\n4. -->> Hapus Dokter.\n5. -->> Hapus Pasien.\n6. -->> Tampilkan seluruh data Dokter dan Pasien.\n7. -->> Tampilkan Dokter yang menangani Pasien.\n8. -->> Tampilkan Pasien yang ditangani Dokter.\n9. -->> Tampilkan status Dokter.\n99.-->> Ganti nama Pasien.\n0. -->> Exit (Program)\nPilih -->> ";
@@ -56,6 +62,7 @@ int main() {
             goto PROGMENU;
         };
 
+        // greeting and exiting program //
         if (choose == 0) {
             system("CLS");
             cout << "-->> Greeting from Creators <<--";
@@ -77,19 +84,23 @@ int main() {
 
         cout << endl;
 
-        // pilih menu program //
+        // switch case of choosing menu //
         CHOOSEMENU:switch (choose) {
             case 1:
+                // adding doctor //
                 int i;
+
                 system("CLS");
                 cout << "-->> Program penambah data Dokter <<--";
                 cout << "\n-->> Input 0 to back <<--";
                 cout << "\n\nBerapa Dokter? (1-6): ";
                 cin >> cntDok;
+
                 if (cntDok == 0) {
                     system("CLS");
                     goto PROGMENU;
                 };
+
                 for (i = 1; i <= cntDok; i++) {
                     if (cntDok > 6) {
                         cout << "Terlalu banyak, mohon ulangi." << endl;
@@ -106,21 +117,26 @@ int main() {
                         insertFirstParent(LP, P);
                         };
                     };
+
                     system("CLS");
                     cout << "\n" << i - 1 << " Dokter telah ditambahkan.\n";
                     system("TIMEOUT /T 7");
                     system("CLS");
+
                 break;
             case 2:
+                // adding patient //
                 system("CLS");
                 cout << "-->> Program penambah data Pasien <<--";
                 cout << "\n-->> Input 0 to back <<--";
                 cout << "\n\nBerapa Pasien? (1-6): ";
                 cin >> cntPas;
+
                 if (cntPas == 0) {
                     system("CLS");
                     goto PROGMENU;
                 };
+
                 for (i = 1; i <= cntPas; i++) {
                     if (cntPas > 6) {
                         cout << "Terlalu banyak, mohon ulangi." << endl;
@@ -130,27 +146,32 @@ int main() {
                         goto CHOOSEMENU;
                     } else {
                         system("CLS");
-                    cout << "-->> Program penambah data Pasien <<--";
-                    cout << "\n\nInput nama Pasien " << i << ": ";
-                    cin >> nPas;
-                    C = alokasi_child("ps." + nPas);
-                    insertFirstChild(LC, C);
+                        cout << "-->> Program penambah data Pasien <<--";
+                        cout << "\n\nInput nama Pasien " << i << ": ";
+                        cin >> nPas;
+                        C = alokasi_child("ps." + nPas);
+                        insertFirstChild(LC, C);
                     };
                 };
+
                 system("CLS");
                 cout << "\n" << i - 1 << " Pasien telah ditambahkan.\n";
                 system("TIMEOUT /T 7");
                 system("CLS");
+
                 break;
             case 3:
+                // adding relation (reversing) //
                 system("CLS");
                 cout << "-->> Program penambah relasi Dokter dengan Pasien (dan sebaliknya) <<--";
                 cout << "\n\n1. Dokter - Pasien\n2. Pasien - Dokter\n0. Back\nPilih -->> ";
                 cin >> Rdpd;
+
                 if (Rdpd == 0) {
                     system("CLS");
                     goto PROGMENU;
                 };
+
                 if (Rdpd == 1) {
                     system("CLS");
                     cout << "-->> Program penambah relasi Dokter dengan Pasien <<--";
@@ -182,38 +203,49 @@ int main() {
                     choose = 3;
                     goto CHOOSEMENU;
                 };
+
                 system("TIMEOUT /T 7");
                 system("CLS");
+
                 break;
-            case 4: //KURANG DELETE DOKTER
+            case 4:
+                // delete doctor //
                 system("CLS");
                 cout << "-->> Program penghapus data Dokter <<--";
                 cout << "\n-->> Input 0 to back <<--";
                 cout << "\n\nInput nama Dokter: ";
                 cin >> delDoc;
+
                 if (delDoc == "0") {
                     system("CLS");
                     goto PROGMENU;
                 };
+
                 removeParent(LP, "dr." + delDoc);
                 system("TIMEOUT /T 7");
                 system("CLS");
+
                 break;
-            case 5: //KURANG DELETE PASIEN
+            case 5:
+                // delete patient //
                 system("CLS");
                 cout << "-->> Program penghapus data Pasien <<--";
                 cout << "\n-->> Input 0 to back <<--";
                 cout << "\n\nInput nama Pasien: ";
                 cin >> delPas;
+
                 if (delPas == "0") {
                     system("CLS");
                     goto PROGMENU;
                 };
+
                 removeChild(LC, "ps." + delPas);
                 system("TIMEOUT /T 7");
                 system("CLS");
+
                 break;
             case 6:
+                // view all data //
                 system("CLS");
                 cout << "-->> Program menampilkan data Dokter dan Pasien <<--";
                 cout << "\n\n------DOKTER------\n" << endl;
@@ -224,8 +256,10 @@ int main() {
                 cout << "\n------------------\n" << endl;
                 system("PAUSE");
                 system("CLS");
+
                 break;
             case 7:
+                // view relation of doctor to patient //
                 system("CLS");
                 cout << "-->> Program menampilkan relasi Dokter terhadap Pasien <<--";
                 cout << "\n\n------DOKTER------\n" << endl;
@@ -233,8 +267,10 @@ int main() {
                 cout << "\n------------------\n" << endl;
                 system("PAUSE");
                 system("CLS");
+
                 break;
             case 8:
+                // view relation of patient to doctor //
                 system("CLS");
                 cout << "-->> Program menampilkan relasi Pasien terhadap Dokter <<--";
                 cout << "\n\n------PASIEN------\n" << endl;
@@ -242,8 +278,10 @@ int main() {
                 cout << "\n------------------\n" << endl;
                 system("PAUSE");
                 system("CLS");
+
                 break;
             case 9:
+                // view busy status of doctor //
                 system("CLS");
                 cout << "-->> Program menampilkan Dokter paling sibuk <<--";
                 cout << "\n\n------DOKTER------\n" << endl;
@@ -251,27 +289,32 @@ int main() {
                 cout << "\n------------------\n" << endl;
                 system("PAUSE");
                 system("CLS");
+
                 break;
             case 99:
-                // ganti pasien (penambahan fungsionalitas) //
+                // swipe patient (additional) //
                 system("CLS");
                 cout << "-->> Program Ganti Pasien dengan nama Pasien baru! <<--";
                 cout << "\n-->> Input 0 to back <<--";
                 cout << "\n\nInput nama Pasien: ";
                 cin >> rPas;
+
                 if (rPas == "0") {
                     system("CLS");
                     goto PROGMENU;
                 };
+
                 C = findElmChild(LC, "ps." + rPas);
                 cout << "Input nama Pasien baru: ";
                 cin >> rPasNew;
                 info(C) = "ps." + rPasNew;
                 system("CLS");
                 cout << "Pasien " << rPas << "digantikan dengan Pasien " << rPasNew << ".\n\n";
+
                 break;
         };
     };
 
+    // program always be returned to 0 //
     return 0;
 };
