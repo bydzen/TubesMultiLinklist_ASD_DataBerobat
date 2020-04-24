@@ -48,8 +48,6 @@ void printInfoChild(list_child L) {
     };
 };
 
-
-
 address_child findElmChild(list_child L, infotype_child x) {
     // find the element of child list //
     address_child P = first(L);
@@ -74,14 +72,6 @@ void insertAfterChild(address_child &Prec, address_child P) {
 };
 
 void deleteFirstChild(list_child &L, address_child &P) {
-
-    // delete first pasien //
-    P = first(L);
-    first(L) = next(P);
-    P = next(P);
-    prev(P) = NULL;
-
-
     // delete first child list //
     if (first(L) != NULL && next(first(L)) != NULL) {
         P = first(L);
@@ -91,7 +81,6 @@ void deleteFirstChild(list_child &L, address_child &P) {
         P = first(L);
         first(L) = NULL;
     };
-
 };
 
 void deleteAfterChild(list_child &L, address_child &P, address_child Q) {
@@ -114,7 +103,9 @@ void removeChild(list_child &L, infotype_child x) {
     // remove child list from element //
     bool NCfound = false;
 
-    if (first(L) != NULL) {
+    if (first(L) == NULL) {
+		cout << "\nData Pasien Kosong." << endl;
+	} else {
 		address_child P = first(L);
 
 		while ((info(P) != x) && (next(P) != NULL)) {

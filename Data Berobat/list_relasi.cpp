@@ -45,7 +45,7 @@ void printInfoRFChild(list_relasi L) {
     cout << "        -> ";
 };
 
-void printBusy(list_relasi L) {
+void printBusy(list_relasi L, int &i_max) {
     // print busy of parent list with child list//
     int i = 0;
     address_relasi P = first(L);
@@ -55,11 +55,7 @@ void printBusy(list_relasi L) {
         i++;
     };
 
-    if (i == 0) {
-        cout << " (tidak sibuk)";
-    } else if (i > 0) {
-        cout << " (sedang sibuk dengan " << i << " Pasien)";
-    };
+    i_max = i;
 };
 
 address_relasi findElm(list_relasi L, address_child C) {

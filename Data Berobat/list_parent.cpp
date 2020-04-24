@@ -36,7 +36,6 @@ void insertFirstParent(list_parent &L, address_parent P) {
     };
 };
 
-
 void printInfoParent(list_parent L) {
     // print info parent list //
     address_parent P = first(L);
@@ -58,18 +57,19 @@ void printInfoCRel(list_parent L) {
 
     if(first(L) != NULL) {
         do {
-            printInfoRFChild(child(P));
-            if (info(P) != "") {
-                cout << "Dokter: " << info(P);
-            };
-            cout << endl;
+            if (first(child(P)) != NULL) {
+                printInfoRFChild(child(P));
+                if (info(P) != "") {
+                    cout << "Dokter: " << info(P);
+                };
+                cout << endl;
+            }
             P = next(P);
         } while((P) != first(L));
     } else {
         cout << "Tidak ada Pasien dan relasi.\n";
     };
 }
-
 
 void printInfoParentOnly(list_parent L) {
     // print info parent list //
@@ -90,14 +90,22 @@ void printInfoParentOnly(list_parent L) {
 void printBusyParent(list_parent L) {
     // print busy of parent list with list child relation //
     address_parent P = first(L);
+    int temp_max = 0;
+    int k_max;
+    address_parent Q;
 
     if(first(L) != NULL) {
         do {
-            cout << "Dokter: " << info(P);
-            printBusy(child(P));
-            printInfoRChild(child(P));
+            printBusy(child(P), k_max);
+            if (temp_max < k_max) {
+                temp_max = k_max;
+                Q = P;
+            };
             P = next(P);
         } while((P) != first(L));
+        cout << "Dokter: " << info(Q);
+        cout << "\nSibuk dengan: " << temp_max << " aksi.";
+        printInfoRChild(child(Q));
     } else {
         cout << "Tidak ada dokter.\n";
     };
@@ -145,7 +153,9 @@ void removeParent(list_parent &L, infotype_parent x) {
     // remove parent list from element //
     bool NPfound = false;
 
-    if (first(L) != NULL) {
+    if (first(L) == NULL) {
+		cout << "\nData Dokter kosong." << endl;
+	} else {
 		address_parent P = first(L);
 
 		while ((info(P) != x) && (next(P) != first(L))) {

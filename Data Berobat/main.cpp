@@ -203,6 +203,7 @@ int main() {
                     choose = 3;
                     goto CHOOSEMENU;
                 };
+
                 system("TIMEOUT /T 7");
                 system("CLS");
 
@@ -273,11 +274,7 @@ int main() {
                 system("CLS");
                 cout << "-->> Program menampilkan relasi Pasien terhadap Dokter <<--";
                 cout << "\n\n------PASIEN------\n" << endl;
-
-                //printInfoChildRelasi(LC);
-
                 printInfoCRel(LP);
-
                 cout << "\n------------------\n" << endl;
                 system("PAUSE");
                 system("CLS");
