@@ -16,6 +16,34 @@ address_relasi alokasi(address_child C) {
     return P;
 };
 
+int counterStopper(list_relasi &L) {
+    /** PENAMBAHAN */
+
+    address_relasi Q = first(L);
+    address_relasi R = first(L);
+    int p_max = 0;
+
+    while (Q != NULL) {
+        while (R != NULL) {
+            R = next(R);
+            if (info(info(Q)) == info(info(R))) {
+                p_max++;
+                if (p_max == 4) {
+                    goto STOPPER;
+                }
+                cout << p_max << endl;
+            };
+        };
+        Q = next(Q);
+        R = first(L);
+    };
+    STOPPER:system("PAUSE");
+
+    return p_max;
+
+    /** AKHIR */
+};
+
 void insertFirst(list_relasi &L, address_relasi P) {
     // insert first list relation //
     next(P) = first(L);
@@ -37,7 +65,6 @@ void printInfoRFChild(list_relasi L) {
     // print info child list with parent list //
     address_relasi P = first(L);
 
-    cout << endl;
     while(P != NULL) {
         cout << "Pasien: " << info(info(P)) << "\n";
         P = next(P);

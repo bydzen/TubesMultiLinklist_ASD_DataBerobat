@@ -284,7 +284,7 @@ int main() {
                 // view busy status of doctor //
                 system("CLS");
                 cout << "-->> Program menampilkan Dokter paling sibuk <<--";
-                cout << "\n\n------DOKTER------\n" << endl;
+                cout << "\n\n-------BUSY-------\n" << endl;
                 printBusyParent(LP);
                 cout << "\n------------------\n" << endl;
                 system("PAUSE");
