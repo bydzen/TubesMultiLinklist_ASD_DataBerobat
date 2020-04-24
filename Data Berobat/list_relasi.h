@@ -36,7 +36,7 @@ void deleteAfter(address_relasi Prec, address_relasi &P);
 void dealokasi(address_relasi &P);
 void printInfoRChild(list_relasi L);
 void printInfoRFChild(list_relasi L);
-void printBusy(list_relasi L);
+void printBusy(list_relasi L, int &i_max);
 
 // all function //
 address_relasi alokasi(address_child C);
