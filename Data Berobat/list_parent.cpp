@@ -59,10 +59,6 @@ void printInfoCRel(list_parent L) {
     if(first(L) != NULL) {
         do {
             printInfoRFChild(child(P));
-            /*char x = printInfoRFChildS(child(P));
-            if (x == "") {
-                    cout << "Tidak ada Pasien";
-            };*/
             if (info(P) != "") {
                 cout << "Dokter: " << info(P);
             };

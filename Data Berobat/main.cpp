@@ -163,21 +163,6 @@ int main() {
             case 3:
                 // adding relation (reversing) //
                 system("CLS");
-
-                cout << "-->> Program penambah relasi Dokter dengan Pasien <<--";
-                cout << "\n\nInput nama Dokter: ";
-                cin >> nRelDoc;
-                P = findElmParent(LP, "dr." + nRelDoc);
-                cout << "Input nama Pasien relasi: ";
-                cin >> nRelPas;
-                C = findElmChild(LC, "ps." + nRelPas);
-
-                R = alokasi(C);
-                insertFirst(child(P),R);
-
-                system("CLS");
-                cout << "\nDokter " << nRelDoc << " telah direlasikan dengan Pasien " << nRelPas << ".\n";
-
                 cout << "-->> Program penambah relasi Dokter dengan Pasien (dan sebaliknya) <<--";
                 cout << "\n\n1. Dokter - Pasien\n2. Pasien - Dokter\n0. Back\nPilih -->> ";
                 cin >> Rdpd;
