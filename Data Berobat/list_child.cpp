@@ -1,13 +1,14 @@
+// include needed //
 #include "list_child.h"
 
 void createListChild(list_child &L) {
-    // membuat list baru pasien //
+    // create new child list //
     first(L) = NULL;
     last(L) = NULL;
 };
 
 address_child alokasi_child(infotype_child x) {
-    // alokasi pasen //
+    // allocate child list //
     address_child P = new elmlist_child;
 
     info(P) = x;
@@ -18,7 +19,7 @@ address_child alokasi_child(infotype_child x) {
 };
 
 void insertFirstChild(list_child &L, address_child P) {
-    // insert first pasien //
+    // insert first child list //
     if(first(L) == NULL) {
         last(L) = P;
         first(L) = P;
@@ -30,38 +31,42 @@ void insertFirstChild(list_child &L, address_child P) {
 };
 
 void printInfoChild(list_child L) {
-    // print info child/pasien //
+    // print info child list //
     address_child P = first(L);
 
-    while(P != NULL) {
-        if(P == NULL){
-            cout<<"Data Kosong";
-
-        }else{
-             cout << "Pasien: " << info(P) << endl;
-            P = next(P);
-        }
+    if (first(L) == NULL) {
+        cout << "Tidak ada pasien.\n";
     };
 
+    while(P != NULL) {
+        if(P == NULL) {
+            cout <<" Data Kosong";
+        } else{
+            cout << "Pasien: " << info(P) << endl;
+            P = next(P);
+        };
+    };
 };
 
 
 
 address_child findElmChild(list_child L, infotype_child x) {
-    // mencari elemen pasien //
+    // find the element of child list //
     address_child P = first(L);
 
     while(P != NULL) {
         if(info(P) == x) {
+
             return P;
         };
         P = next(P);
     };
+
     return NULL;
 };
 
 void insertAfterChild(address_child &Prec, address_child P) {
-    // insert after pasien //
+    // insert after child list //
     prev(next(Prec)) = P;
     next(P) = next(Prec);
     prev(P) = Prec;
@@ -69,23 +74,36 @@ void insertAfterChild(address_child &Prec, address_child P) {
 };
 
 void deleteFirstChild(list_child &L, address_child &P) {
+
     // delete first pasien //
     P = first(L);
     first(L) = next(P);
     P = next(P);
     prev(P) = NULL;
 
+
+    // delete first child list //
+    if (first(L) != NULL && next(first(L)) != NULL) {
+        P = first(L);
+        first(L) = next(P);
+        prev(first(L)) = NULL;
+    } else if (next(first(L)) == NULL && prev(first(L)) == NULL) {
+        P = first(L);
+        first(L) = NULL;
+    };
+
 };
 
 void deleteAfterChild(list_child &L, address_child &P, address_child Q) {
-    // delete after pasien //
+    // delete after child list //
 	next(Q) = next(P);
 	next(P) = NULL;
 };
 
 void deleteLastChild(list_child &L, address_child &P) {
-    // delete last pasien //
+    // delete last child list //
 	address_child  Q = first(L);
+
 	while (next(Q) != P) {
 		Q = next(Q);
 	};
@@ -93,32 +111,41 @@ void deleteLastChild(list_child &L, address_child &P) {
 };
 
 void removeChild(list_child &L, infotype_child x) {
-    // delete pasien //
-    if (first(L) == NULL) {
-		cout << "\nData Pasien Kosong." << endl;
+    // remove child list from element //
+    bool NCfound = false;
 
-	} else {
+    if (first(L) != NULL) {
 		address_child P = first(L);
 
 		while ((info(P) != x) && (next(P) != NULL)) {
 			P = next(P);
 		};
 
+		if (next(P) == NULL && info(P) != x) {
+            NCfound = true;
+            goto NCFOUND;
+		};
+
 		if (P == first(L)) {
+            cout << "\nPasien " << info(P) << " telah dihapus.\n";
 			deleteFirstChild(L, P);
-			cout << "\nPasien " << info(P) << " telah dihapus.\n";
 		} else if (next(P) == NULL ) {
 			deleteLastChild(L, P);
 			cout << "\nPasien " << info(P) << " telah dihapus.\n";
-		}else {
+		} else {
 			address_child Q;
 			Q = first(L);
+
 			while (next(Q) != P) {
 				Q = next(Q);
 			};
+
 			deleteAfterChild(L, P, Q);
 			cout << "\nPasien " << info(P) << " telah dihapus.\n";
+		};
+	};
 
-		}
-	}
-}
+	NCFOUND:if (NCfound != false) {
+    cout << "\nData Pasien " << x << " tidak ditemukan.\n";
+	};
+};

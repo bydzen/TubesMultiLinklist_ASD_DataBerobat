@@ -10,7 +10,7 @@ Sultan Kautsar - *1303194010* - [Sultan Kautsar](https://github.com/svzax)<br>
 Bagas Alfito Prismawan - *1303193027* - [Bagas Mahier](https://github.com/BagasMahier12a)
 
 <p align="center">
-  <img weight="400px" height="400px" src="img/lottie2.gif">
+  <img weight="400px" height="400px" src="Data Berobat/img/lottie2.gif">
 </p>
 
 ## Getting Started
@@ -121,7 +121,7 @@ We use [GitHubDesktop](https://desktop.github.comg/) for versioning.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/svzax/TubesMultiLinklist_ASD_DataBerobat/blob/master/LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
