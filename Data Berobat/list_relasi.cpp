@@ -20,6 +20,8 @@ void insertFirst(list_relasi &L, address_relasi P) {
     // insert first list relation //
     next(P) = first(L);
     first(L) = P;
+    int i = 0;
+    i++;
 };
 
 void printInfoRChild(list_relasi L) {
@@ -54,7 +56,6 @@ void printBusy(list_relasi L) {
         P = next(P);
         i++;
     };
-
     if (i == 0) {
         cout << " (tidak sibuk)";
     } else if (i > 0) {
@@ -81,3 +82,15 @@ void insertAfter(address_relasi &Prec, address_relasi P) {
     next(P) = next(Prec);
     next(Prec) = P;
 };
+
+int maxPasien(list_relasi L) {
+    // print busy of parent list with child list//
+    int i = 0;
+    address_relasi P = first(L);
+
+    while(P != NULL) {
+        P = next(P);
+        i++;
+    };
+    return i;
+}

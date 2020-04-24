@@ -58,8 +58,9 @@ void printInfoCRel(list_parent L) {
 
     if(first(L) != NULL) {
         do {
-            printInfoRFChild(child(P));
+
             if (info(P) != "") {
+                     printInfoRFChild(child(P));
                 cout << "Dokter: " << info(P);
             };
             cout << endl;
@@ -179,3 +180,5 @@ void removeParent(list_parent &L, infotype_parent x) {
     cout << "\nData Dokter " << x << " tidak ditemukan.\n";
 	};
 };
+
+
