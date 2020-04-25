@@ -2,7 +2,7 @@
 #include <iostream>
 #include "list_child.h"
 #include "list_parent.h"
-#include "list_relasi.h"
+#define MAX_LOAD 1000
 using namespace std;
 
 int main() {
@@ -21,7 +21,6 @@ int main() {
     // all list //
     list_parent LP;
     list_child LC;
-    list_relasi L;
 
     // all address //
     address_child C;
@@ -39,6 +38,7 @@ int main() {
     string rPasNew;
     string delDoc;
     string delPas;
+
     // character //
     char authGit;
 
@@ -47,14 +47,19 @@ int main() {
     int cntDok;
     int cntPas;
     int Rdpd;
+    int stp = 0;
+    int cStp;
+    int mStp = 0;
+
+    // array //
+    string stopDok [MAX_LOAD];
 
     // main algorithm started //
     createListParent(LP);
     createListChild(LC);
 
     // menu of program //
-    PROGMENU:while (choose != 0) {
-        choose = 1;
+    PROGMENU:while (true) {
         cout << "Menu Program\n1. -->> Tambah Dokter.\n2. -->> Tambah Pasien.\n3. -->> Tambah relasi Dokter dengan Pasien.\n4. -->> Hapus Dokter.\n5. -->> Hapus Pasien.\n6. -->> Tampilkan seluruh data Dokter dan Pasien.\n7. -->> Tampilkan Dokter yang menangani Pasien.\n8. -->> Tampilkan Pasien yang ditangani Dokter.\n9. -->> Tampilkan status Dokter.\n99.-->> Ganti nama Pasien.\n0. -->> Exit (Program)\nPilih -->> ";
         cin >> choose;
         if (choose != 1 && choose != 2 && choose != 3 && choose != 4 && choose != 5 && choose != 6 && choose != 7 && choose != 8 && choose != 9 && choose != 99 && choose != 0) {
@@ -161,7 +166,7 @@ int main() {
                 system("CLS");
 
                 break;
-            case 3:
+            CASETHREE:case 3:
                 // adding relation (reversing) //
                 system("CLS");
                 cout << "-->> Program penambah relasi Dokter dengan Pasien (dan sebaliknya) <<--";
@@ -181,6 +186,24 @@ int main() {
                     P = findElmParent(LP, "dr." + nRelDoc);
                     cout << "Input nama Pasien relasi: ";
                     cin >> nRelPas;
+                    stopDok[stp] = nRelPas;
+                    stp++;
+                    cStp = 0;
+                    FINDAGAIN1:while (cStp <= stp) {
+                        if (stopDok[cStp] == nRelPas) {
+                            mStp++;
+                            if (mStp > 5) {
+                                system("CLS");
+                                cout << "\nPasien: ps." << nRelPas << " sudah terlalu banyak relasi\n";
+                                mStp = 0;
+                                system("TIMEOUT /T 7");
+                                system("CLS");
+                                goto CASETHREE;
+                            };
+                        };
+                        cStp++;
+                        goto FINDAGAIN1;
+                    };
                     C = findElmChild(LC, "ps." + nRelPas);
                     R = alokasi(C);
                     insertFirst(child(P),R);
@@ -191,16 +214,32 @@ int main() {
                     cout << "-->> Program penambah relasi Pasien dengan Dokter <<--";
                     cout << "\n\nInput nama Pasien: ";
                     cin >> nRelPas;
+                    stopDok[stp] = nRelPas;
+                    stp++;
+                    cStp = 0;
+                    FINDAGAIN2:while (cStp <= stp) {
+                        if (stopDok[cStp] == nRelPas) {
+                            mStp++;
+                            if (mStp > 3) {
+                                system("CLS");
+                                cout << "\nPasien: ps." << nRelPas << " sudah terlalu banyak relasi\n";
+                                mStp = 0;
+                                system("TIMEOUT /T 7");
+                                system("CLS");
+                                goto CASETHREE;
+                            };
+                        };
+                        cStp++;
+                        goto FINDAGAIN2;
+                    };
                     C = findElmChild(LC, "ps." + nRelPas);
-
-                        cout << "Input nama Dokter relasi: ";
-                        cin >> nRelDoc;
-                        P = findElmParent(LP, "dr." + nRelDoc);
-                        R = alokasi(C);
-                        insertFirst(child(P),R);
-                        system("CLS");
-                        cout << "\nPasien " << nRelPas << " telah direlasikan dengan Dokter " << nRelDoc << ".\n";
-
+                    cout << "Input nama Dokter relasi: ";
+                    cin >> nRelDoc;
+                    P = findElmParent(LP, "dr." + nRelDoc);
+                    R = alokasi(C);
+                    insertFirst(child(P),R);
+                    system("CLS");
+                    cout << "\nPasien " << nRelPas << " telah direlasikan dengan Dokter " << nRelDoc << ".\n";
                 } else {
                     system("CLS");
                     choose = 3;
