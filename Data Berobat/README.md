@@ -88,12 +88,12 @@ user@debian$ sudo gcc
 - [x] Menampilkan data keseluruhan pasien beserta data dokternya. ```(no error)``` +say empty when no elment.
 - [x] Menampilkan data pasien yang ditangani dokter tertentu. ```(no error)``` +helpful interface!.
 - [x] Menampilkan data dokter yang menangani seorang pasien tertentu. ```(no error)``` +helpful interface!
-- [x] Menampilkan data dokter yang tidak sibuk dan yang paling sibuk. ```(not completed)``` +shows doctor busy & count patient.
+- [x] Menampilkan data dokter yang tidak sibuk dan yang paling sibuk. ```(no error)``` +shows doctor busy(latest).
 - [x] Mengubah nama dari salah satu data pasien ```(no error)``` +correcting when patient is leaving instantly.
 
 Other requirements:
 
-- [ ] Pasien tidak boleh relasi > 5 dokter ```(not completed)``` +break in include (maybe in relation.h).
+- [ ] Pasien tidak boleh relasi > 5 dokter ```(not completed)``` +in developement.
 
 ## Built With
 
