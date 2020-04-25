@@ -2,6 +2,7 @@
 #include <iostream>
 #include "list_child.h"
 #include "list_parent.h"
+#include "list_relasi.h"
 #define MAX_LOAD 1000
 using namespace std;
 

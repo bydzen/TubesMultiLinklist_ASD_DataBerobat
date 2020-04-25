@@ -103,12 +103,17 @@ void printBusyParent(list_parent L) {
             };
             P = next(P);
         } while((P) != first(L));
+        if (temp_max == 0) {
+            cout << "Tidak ada dokter yang sibuk.\n";
+            goto ENDBUSY;
+        }
         cout << "Dokter: " << info(Q);
         cout << "\nSibuk dengan: " << temp_max << " aksi.";
         printInfoRChild(child(Q));
     } else {
         cout << "Tidak ada dokter.\n";
     };
+    ENDBUSY:cout << "";
 };
 
 address_parent findElmParent(list_parent L, infotype_parent x) {
