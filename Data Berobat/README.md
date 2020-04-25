@@ -93,7 +93,7 @@ user@debian$ sudo gcc
 
 Other requirements:
 
-- [ ] Pasien tidak boleh relasi > 5 dokter ```(not completed)``` +in developement.
+- [x] Pasien tidak boleh relasi > 5 dokter ```(no error)``` +reverse no error.
 
 ## Built With
 
