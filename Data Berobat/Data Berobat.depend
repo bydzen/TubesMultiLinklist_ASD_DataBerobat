@@ -138,3 +138,24 @@
 	"list_child.h"
 	"list_parent.h"
 
+1587716978 source:c:\users\svnte\documents\temporary projects\+v20\data berobat\list_child.cpp
+	"list_child.h"
+
+1587446103 c:\users\svnte\documents\temporary projects\+v20\data berobat\list_child.h
+	<iostream>
+
+1587829393 source:c:\users\svnte\documents\temporary projects\+v20\data berobat\list_parent.cpp
+	"list_parent.h"
+
+1587446095 c:\users\svnte\documents\temporary projects\+v20\data berobat\list_parent.h
+	<iostream>
+	"list_relasi.h"
+
+1587827439 c:\users\svnte\documents\temporary projects\+v20\data berobat\list_relasi.h
+	<iostream>
+	"list_relasi.h"
+	"list_child.h"
+
+1587827593 source:c:\users\svnte\documents\temporary projects\+v20\data berobat\list_relasi.cpp
+	"list_relasi.h"
+
