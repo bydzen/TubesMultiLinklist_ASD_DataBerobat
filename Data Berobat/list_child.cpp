@@ -139,3 +139,4 @@ void removeChild(list_child &L, infotype_child x) {
     cout << "\nData Pasien " << x << " tidak ditemukan.\n";
 	};
 };
+

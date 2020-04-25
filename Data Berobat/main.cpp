@@ -2,6 +2,7 @@
 #include <iostream>
 #include "list_child.h"
 #include "list_parent.h"
+#include "list_relasi.h"
 using namespace std;
 
 int main() {
@@ -20,6 +21,7 @@ int main() {
     // all list //
     list_parent LP;
     list_child LC;
+    list_relasi L;
 
     // all address //
     address_child C;
@@ -37,7 +39,6 @@ int main() {
     string rPasNew;
     string delDoc;
     string delPas;
-
     // character //
     char authGit;
 
@@ -191,13 +192,15 @@ int main() {
                     cout << "\n\nInput nama Pasien: ";
                     cin >> nRelPas;
                     C = findElmChild(LC, "ps." + nRelPas);
-                    cout << "Input nama Dokter relasi: ";
-                    cin >> nRelDoc;
-                    P = findElmParent(LP, "dr." + nRelDoc);
-                    R = alokasi(C);
-                    insertFirst(child(P),R);
-                    system("CLS");
-                    cout << "\nPasien " << nRelPas << " telah direlasikan dengan Dokter " << nRelDoc << ".\n";
+
+                        cout << "Input nama Dokter relasi: ";
+                        cin >> nRelDoc;
+                        P = findElmParent(LP, "dr." + nRelDoc);
+                        R = alokasi(C);
+                        insertFirst(child(P),R);
+                        system("CLS");
+                        cout << "\nPasien " << nRelPas << " telah direlasikan dengan Dokter " << nRelDoc << ".\n";
+
                 } else {
                     system("CLS");
                     choose = 3;
