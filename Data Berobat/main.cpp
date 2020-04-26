@@ -39,20 +39,12 @@ int main() {
     string rPasNew;
     string delDoc;
     string delPas;
-<<<<<<< HEAD
-    int k_max;
 
-    int maksimum;
-
-    maksimum = 5;
-=======
-
->>>>>>> 284fac59e3dafef17b3fbf1b129b1cdfbae15db7
     // character //
     char authGit;
 
     // all integer //
-    int choose = 1;
+    int choose = -1;
     int cntDok;
     int cntPas;
     int Rdpd;
@@ -74,10 +66,19 @@ int main() {
     // menu of program //
     PROGMENU:while (true) {
         cout << "Menu Program\n1. -->> Tambah Dokter.\n2. -->> Tambah Pasien.\n3. -->> Tambah relasi Dokter dengan Pasien.\n4. -->> Hapus Dokter.\n5. -->> Hapus Pasien.\n6. -->> Tampilkan seluruh data Dokter dan Pasien.\n7. -->> Tampilkan Dokter yang menangani Pasien.\n8. -->> Tampilkan Pasien yang ditangani Dokter.\n9. -->> Tampilkan status Dokter.\n99.-->> Ganti nama Pasien.\n0. -->> Exit (Program)\nPilih -->> ";
-        cin >> choose;
+
+        if (!(cin >> choose)) {
+            system("CLS");
+            cin.clear();
+            cin.ignore(MAX_LOAD, '\n');
+            choose = 0;
+            goto PROGMENU;
+        };
+
+        cin.ignore(MAX_LOAD, '\n');
+
         if (choose != 1 && choose != 2 && choose != 3 && choose != 4 && choose != 5 && choose != 6 && choose != 7 && choose != 8 && choose != 9 && choose != 99 && choose != 0) {
             system("CLS");
-            choose = 1;
             goto PROGMENU;
         };
 
@@ -110,10 +111,16 @@ int main() {
                 int i;
 
                 system("CLS");
-                cout << "-->> Program penambah data Dokter <<--";
+                ADDDOK:cout << "-->> Program penambah data Dokter <<--";
                 cout << "\n-->> Input 0 to back <<--";
                 cout << "\n\nBerapa Dokter? (1-6): ";
-                cin >> cntDok;
+
+                if (!(cin >> cntDok)) {
+                    system("CLS");
+                    cin.clear();
+                    cin.ignore(MAX_LOAD, '\n');
+                    goto ADDDOK;
+                };
 
                 if (cntDok == 0) {
                     system("CLS");
@@ -121,21 +128,21 @@ int main() {
                 };
 
                 for (i = 1; i <= cntDok; i++) {
-                    while (cntDok > 6 || cntDok != CHAR_BIT) {
+                    if (cntDok > 6) {
                         cout << "Terlalu banyak, mohon ulangi." << endl;
                         system("TIMEOUT /T 4");
                         system("CLS");
-                      //  choose = 1;
+                        choose = 1;
                         goto CHOOSEMENU;
-
-                    }
+                    } else {
                         system("CLS");
                         cout << "-->> Program penambah data Dokter <<--";
+                        cin.ignore(MAX_LOAD, '\n');
                         cout << "\n\nInput nama Dokter " << i << ": ";
                         cin >> nDok;
                         P = alokasi_parent("dr." + nDok);
                         insertFirstParent(LP, P);
-
+                        };
                     };
 
                     system("CLS");
@@ -147,10 +154,16 @@ int main() {
             case 2:
                 // adding patient //
                 system("CLS");
-                cout << "-->> Program penambah data Pasien <<--";
+                ADDPAS:cout << "-->> Program penambah data Pasien <<--";
                 cout << "\n-->> Input 0 to back <<--";
                 cout << "\n\nBerapa Pasien? (1-6): ";
-                cin >> cntPas;
+
+                if (!(cin >> cntPas)) {
+                    system("CLS");
+                    cin.clear();
+                    cin.ignore(MAX_LOAD, '\n');
+                    goto ADDPAS;
+                };
 
                 if (cntPas == 0) {
                     system("CLS");
@@ -167,6 +180,7 @@ int main() {
                     } else {
                         system("CLS");
                         cout << "-->> Program penambah data Pasien <<--";
+                        cin.ignore(MAX_LOAD, '\n');
                         cout << "\n\nInput nama Pasien " << i << ": ";
                         cin >> nPas;
                         C = alokasi_child("ps." + nPas);
@@ -185,7 +199,13 @@ int main() {
                 system("CLS");
                 cout << "-->> Program penambah relasi Dokter dengan Pasien (dan sebaliknya) <<--";
                 cout << "\n\n1. Dokter - Pasien\n2. Pasien - Dokter\n0. Back\nPilih -->> ";
-                cin >> Rdpd;
+
+                if (!(cin >> Rdpd)) {
+                    system("CLS");
+                    cin.clear();
+                    cin.ignore(MAX_LOAD, '\n');
+                    goto LOOPCASE3;
+                };
 
                 if (Rdpd == 0) {
                     system("CLS");
@@ -196,8 +216,10 @@ int main() {
                     system("CLS");
                     cout << "-->> Program penambah relasi Dokter dengan Pasien <<--";
                     cout << "\n\nInput nama Dokter: ";
+                    cin.ignore(MAX_LOAD, '\n');
                     cin >> nRelDoc;
                     P = findElmParent(LP, "dr." + nRelDoc);
+
                     if (P == NULL) {
                         system("CLS");
                         cout << "\nDokter dr." << nRelDoc << " tidak ditemukan.\n";
@@ -205,9 +227,12 @@ int main() {
                         system("CLS");
                         goto LOOPCASE3;
                     };
+
                     cout << "Input nama Pasien relasi: ";
+                    cin.ignore(MAX_LOAD, '\n');
                     cin >> nRelPas;
                     C = findElmChild(LC, "ps." + nRelPas);
+
                     if (C == NULL) {
                         system("CLS");
                         cout << "\nPasien ps." << nRelPas << " tidak ditemukan.\n";
@@ -215,14 +240,17 @@ int main() {
                         system("CLS");
                         goto LOOPCASE3;
                     };
+
                     stopDok[stp] = nRelPas;
                     stp++;
                     cStp = 0;
+
                     if (cekJump == 0) {
                         goto WHILE1;
                     } else {
                         goto IF1;
                     };
+
                     IF1:if (true) {
                         mCtpC = 0;
                         while (mCtpC <= MAX_LOAD) {
@@ -237,6 +265,7 @@ int main() {
                             };
                         };
                     };
+
                     WHILE1:while (cStp <= MAX_LOAD) {
                         if (stopDok[cStp] == nRelPas) {
                             mStp++;
@@ -262,24 +291,10 @@ int main() {
                     system("CLS");
                     cout << "-->> Program penambah relasi Pasien dengan Dokter <<--";
                     cout << "\n\nInput nama Pasien: ";
+                    cin.ignore(MAX_LOAD, '\n');
                     cin >> nRelPas;
                     C = findElmChild(LC, "ps." + nRelPas);
-<<<<<<< HEAD
 
-
-                    if(maxPasien(child(P), k_max) <= 5){
-                        cout << "Input nama Dokter relasi: ";
-                        cin >> nRelDoc;
-                        P = findElmParent(LP, "dr." + nRelDoc);
-                        R = alokasi(C);
-                        insertFirst(child(P),R);
-                        system("CLS");
-                        cout << "\nPasien " << nRelPas << " telah direlasikan dengan Dokter " << nRelDoc << ".\n";
-                    }else{
-                        cout<<"List Penuh";
-                    }
-
-=======
                     if (C == NULL) {
                         system("CLS");
                         cout << "\nPasien ps." << nRelPas << " tidak ditemukan.\n";
@@ -287,14 +302,17 @@ int main() {
                         system("CLS");
                         goto LOOPCASE3;
                     };
+
                     stopDok[stp] = nRelPas;
                     stp++;
                     cStp = 0;
+
                     if (cekJump == 0) {
                         goto WHILE2;
                     } else {
                         goto IF2;
                     };
+
                     IF2:if (true) {
                         mCtpC = 0;
                         while (mCtpC <= MAX_LOAD) {
@@ -309,6 +327,7 @@ int main() {
                             };
                         };
                     };
+
                     WHILE2:while (cStp <= MAX_LOAD) {
                         if (stopDok[cStp] == nRelPas) {
                             mStp++;
@@ -327,8 +346,10 @@ int main() {
                         };
                     };
                     cout << "Input nama Dokter relasi: ";
+                    cin.ignore(MAX_LOAD, '\n');
                     cin >> nRelDoc;
                     P = findElmParent(LP, "dr." + nRelDoc);
+
                     if (P == NULL) {
                         system("CLS");
                         cout << "\nDokter dr." << nRelDoc << " tidak ditemukan.\n";
@@ -340,7 +361,6 @@ int main() {
                     insertFirst(child(P),R);
                     system("CLS");
                     cout << "\nPasien " << nRelPas << " telah direlasikan dengan Dokter " << nRelDoc << ".\n";
->>>>>>> 284fac59e3dafef17b3fbf1b129b1cdfbae15db7
                 } else {
                     system("CLS");
                     choose = 3;
@@ -437,7 +457,7 @@ int main() {
             case 99:
                 // swipe patient (additional) //
                 system("CLS");
-                cout << "-->> Program Ganti Pasien dengan nama Pasien baru! <<--";
+                CHANGEPAS:cout << "-->> Program Ganti Pasien dengan nama Pasien baru! <<--";
                 cout << "\n-->> Input 0 to back <<--";
                 cout << "\n\nInput nama Pasien: ";
                 cin >> rPas;
@@ -448,11 +468,23 @@ int main() {
                 };
 
                 C = findElmChild(LC, "ps." + rPas);
+
+                if (C == NULL) {
+                    system("CLS");
+                    cout << "\nPasien ps." << rPas << " tidak ditemukan.\n";
+                    system("TIMEOUT /T 7");
+                    system("CLS");
+                    goto CHANGEPAS;
+                };
+
                 cout << "Input nama Pasien baru: ";
                 cin >> rPasNew;
                 info(C) = "ps." + rPasNew;
                 system("CLS");
-                cout << "Pasien " << rPas << "digantikan dengan Pasien " << rPasNew << ".\n\n";
+                cout << "\nPasien ps." << rPas << " digantikan dengan Pasien ps." << rPasNew << "\n";
+                system("TIMEOUT /T 7");
+                system("CLS");
+                goto PROGMENU;
 
                 break;
         };

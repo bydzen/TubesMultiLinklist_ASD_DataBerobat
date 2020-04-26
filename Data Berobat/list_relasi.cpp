@@ -20,10 +20,6 @@ void insertFirst(list_relasi &L, address_relasi P) {
     // insert first list relation //
     next(P) = first(L);
     first(L) = P;
-<<<<<<< HEAD
-
-=======
->>>>>>> 284fac59e3dafef17b3fbf1b129b1cdfbae15db7
 };
 
 void printInfoRChild(list_relasi L) {
@@ -40,15 +36,12 @@ void printInfoRChild(list_relasi L) {
 void printInfoRFChild(list_relasi L) {
     // print info child list with parent list //
     address_relasi P = first(L);
-    int i;
 
     while(P != NULL) {
         cout << "Pasien: " << info(info(P)) << "\n";
         P = next(P);
-
     };
     cout << "        -> ";
-
 };
 
 void printBusy(list_relasi L, int &i_max) {
@@ -60,21 +53,8 @@ void printBusy(list_relasi L, int &i_max) {
         P = next(P);
         i++;
     };
-<<<<<<< HEAD
-
-    if (i == 0) {
-        cout << " (tidak sibuk)";
-    } else if (i > 0) {
-        cout << " (sedang sibuk dengan " << i << " Pasien)";
-    };
-
 
     i_max = i;
-
-=======
-
-    i_max = i;
->>>>>>> 284fac59e3dafef17b3fbf1b129b1cdfbae15db7
 };
 
 address_relasi findElm(list_relasi L, address_child C) {
@@ -96,21 +76,3 @@ void insertAfter(address_relasi &Prec, address_relasi P) {
     next(P) = next(Prec);
     next(Prec) = P;
 };
-<<<<<<< HEAD
-
-int maxPasien(list_relasi L, int i_max) {
-    // print busy of parent list with child list//
-    int i = 0;
-    address_relasi P = first(L);
-
-    while(P != NULL) {
-        P = next(P);
-        i++;
-    };
-
-
-    i_max = i;
-
-};
-=======
->>>>>>> 284fac59e3dafef17b3fbf1b129b1cdfbae15db7
