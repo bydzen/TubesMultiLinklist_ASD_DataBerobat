@@ -3,6 +3,7 @@
 #include "list_child.h"
 #include "list_parent.h"
 #include "list_relasi.h"
+#define MAX_LOAD 1000
 using namespace std;
 
 int main() {
@@ -21,7 +22,6 @@ int main() {
     // all list //
     list_parent LP;
     list_child LC;
-    list_relasi L;
 
     // all address //
     address_child C;
@@ -39,11 +39,15 @@ int main() {
     string rPasNew;
     string delDoc;
     string delPas;
+<<<<<<< HEAD
     int k_max;
 
     int maksimum;
 
     maksimum = 5;
+=======
+
+>>>>>>> 284fac59e3dafef17b3fbf1b129b1cdfbae15db7
     // character //
     char authGit;
 
@@ -52,14 +56,23 @@ int main() {
     int cntDok;
     int cntPas;
     int Rdpd;
+    int stp = 0;
+    int cStp;
+    int mStp = 0;
+    int mCtp = 0;
+    int mCtpC;
+    int cekJump = 0;
+
+    // array //
+    string stopDok [MAX_LOAD];
+    string machDok [MAX_LOAD];
 
     // main algorithm started //
     createListParent(LP);
     createListChild(LC);
 
     // menu of program //
-    PROGMENU:while (choose != 0) {
-        choose = 1;
+    PROGMENU:while (true) {
         cout << "Menu Program\n1. -->> Tambah Dokter.\n2. -->> Tambah Pasien.\n3. -->> Tambah relasi Dokter dengan Pasien.\n4. -->> Hapus Dokter.\n5. -->> Hapus Pasien.\n6. -->> Tampilkan seluruh data Dokter dan Pasien.\n7. -->> Tampilkan Dokter yang menangani Pasien.\n8. -->> Tampilkan Pasien yang ditangani Dokter.\n9. -->> Tampilkan status Dokter.\n99.-->> Ganti nama Pasien.\n0. -->> Exit (Program)\nPilih -->> ";
         cin >> choose;
         if (choose != 1 && choose != 2 && choose != 3 && choose != 4 && choose != 5 && choose != 6 && choose != 7 && choose != 8 && choose != 9 && choose != 99 && choose != 0) {
@@ -167,7 +180,7 @@ int main() {
                 system("CLS");
 
                 break;
-            case 3:
+            LOOPCASE3:case 3:
                 // adding relation (reversing) //
                 system("CLS");
                 cout << "-->> Program penambah relasi Dokter dengan Pasien (dan sebaliknya) <<--";
@@ -185,9 +198,62 @@ int main() {
                     cout << "\n\nInput nama Dokter: ";
                     cin >> nRelDoc;
                     P = findElmParent(LP, "dr." + nRelDoc);
+                    if (P == NULL) {
+                        system("CLS");
+                        cout << "\nDokter dr." << nRelDoc << " tidak ditemukan.\n";
+                        system("TIMEOUT /T 7");
+                        system("CLS");
+                        goto LOOPCASE3;
+                    };
                     cout << "Input nama Pasien relasi: ";
                     cin >> nRelPas;
                     C = findElmChild(LC, "ps." + nRelPas);
+                    if (C == NULL) {
+                        system("CLS");
+                        cout << "\nPasien ps." << nRelPas << " tidak ditemukan.\n";
+                        system("TIMEOUT /T 7");
+                        system("CLS");
+                        goto LOOPCASE3;
+                    };
+                    stopDok[stp] = nRelPas;
+                    stp++;
+                    cStp = 0;
+                    if (cekJump == 0) {
+                        goto WHILE1;
+                    } else {
+                        goto IF1;
+                    };
+                    IF1:if (true) {
+                        mCtpC = 0;
+                        while (mCtpC <= MAX_LOAD) {
+                            if (machDok[mCtpC] == nRelPas) {
+                                system("CLS");
+                                cout << "\nTerlalu banyak relasi!\n";
+                                system("TIMEOUT /T 7");
+                                system("CLS");
+                                goto PROGMENU;
+                            } else {
+                                mCtpC++;
+                            };
+                        };
+                    };
+                    WHILE1:while (cStp <= MAX_LOAD) {
+                        if (stopDok[cStp] == nRelPas) {
+                            mStp++;
+                            cStp++;
+                            if (mStp > 15) {
+                                machDok[mCtp] = nRelPas;
+                                mCtp++;
+                                stp = 0;
+                                mStp = 0;
+                                cekJump = 1;
+                                nRelPas = "";
+                                goto IF1;
+                            };
+                        } else {
+                            cStp++;
+                        };
+                    };
                     R = alokasi(C);
                     insertFirst(child(P),R);
                     system("CLS");
@@ -198,6 +264,7 @@ int main() {
                     cout << "\n\nInput nama Pasien: ";
                     cin >> nRelPas;
                     C = findElmChild(LC, "ps." + nRelPas);
+<<<<<<< HEAD
 
 
                     if(maxPasien(child(P), k_max) <= 5){
@@ -212,6 +279,68 @@ int main() {
                         cout<<"List Penuh";
                     }
 
+=======
+                    if (C == NULL) {
+                        system("CLS");
+                        cout << "\nPasien ps." << nRelPas << " tidak ditemukan.\n";
+                        system("TIMEOUT /T 7");
+                        system("CLS");
+                        goto LOOPCASE3;
+                    };
+                    stopDok[stp] = nRelPas;
+                    stp++;
+                    cStp = 0;
+                    if (cekJump == 0) {
+                        goto WHILE2;
+                    } else {
+                        goto IF2;
+                    };
+                    IF2:if (true) {
+                        mCtpC = 0;
+                        while (mCtpC <= MAX_LOAD) {
+                            if (machDok[mCtpC] == nRelPas) {
+                                system("CLS");
+                                cout << "\nTerlalu banyak relasi!\n";
+                                system("TIMEOUT /T 7");
+                                system("CLS");
+                                goto PROGMENU;
+                            } else {
+                                mCtpC++;
+                            };
+                        };
+                    };
+                    WHILE2:while (cStp <= MAX_LOAD) {
+                        if (stopDok[cStp] == nRelPas) {
+                            mStp++;
+                            cStp++;
+                            if (mStp > 15) {
+                                machDok[mCtp] = nRelPas;
+                                mCtp++;
+                                stp = 0;
+                                mStp = 0;
+                                cekJump = 1;
+                                nRelPas = "";
+                                goto IF2;
+                            };
+                        } else {
+                            cStp++;
+                        };
+                    };
+                    cout << "Input nama Dokter relasi: ";
+                    cin >> nRelDoc;
+                    P = findElmParent(LP, "dr." + nRelDoc);
+                    if (P == NULL) {
+                        system("CLS");
+                        cout << "\nDokter dr." << nRelDoc << " tidak ditemukan.\n";
+                        system("TIMEOUT /T 7");
+                        system("CLS");
+                        goto LOOPCASE3;
+                    };
+                    R = alokasi(C);
+                    insertFirst(child(P),R);
+                    system("CLS");
+                    cout << "\nPasien " << nRelPas << " telah direlasikan dengan Dokter " << nRelDoc << ".\n";
+>>>>>>> 284fac59e3dafef17b3fbf1b129b1cdfbae15db7
                 } else {
                     system("CLS");
                     choose = 3;
@@ -298,7 +427,7 @@ int main() {
                 // view busy status of doctor //
                 system("CLS");
                 cout << "-->> Program menampilkan Dokter paling sibuk <<--";
-                cout << "\n\n------DOKTER------\n" << endl;
+                cout << "\n\n-------BUSY-------\n" << endl;
                 printBusyParent(LP);
                 cout << "\n------------------\n" << endl;
                 system("PAUSE");

@@ -57,12 +57,15 @@ void printInfoCRel(list_parent L) {
 
     if(first(L) != NULL) {
         do {
+<<<<<<< HEAD
 
             if (info(P) != "") {
                      printInfoRFChild(child(P));
                 cout << "Dokter: " << info(P);
             };
             cout << endl;
+=======
+>>>>>>> 284fac59e3dafef17b3fbf1b129b1cdfbae15db7
             if (first(child(P)) != NULL) {
                 printInfoRFChild(child(P));
                 if (info(P) != "") {
@@ -109,12 +112,17 @@ void printBusyParent(list_parent L) {
             };
             P = next(P);
         } while((P) != first(L));
+        if (temp_max == 0) {
+            cout << "Tidak ada dokter yang sibuk.\n";
+            goto ENDBUSY;
+        }
         cout << "Dokter: " << info(Q);
         cout << "\nSibuk dengan: " << temp_max << " aksi.";
         printInfoRChild(child(Q));
     } else {
         cout << "Tidak ada dokter.\n";
     };
+    ENDBUSY:cout << "";
 };
 
 address_parent findElmParent(list_parent L, infotype_parent x) {
@@ -195,5 +203,3 @@ void removeParent(list_parent &L, infotype_parent x) {
     cout << "\nData Dokter " << x << " tidak ditemukan.\n";
 	};
 };
-
-

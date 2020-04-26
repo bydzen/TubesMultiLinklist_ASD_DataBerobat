@@ -41,5 +41,9 @@ void printBusy(list_relasi L, int &i_max);
 // all function //
 address_relasi alokasi(address_child C);
 address_relasi findElm(list_relasi L, address_child C);
+<<<<<<< HEAD
 int maxPasien(list_relasi L, int i_max);
+=======
+
+>>>>>>> 284fac59e3dafef17b3fbf1b129b1cdfbae15db7
 #endif // LIST_RELASI_H_INCLUDED

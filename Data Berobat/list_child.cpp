@@ -54,7 +54,6 @@ address_child findElmChild(list_child L, infotype_child x) {
 
     while(P != NULL) {
         if(info(P) == x) {
-
             return P;
         };
         P = next(P);
@@ -140,4 +139,3 @@ void removeChild(list_child &L, infotype_child x) {
     cout << "\nData Pasien " << x << " tidak ditemukan.\n";
 	};
 };
-
