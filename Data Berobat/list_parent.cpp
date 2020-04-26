@@ -57,14 +57,12 @@ void printInfoCRel(list_parent L) {
 
     if(first(L) != NULL) {
         do {
-<<<<<<< HEAD
 
             if (info(P) != "") {
                      printInfoRFChild(child(P));
                 cout << "Dokter: " << info(P);
             };
             cout << endl;
-=======
             if (first(child(P)) != NULL) {
                 printInfoRFChild(child(P));
                 if (info(P) != "") {
@@ -72,7 +70,6 @@ void printInfoCRel(list_parent L) {
                 };
                 cout << endl;
             }
->>>>>>> 5fbee4d226fc5e1db297d2ff7c4a714d2d2b5710
             P = next(P);
         } while((P) != first(L));
     } else {

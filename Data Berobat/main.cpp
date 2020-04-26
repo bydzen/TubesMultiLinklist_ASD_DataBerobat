@@ -39,6 +39,11 @@ int main() {
     string rPasNew;
     string delDoc;
     string delPas;
+    int k_max;
+
+    int maksimum;
+
+    maksimum = 5;
     // character //
     char authGit;
 
@@ -103,20 +108,21 @@ int main() {
                 };
 
                 for (i = 1; i <= cntDok; i++) {
-                    if (cntDok > 6) {
+                    while (cntDok > 6 || cntDok != CHAR_BIT) {
                         cout << "Terlalu banyak, mohon ulangi." << endl;
                         system("TIMEOUT /T 4");
                         system("CLS");
-                        choose = 1;
+                      //  choose = 1;
                         goto CHOOSEMENU;
-                    } else {
+
+                    }
                         system("CLS");
                         cout << "-->> Program penambah data Dokter <<--";
                         cout << "\n\nInput nama Dokter " << i << ": ";
                         cin >> nDok;
                         P = alokasi_parent("dr." + nDok);
                         insertFirstParent(LP, P);
-                        };
+
                     };
 
                     system("CLS");
@@ -193,6 +199,8 @@ int main() {
                     cin >> nRelPas;
                     C = findElmChild(LC, "ps." + nRelPas);
 
+
+                    if(maxPasien(child(P), k_max) <= 5){
                         cout << "Input nama Dokter relasi: ";
                         cin >> nRelDoc;
                         P = findElmParent(LP, "dr." + nRelDoc);
@@ -200,6 +208,9 @@ int main() {
                         insertFirst(child(P),R);
                         system("CLS");
                         cout << "\nPasien " << nRelPas << " telah direlasikan dengan Dokter " << nRelDoc << ".\n";
+                    }else{
+                        cout<<"List Penuh";
+                    }
 
                 } else {
                     system("CLS");
