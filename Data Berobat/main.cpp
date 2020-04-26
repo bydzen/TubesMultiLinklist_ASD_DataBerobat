@@ -51,9 +51,13 @@ int main() {
     int stp = 0;
     int cStp;
     int mStp = 0;
+    int mCtp = 0;
+    int mCtpC;
+    int cekJump = 0;
 
     // array //
     string stopDok [MAX_LOAD];
+    string machDok [MAX_LOAD];
 
     // main algorithm started //
     createListParent(LP);
@@ -167,7 +171,7 @@ int main() {
                 system("CLS");
 
                 break;
-            CASETHREE:case 3:
+            LOOPCASE3:case 3:
                 // adding relation (reversing) //
                 system("CLS");
                 cout << "-->> Program penambah relasi Dokter dengan Pasien (dan sebaliknya) <<--";
@@ -185,27 +189,62 @@ int main() {
                     cout << "\n\nInput nama Dokter: ";
                     cin >> nRelDoc;
                     P = findElmParent(LP, "dr." + nRelDoc);
+                    if (P == NULL) {
+                        system("CLS");
+                        cout << "\nDokter dr." << nRelDoc << " tidak ditemukan.\n";
+                        system("TIMEOUT /T 7");
+                        system("CLS");
+                        goto LOOPCASE3;
+                    };
                     cout << "Input nama Pasien relasi: ";
                     cin >> nRelPas;
+                    C = findElmChild(LC, "ps." + nRelPas);
+                    if (C == NULL) {
+                        system("CLS");
+                        cout << "\nPasien ps." << nRelPas << " tidak ditemukan.\n";
+                        system("TIMEOUT /T 7");
+                        system("CLS");
+                        goto LOOPCASE3;
+                    };
                     stopDok[stp] = nRelPas;
                     stp++;
                     cStp = 0;
-                    FINDAGAIN1:while (cStp <= stp) {
-                        if (stopDok[cStp] == nRelPas) {
-                            mStp++;
-                            if (mStp > 5) {
+                    if (cekJump == 0) {
+                        goto WHILE1;
+                    } else {
+                        goto IF1;
+                    };
+                    IF1:if (true) {
+                        mCtpC = 0;
+                        while (mCtpC <= MAX_LOAD) {
+                            if (machDok[mCtpC] == nRelPas) {
                                 system("CLS");
-                                cout << "\nPasien: ps." << nRelPas << " sudah terlalu banyak relasi\n";
-                                mStp = 0;
+                                cout << "\nTerlalu banyak relasi!\n";
                                 system("TIMEOUT /T 7");
                                 system("CLS");
-                                goto CASETHREE;
+                                goto PROGMENU;
+                            } else {
+                                mCtpC++;
                             };
                         };
-                        cStp++;
-                        goto FINDAGAIN1;
                     };
-                    C = findElmChild(LC, "ps." + nRelPas);
+                    WHILE1:while (cStp <= MAX_LOAD) {
+                        if (stopDok[cStp] == nRelPas) {
+                            mStp++;
+                            cStp++;
+                            if (mStp > 15) {
+                                machDok[mCtp] = nRelPas;
+                                mCtp++;
+                                stp = 0;
+                                mStp = 0;
+                                cekJump = 1;
+                                nRelPas = "";
+                                goto IF1;
+                            };
+                        } else {
+                            cStp++;
+                        };
+                    };
                     R = alokasi(C);
                     insertFirst(child(P),R);
                     system("CLS");
@@ -215,28 +254,63 @@ int main() {
                     cout << "-->> Program penambah relasi Pasien dengan Dokter <<--";
                     cout << "\n\nInput nama Pasien: ";
                     cin >> nRelPas;
+                    C = findElmChild(LC, "ps." + nRelPas);
+                    if (C == NULL) {
+                        system("CLS");
+                        cout << "\nPasien ps." << nRelPas << " tidak ditemukan.\n";
+                        system("TIMEOUT /T 7");
+                        system("CLS");
+                        goto LOOPCASE3;
+                    };
                     stopDok[stp] = nRelPas;
                     stp++;
                     cStp = 0;
-                    FINDAGAIN2:while (cStp <= stp) {
-                        if (stopDok[cStp] == nRelPas) {
-                            mStp++;
-                            if (mStp > 3) {
+                    if (cekJump == 0) {
+                        goto WHILE2;
+                    } else {
+                        goto IF2;
+                    };
+                    IF2:if (true) {
+                        mCtpC = 0;
+                        while (mCtpC <= MAX_LOAD) {
+                            if (machDok[mCtpC] == nRelPas) {
                                 system("CLS");
-                                cout << "\nPasien: ps." << nRelPas << " sudah terlalu banyak relasi\n";
-                                mStp = 0;
+                                cout << "\nTerlalu banyak relasi!\n";
                                 system("TIMEOUT /T 7");
                                 system("CLS");
-                                goto CASETHREE;
+                                goto PROGMENU;
+                            } else {
+                                mCtpC++;
                             };
                         };
-                        cStp++;
-                        goto FINDAGAIN2;
                     };
-                    C = findElmChild(LC, "ps." + nRelPas);
+                    WHILE2:while (cStp <= MAX_LOAD) {
+                        if (stopDok[cStp] == nRelPas) {
+                            mStp++;
+                            cStp++;
+                            if (mStp > 15) {
+                                machDok[mCtp] = nRelPas;
+                                mCtp++;
+                                stp = 0;
+                                mStp = 0;
+                                cekJump = 1;
+                                nRelPas = "";
+                                goto IF2;
+                            };
+                        } else {
+                            cStp++;
+                        };
+                    };
                     cout << "Input nama Dokter relasi: ";
                     cin >> nRelDoc;
                     P = findElmParent(LP, "dr." + nRelDoc);
+                    if (P == NULL) {
+                        system("CLS");
+                        cout << "\nDokter dr." << nRelDoc << " tidak ditemukan.\n";
+                        system("TIMEOUT /T 7");
+                        system("CLS");
+                        goto LOOPCASE3;
+                    };
                     R = alokasi(C);
                     insertFirst(child(P),R);
                     system("CLS");
