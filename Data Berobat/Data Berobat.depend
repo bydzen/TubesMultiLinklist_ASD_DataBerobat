@@ -48,19 +48,25 @@
 
 1587186535 D
 
-<<<<<<< HEAD
-1587831980 source:e:\bagas\pendidikan\telkom university\struktur data\github tubes\tubesmultilinklist_asd_databerobat\data berobat\list_relasi.cpp
+1587890700 source:e:\bagas\pendidikan\telkom university\struktur data\github tubes\tubesmultilinklist_asd_databerobat\data berobat\list_relasi.cpp
 	"list_relasi.h"
 
-1587831813 e:\bagas\pendidikan\telkom university\struktur data\github tubes\tubesmultilinklist_asd_databerobat\data berobat\list_relasi.h
+1587890625 e:\bagas\pendidikan\telkom university\struktur data\github tubes\tubesmultilinklist_asd_databerobat\data berobat\list_relasi.h
 	<iostream>
-=======
-1587189698 source:e:\bagas\pendidikan\telkom university\struktur data\github tubes\tubesmultilinklist_asd_databerobat\data berobat\list_relasi.cpp
->>>>>>> 284fac59e3dafef17b3fbf1b129b1cdfbae15db7
 	"list_relasi.h"
 	"list_child.h"
 
-<<<<<<< HEAD
+1587831813 
+
+1587194617 fac59e3dafef17b3fbf1b129b1cdfbae15db7
+	"list_relasi.h"
+	"list_child.h"
+	"list_parent.h"
+	<iostream>
+	"list_child.h"
+	"list_parent.h"
+	"list_child.h"
+
 1587194617 ee4d226fc5e1db297d2ff7c4a714d2d2b5710
 	<iostream>
 	"list_relasi.h"
@@ -75,32 +81,18 @@
 1587717338 e:\bagas\pendidikan\telkom university\struktur data\github tubes\tubesmultilinklist_asd_databerobat\data berobat\list_child.h
 	<iostream>
 
-1587827868 source:e:\bagas\pendidikan\telkom university\struktur data\github tubes\tubesmultilinklist_asd_databerobat\data berobat\list_parent.cpp
-=======
-1587037744 e:\bagas\pendidikan\telkom university\struktur data\github tubes\tubesmultilinklist_asd_databerobat\data berobat\list_relasi.h
-	<iostream>
-	"list_relasi.h"
-	"list_child.h"
-
-1587189698 e:\bagas\pendidikan\telkom university\struktur data\github tubes\tubesmultilinklist_asd_databerobat\data berobat\list_child.h
-	<iostream>
-
-1587196417 source:e:\bagas\pendidikan\telkom university\struktur data\github tubes\tubesmultilinklist_asd_databerobat\data berobat\list_parent.cpp
->>>>>>> 284fac59e3dafef17b3fbf1b129b1cdfbae15db7
+1587890656 source:e:\bagas\pendidikan\telkom university\struktur data\github tubes\tubesmultilinklist_asd_databerobat\data berobat\list_parent.cpp
 	"list_parent.h"
 
 1587828828 e:\bagas\pendidikan\telkom university\struktur data\github tubes\tubesmultilinklist_asd_databerobat\data berobat\list_parent.h
 	<iostream>
 	"list_relasi.h"
 
-<<<<<<< HEAD
-1587837188 source:e:\bagas\pendidikan\telkom university\struktur data\github tubes\tubesmultilinklist_asd_databerobat\data berobat\main.cpp
-=======
-1587192500 source:e:\bagas\pendidikan\telkom university\struktur data\github tubes\tubesmultilinklist_asd_databerobat\data berobat\main.cpp
->>>>>>> 284fac59e3dafef17b3fbf1b129b1cdfbae15db7
+1587963614 source:e:\bagas\pendidikan\telkom university\struktur data\github tubes\tubesmultilinklist_asd_databerobat\data berobat\main.cpp
 	<iostream>
 	"list_child.h"
 	"list_parent.h"
+	"list_relasi.h"
 
 1587445490 source:c:\users\svnte\documents\temporary projects\tubes multilist data berobat\data berobat\tubesmultilinklist_asd_databerobat\data berobat\main.cpp
 	<iostream>
@@ -112,11 +104,7 @@
 	"list_child.h"
 	"list_parent.h"
 
-<<<<<<< HEAD
-1587717338 source:e:\bagas\pendidikan\telkom university\struktur data\github tubes\tubesmultilinklist_asd_databerobat\data berobat\list_child.cpp
-=======
-1587194617 source:e:\bagas\pendidikan\telkom university\struktur data\github tubes\tubesmultilinklist_asd_databerobat\data berobat\list_child.cpp
->>>>>>> 284fac59e3dafef17b3fbf1b129b1cdfbae15db7
+1587890408 source:e:\bagas\pendidikan\telkom university\struktur data\github tubes\tubesmultilinklist_asd_databerobat\data berobat\list_child.cpp
 	"list_child.h"
 
 1587186535 d.h"
