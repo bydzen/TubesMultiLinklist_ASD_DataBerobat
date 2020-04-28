@@ -61,7 +61,7 @@ void insertFirstChi(list_relasi& L, address_relasi P, string x, string y) {
     first(L) = P;
 
     system("CLS");
-    cout << "\nPasien " << x << " telah direlasikan dengan Dokter " << y << ".\n";
+    cout << "\nPasien " << y << " telah direlasikan dengan Dokter " << x << ".\n";
     system("TIMEOUT /T 7");
 
     if (info(P) != info(P)) {
@@ -72,26 +72,66 @@ void insertFirstChi(list_relasi& L, address_relasi P, string x, string y) {
     };
 };
 
+void printInfoZeroChild(list_relasi L, int& RC_max) {
+    // stop print child of no exiting data //
+    address_relasi P = first(L);
+    int i = 0;
+    int j = 0;
+
+    while (P != NULL) {
+        if (info(info(P)) == "") {
+            goto NEXIT;
+        };
+        j++;
+        if (i == -1) {
+        NEXIT:cout << "";
+            j = 0;
+        };
+        P = next(P);
+    };
+    RC_max = j;
+};
+
 void printInfoRChild(list_relasi L) {
     // print info relation list with child list //
     address_relasi P = first(L);
+    int i = 0;
 
     while (P != NULL) {
+        if (info(info(P)) == "") {
+            goto DONTPRINTRC;
+        };
         cout << "\n        -> Pasien: " << info(info(P));
+        if (i == -1) {
+        DONTPRINTRC:cout << "";
+        };
         P = next(P);
     };
     cout << endl;
 };
 
-void printInfoRFChild(list_relasi L) {
+void printInfoRFChild(list_relasi L, int& RF_max) {
     // print info child list with parent list //
     address_relasi P = first(L);
+    int i = 0;
+    int j = 0;
 
     while (P != NULL) {
+        if (info(info(P)) == "") {
+            goto DONTPRINTRF;
+        };
         cout << "Pasien: " << info(info(P)) << "\n";
+        j++;
+        if (i == -1) {
+        DONTPRINTRF:cout << "";
+            j = 0;
+        };
         P = next(P);
     };
-    cout << "        -> ";
+    if (j != 0) {
+        cout << "        -> ";
+    };
+    RF_max = j;
 };
 
 void printBusy(list_relasi L, int& i_max) {
@@ -100,8 +140,14 @@ void printBusy(list_relasi L, int& i_max) {
     address_relasi P = first(L);
 
     while (P != NULL) {
-        P = next(P);
+        if (info(info(P)) == "") {
+            goto TOZERO;
+        };
         i++;
+    TOZERO:if (i == -1) {
+        i = 0;
+        };
+        P = next(P);
     };
 
     i_max = i;

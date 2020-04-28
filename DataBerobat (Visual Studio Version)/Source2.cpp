@@ -40,16 +40,31 @@ void insertFirstParent(list_parent& L, address_parent P) {
 void printInfoParent(list_parent L) {
     // print info parent list //
     address_parent P = first(L);
+    int z;
 
     if (first(L) != NULL) {
         do {
+            if (info(P) == "") {
+                goto DONTPRINTRPAR;
+            };
+            printInfoZeroChild(child(P), z);
+            if (z == 0) {
+                goto NORPAR;
+            };
             cout << "Dokter: " << info(P);
             printInfoRChild(child(P));
-            P = next(P);
+            if (P != first(L)) {
+                cout << endl;
+            };
+        DONTPRINTRPAR:P = next(P);
         } while ((P) != first(L));
+        if (info(P) == "") {
+            goto NORPAR;
+        };
     }
     else {
-        cout << "Tidak ada Dokter dan relasi.\n";
+    NORPAR:cout << "Tidak ada Dokter dan relasi.\n";
+        first(L) = NULL;
     };
 };
 
@@ -57,11 +72,24 @@ void printInfoCRel(list_parent L) {
     // print info parent list with list child relation //
     address_parent P = first(L);
     int i = 0;
+    int z;
+
+    if (first(L) == NULL || first(child(P)) == NULL) {
+    NORC:cout << "Tidak ada Pasien dan relasi.\n";
+        first(L) = NULL;
+        goto EXCCREL;
+    }
 
     if (first(L) != NULL) {
         do {
             if (first(child(P)) != NULL) {
-                printInfoRFChild(child(P));
+                if (info(P) == "") {
+                    goto EXCCREL;
+                }
+                printInfoRFChild(child(P), z);
+                if (z == 0) {
+                    goto NORC;
+                }
                 if (info(P) != "") {
                     cout << "Dokter: " << info(P);
                     i++;
@@ -71,19 +99,21 @@ void printInfoCRel(list_parent L) {
                 };
                 cout << endl;
             }
+            if (P != first(L)) {
+                cout << endl;
+            }
             P = next(P);
-        } while ((P) != first(L));
-    }
-    else {
-        cout << "Tidak ada Pasien dan relasi.\n";
+        } while (P != first(L));
     };
 
     if (i == -1) {
     MAXDOC:
         cout << "\n\nAda Pasien yang telah mencapai limit dokter (5/5)!\nJika ingin menambah relasi, maka Dokter dan Pasien akan melepaskan relasi\ndan digantikan dengan relasi baru.\n";
         first(child(P)) = NULL;
-    };
-
+    }
+    else if (i == -9) {
+    EXCCREL: cout << "";
+    }
 };
 
 void printInfoParentOnly(list_parent L) {
@@ -97,9 +127,13 @@ void printInfoParentOnly(list_parent L) {
             };
             P = next(P);
         } while ((P) != first(L));
+        if (info(P) == "") {
+            goto NOPAR;
+        };
     }
     else {
-        cout << "Tidak ada Dokter.\n";
+    NOPAR:cout << "Tidak ada Dokter.\n";
+        first(L) = NULL;
     };
 };
 
@@ -109,6 +143,7 @@ void printBusyParent(list_parent L) {
     address_parent Q = NULL;
     int temp_max = 0;
     int k_max;
+    int z;
 
     if (first(L) != NULL) {
         do {
@@ -154,8 +189,8 @@ void deleteFirstParent(list_parent& L, address_parent& P) {
     P = first(L);
     first(L) = next(P);
     info(P) = "";
+    
 };
-
 
 void deleteAfterParent(list_parent& L, address_parent& P, address_parent Q) {
     // delete after parent list //
@@ -207,6 +242,7 @@ void removeParent(list_parent& L, infotype_parent x) {
             while (next(Q) != P) {
                 Q = next(Q);
             };
+
             deleteAfterParent(L, P, Q);
             cout << "\nDokter " << info(P) << " telah dihapus.\n";
         };
