@@ -10,7 +10,7 @@ Sultan Kautsar - *1303194010* - [Sultan Kautsar](https://github.com/svzax)<br>
 Bagas Alfito Prismawan - *1303193027* - [Bagas Mahier](https://github.com/BagasMahier12a)
 
 <p align="center">
-  <img weight="400px" height="400px" src="Data Berobat/img/lottie2.gif">
+  <img weight="400px" height="400px" src="https://github.com/svzax/TubesMultiLinklist_ASD_DataBerobat/blob/master/Data%20Berobat/img/lottie2.gif">
 </p>
 
 ## Getting Started
