@@ -1,11 +1,11 @@
-#### Data Berobat: File in Code Blocks.
-#### DataBerobat (Visual Studio Version): File in Visual Studio.
-
 # Data Treatment (ID: Algoritma dan Struktur Data)
 
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
 This project was created to fulfill a large assignment in an algorithm and data structure course. Where is our job to make medical data that is based on multiple lists. This project is carried out by two people to complete a program.
+
+- [x] Data Berobat: File in Code Blocks.
+- [x] DataBerobat (Visual Studio Version): File in Visual Studio.
 
 ## Developed By
 
