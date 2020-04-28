@@ -12,16 +12,24 @@
 			<Cursor1 position="0" topLine="0" />
 		</Cursor>
 	</File>
+
 	<File name="list_relasi.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+
+	<File name="list_relasi.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="1261" topLine="26" />
 		</Cursor>
 	</File>
+
 	<File name="list_parent.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+
+	<File name="list_child.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+
 		<Cursor>
 			<Cursor1 position="1324" topLine="180" />
 		</Cursor>
 	</File>
+
 	<File name="list_child.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="0" topLine="119" />
@@ -33,6 +41,19 @@
 		</Cursor>
 	</File>
 	<File name="list_parent.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+
+	<File name="list_parent.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="list_child.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="list_parent.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+
 		<Cursor>
 			<Cursor1 position="0" topLine="0" />
 		</Cursor>

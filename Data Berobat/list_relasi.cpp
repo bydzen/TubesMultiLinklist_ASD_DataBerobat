@@ -37,15 +37,12 @@ void printInfoRChild(list_relasi L) {
 void printInfoRFChild(list_relasi L) {
     // print info child list with parent list //
     address_relasi P = first(L);
-    int i;
 
     while(P != NULL) {
         cout << "Pasien: " << info(info(P)) << "\n";
         P = next(P);
-
     };
     cout << "        -> ";
-
 };
 
 void printBusy(list_relasi L, int &i_max) {
@@ -58,6 +55,7 @@ void printBusy(list_relasi L, int &i_max) {
         i++;
     };
 
+
     if (i == 0) {
         cout << " (tidak sibuk)";
     } else if (i > 0) {
@@ -66,8 +64,6 @@ void printBusy(list_relasi L, int &i_max) {
 
 
     i_max = i;
-
-
 
 };
 
@@ -90,6 +86,7 @@ void insertAfter(address_relasi &Prec, address_relasi P) {
     next(P) = next(Prec);
     next(Prec) = P;
 };
+
 
 
 int maxPasien(list_relasi L, int i_max) {

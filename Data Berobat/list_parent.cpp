@@ -54,19 +54,26 @@ void printInfoParent(list_parent L) {
 void printInfoCRel(list_parent L) {
     // print info parent list with list child relation //
     address_parent P = first(L);
+    int i = 0;
 
     if(first(L) != NULL) {
         do {
+
 
             if (info(P) != "") {
                      printInfoRFChild(child(P));
                 cout << "Dokter: " << info(P);
             };
             cout << endl;
+
             if (first(child(P)) != NULL) {
                 printInfoRFChild(child(P));
                 if (info(P) != "") {
                     cout << "Dokter: " << info(P);
+                    i++;
+                    if (i > 4) {
+                        goto MAXDOC;
+                    };
                 };
                 cout << endl;
             }
@@ -75,7 +82,14 @@ void printInfoCRel(list_parent L) {
     } else {
         cout << "Tidak ada Pasien dan relasi.\n";
     };
-}
+
+    if (i == -1) {
+        MAXDOC:
+            cout << "\n\nAda Pasien yang telah mencapai limit dokter (5/5)!\nJika ingin menambah relasi, maka Dokter dan Pasien akan melepaskan relasi\ndan digantikan dengan relasi baru.\n";
+            first(child(P)) = NULL;
+    };
+
+};
 
 void printInfoParentOnly(list_parent L) {
     // print info parent list //

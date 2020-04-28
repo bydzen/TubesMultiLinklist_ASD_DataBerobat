@@ -42,7 +42,7 @@ void printBusy(list_relasi L, int &i_max);
 address_relasi alokasi(address_child C);
 address_relasi findElm(list_relasi L, address_child C);
 
-int maxPasien(list_relasi L, int i_max);
 
+int maxPasien(list_relasi L, int i_max);
 
 #endif // LIST_RELASI_H_INCLUDED
