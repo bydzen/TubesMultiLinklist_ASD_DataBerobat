@@ -283,7 +283,7 @@ LOOPCASE3:case 3:
         goto CHOOSEMENU;
     };
 
-    system("CLS");
+    goto LOOPCASE3;
 
     break;
 case 4:
