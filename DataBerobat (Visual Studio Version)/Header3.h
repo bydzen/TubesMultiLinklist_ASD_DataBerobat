@@ -16,12 +16,12 @@ using namespace std;
 typedef struct elmlist_relasi *address_relasi;
 
 // component in parent struct //
-struct elmlist_relasi{
+struct elmlist_relasi {
     address_relasi next;
     address_child info;
 };
 
-struct list_relasi{
+struct list_relasi {
     address_relasi first;
 };
 
@@ -35,8 +35,9 @@ void deleteFirst(list_relasi &L, address_relasi &P);
 void deleteLast(list_relasi &L, address_relasi &P);
 void deleteAfter(address_relasi Prec, address_relasi &P);
 void dealokasi(address_relasi &P);
+void printInfoZeroChild(list_relasi L, int& RC_max);
 void printInfoRChild(list_relasi L);
-void printInfoRFChild(list_relasi L);
+void printInfoRFChild(list_relasi L, int& RF_max);
 void printBusy(list_relasi L, int &i_max);
 
 // all function //

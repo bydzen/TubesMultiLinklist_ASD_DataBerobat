@@ -38,6 +38,7 @@ int main() {
     string rPasNew;
     string delDoc;
     string delPas;
+    string yn;
 
     // character //
     char authGit;
@@ -97,7 +98,7 @@ PROGMENU:while (true) {
 
     // switch case of choosing menu //
 CHOOSEMENU:switch (choose) {
-case 1:
+LOOPCASE1:case 1:
     // adding doctor //
     int i;
 
@@ -142,8 +143,18 @@ ADDDOK:cout << "-->> Program penambah data Dokter <<--";
     system("TIMEOUT /T 7");
     system("CLS");
 
+    cout << "-->> Input 'n' or something to return main program <<--\n\nTambah Dokter lagi? (y/n): ";
+    cin >> yn;
+
+    if (yn == "y" || yn == "Y") {
+        cin.clear();
+        goto LOOPCASE1;
+    };
+
+    system("CLS");
+
     break;
-case 2:
+LOOPCASE2:case 2:
     // adding patient //
     system("CLS");
 ADDPAS:cout << "-->> Program penambah data Pasien <<--";
@@ -184,6 +195,16 @@ ADDPAS:cout << "-->> Program penambah data Pasien <<--";
     system("CLS");
     cout << "\n" << i - 1 << " Pasien telah ditambahkan.\n";
     system("TIMEOUT /T 7");
+    system("CLS");
+
+    cout << "-->> Input 'n' or something to return main program <<--\n\nTambah Pasien lagi? (y/n): ";
+    cin >> yn;
+
+    if (yn == "y" || yn == "Y") {
+        cin.clear();
+        goto LOOPCASE2;
+    };
+
     system("CLS");
 
     break;
@@ -286,11 +307,22 @@ LOOPCASE3:case 3:
     goto LOOPCASE3;
 
     break;
-case 4:
+LOOPCASE4:case 4:
     // delete doctor //
+    if (first(LP) == NULL) {
+        system("CLS");
+        cout << "\nTidak ada Dokter, Silahkan tambahkan terlebih dahulu!\n";
+        system("TIMEOUT /T 7");
+        system("CLS");
+        goto PROGMENU;
+    };
+
     system("CLS");
     cout << "-->> Program penghapus data Dokter <<--";
     cout << "\n-->> Input 0 to back <<--";
+    cout << "\n\n------DOKTER------\n" << endl;
+    printInfoParentOnly(LP);
+    cout << "\n------------------";
     cout << "\n\nInput nama Dokter: ";
     cin >> delDoc;
 
@@ -303,12 +335,42 @@ case 4:
     system("TIMEOUT /T 7");
     system("CLS");
 
+    if (info(first(LP)) == "" || first(LP) == NULL) {
+        system("CLS");
+        first(LP) = NULL;
+        cout << "\nTidak ada Dokter, Silahkan tambahkan terlebih dahulu!\n";
+        system("TIMEOUT /T 7");
+        system("CLS");
+        goto PROGMENU;
+    };
+
+    cout << "-->> Input 'n' or something to return main program <<--\n\nHapus Dokter lagi? (y/n): ";
+    cin >> yn;
+
+    if (yn == "y" || yn == "Y") {
+        cin.clear();
+        goto LOOPCASE4;
+    };
+
+    system("CLS");
+
     break;
-case 5:
+LOOPCASE5:case 5:
     // delete patient //
+    if (first(LC) == NULL) {
+        system("CLS");
+        cout << "\nTidak ada Pasien, Silahkan tambahkan terlebih dahulu!\n";
+        system("TIMEOUT /T 7");
+        system("CLS");
+        goto PROGMENU;
+    };
+
     system("CLS");
     cout << "-->> Program penghapus data Pasien <<--";
     cout << "\n-->> Input 0 to back <<--";
+    cout << "\n\n------PASIEN------\n" << endl;
+    printInfoChild(LC);
+    cout << "\n------------------";
     cout << "\n\nInput nama Pasien: ";
     cin >> delPas;
 
@@ -319,6 +381,24 @@ case 5:
 
     removeChild(LC, "ps." + delPas);
     system("TIMEOUT /T 7");
+    system("CLS");
+
+    if (first(LC) == NULL) {
+        system("CLS");
+        cout << "\nTidak ada Pasien, Silahkan tambahkan terlebih dahulu!\n";
+        system("TIMEOUT /T 7");
+        system("CLS");
+        goto PROGMENU;
+    };
+
+    cout << "-->> Input 'n' or something to return main program <<--\n\nHapus Dokter lagi? (y/n): ";
+    cin >> yn;
+
+    if (yn == "y" || yn == "Y") {
+        cin.clear();
+        goto LOOPCASE5;
+    };
+
     system("CLS");
 
     break;

@@ -74,19 +74,20 @@ void insertAfterChild(address_child& Prec, address_child P) {
 
 void deleteFirstChild(list_child& L, address_child& P) {
     // delete first child list //
-    if (first(L) != NULL && next(first(L)) != NULL) {
+    info(P) = "";
+    if (next(first(L)) != NULL) {
         P = first(L);
         first(L) = next(P);
-        prev(first(L)) = NULL;
+        prev(first(L)) == NULL;
     }
-    else if (next(first(L)) == NULL && prev(first(L)) == NULL) {
-        P = first(L);
+    else {
         first(L) = NULL;
     };
 };
 
 void deleteAfterChild(list_child& L, address_child& P, address_child Q) {
     // delete after child list //
+    info(P) = "";
     next(Q) = next(P);
     next(P) = NULL;
 };
@@ -98,6 +99,7 @@ void deleteLastChild(list_child& L, address_child& P) {
     while (next(Q) != P) {
         Q = next(Q);
     };
+    info(P) = "";
     next(Q) = NULL;
 };
 
