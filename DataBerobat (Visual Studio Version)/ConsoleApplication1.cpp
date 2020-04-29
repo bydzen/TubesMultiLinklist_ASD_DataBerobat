@@ -338,7 +338,7 @@ LOOPCASE4:
     cout << "\n\n------DOKTER------\n" << endl;
     printInfoParentOnly(LP);
     cout << "\n------------------";
-    cout << "\n\nInput nama Dokter: ";
+    cout << "\n\nHapus nama Dokter: ";
     cin >> delDoc;
 
     if (delDoc == "0") {
@@ -387,7 +387,7 @@ LOOPCASE5:
     cout << "\n\n------PASIEN------\n" << endl;
     printInfoChild(LC);
     cout << "\n------------------";
-    cout << "\n\nInput nama Pasien: ";
+    cout << "\n\nHapus nama Pasien: ";
     cin >> delPas;
 
     if (delPas == "0") {
