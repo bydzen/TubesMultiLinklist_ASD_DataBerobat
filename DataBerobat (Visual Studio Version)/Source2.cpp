@@ -18,10 +18,37 @@ address_parent alokasi_parent(infotype_parent x) {
     return P;
 };
 
-void insertFirstParent(list_parent& L, address_parent P) {
+void insertFirstParent(list_parent& L, address_parent P, int& nisf) {
     // insert first parent list //
     address_parent Q;
+    address_parent S = first(L);
+    int i = 0;
 
+    if (first(L) == NULL) {
+        goto INSERTF;
+    };
+
+    S = first(L);
+;   while (next(S) != first(L)) {
+        if (info(S) == info(P)) {
+            system("CLS");
+            cout << "\nDuplikasi terdeteksi, input ulang!\n";
+            system("TIMEOUT /T 7");
+            system("CLS");
+            goto NOINSERT;
+        };
+        S = next(S);
+    };
+
+    if (info(S) == info(P)) {
+        system("CLS");
+        cout << "\nDuplikasi terdeteksi, input ulang!\n";
+        system("TIMEOUT /T 7");
+        system("CLS");
+        goto NOINSERT;
+    }
+
+INSERTF:
     if (first(L) == NULL) {
         first(L) = P;
         next(P) = P;
@@ -34,6 +61,13 @@ void insertFirstParent(list_parent& L, address_parent P) {
         next(P) = first(L);
         next(Q) = P;
         first(L) = P;
+    };
+
+    nisf = 0;
+    if (i == -1) {
+    NOINSERT:
+        nisf = 1;
+        cout << "";
     };
 };
 
@@ -49,19 +83,20 @@ void printInfoParent(list_parent L) {
             };
             printInfoZeroChild(child(P), z);
             if (z == 0) {
-                goto NORPAR;
+                goto DONTPRINTRPAR;
             };
             cout << "Dokter: " << info(P);
             printInfoRChild(child(P));
-        DONTPRINTRPAR:P = next(P);
+        DONTPRINTRPAR:
+            P = next(P);
         } while ((P) != first(L));
         if (info(P) == "") {
             goto NORPAR;
         };
     }
     else {
-    NORPAR:cout << "Tidak ada Dokter dan relasi.\n";
-        first(L) = NULL;
+    NORPAR:
+        cout << "";
     };
 };
 
@@ -71,21 +106,15 @@ void printInfoCRel(list_parent L) {
     int i = 0;
     int z;
 
-    if (first(L) == NULL || first(child(P)) == NULL) {
-    NORC:cout << "Tidak ada Pasien dan relasi.\n";
-        first(L) = NULL;
-        goto EXCCREL;
-    }
-
     if (first(L) != NULL) {
         do {
             if (first(child(P)) != NULL) {
                 if (info(P) == "") {
-                    goto EXCCREL;
+                    goto NEXTEX;
                 }
                 printInfoRFChild(child(P), z);
                 if (z == 0) {
-                    goto NORC;
+                    goto NEXTEX;
                 }
                 if (info(P) != "") {
                     cout << "Dokter: " << info(P);
@@ -96,6 +125,7 @@ void printInfoCRel(list_parent L) {
                 };
                 cout << endl;
             }
+        NEXTEX:
             P = next(P);
         } while (P != first(L));
     };
@@ -104,9 +134,6 @@ void printInfoCRel(list_parent L) {
     MAXDOC:
         cout << "\n\nAda Pasien yang telah mencapai limit dokter (5/5)!\nJika ingin menambah relasi, maka Dokter dan Pasien akan melepaskan relasi\ndan digantikan dengan relasi baru.\n";
         first(child(P)) = NULL;
-    }
-    else if (i == -9) {
-    EXCCREL: cout << "";
     }
 };
 
@@ -126,7 +153,7 @@ void printInfoParentOnly(list_parent L) {
         };
     }
     else {
-    NOPAR:cout << "Tidak ada Dokter.\n";
+    NOPAR:
         first(L) = NULL;
     };
 };
@@ -137,20 +164,31 @@ void printBusyParent(list_parent L) {
     address_parent Q = NULL;
     int temp_max = 0;
     int k_max;
-    int z;
+
+    if (P == NULL) {
+        goto ENDBUSY;
+    };
+
+    if (first(child(P)) == NULL) {
+        goto ENDBUSY;
+    };
 
     if (first(L) != NULL) {
         do {
             printBusy(child(P), k_max);
+            if (k_max == 0) {
+                goto NEXTBUSY;
+            };
             if (temp_max < k_max) {
                 temp_max = k_max;
                 Q = P;
             };
+        NEXTBUSY:
             P = next(P);
         } while ((P) != first(L));
 
         if (temp_max == 0) {
-            NOBUSY:cout << "Tidak ada dokter yang sibuk.\n";
+        NOBUSY:
             goto ENDBUSY;
         }
         if (info(Q) == "") {
@@ -161,9 +199,10 @@ void printBusyParent(list_parent L) {
         printInfoRChild(child(Q));
     }
     else {
-        cout << "Tidak ada dokter.\n";
+        goto ENDBUSY;
     };
-ENDBUSY:cout << "";
+ENDBUSY:
+    cout << "";
 };
 
 address_parent findElmParent(list_parent L, infotype_parent x) {
@@ -208,10 +247,6 @@ void removeParent(list_parent& L, infotype_parent x) {
     // remove parent list from element //
     bool NPfound = false;
 
-    if (first(L) == NULL) {
-        cout << "\nData Dokter kosong." << endl;
-    }
-    else {
         address_parent P = first(L);
 
         while ((info(P) != x) && (next(P) != first(L))) {
@@ -228,8 +263,8 @@ void removeParent(list_parent& L, infotype_parent x) {
             deleteFirstParent(L, P);
         }
         else if (next(P) == NULL) {
-            deleteLastParent(L, P);
             cout << "\nDokter " << info(P) << " telah dihapus.\n";
+            deleteLastParent(L, P);
         }
         else {
             address_parent Q;
@@ -238,11 +273,9 @@ void removeParent(list_parent& L, infotype_parent x) {
             while (next(Q) != P) {
                 Q = next(Q);
             };
-
-            deleteAfterParent(L, P, Q);
             cout << "\nDokter " << info(P) << " telah dihapus.\n";
+            deleteAfterParent(L, P, Q);
         };
-    };
 
 NPFOUND:if (NPfound != false) {
     cout << "\nData Dokter " << x << " tidak ditemukan.\n";

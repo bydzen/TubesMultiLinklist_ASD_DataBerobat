@@ -84,7 +84,8 @@ void printInfoZeroChild(list_relasi L, int& RC_max) {
         };
         j++;
         if (i == -1) {
-        NEXIT:cout << "";
+        NEXIT:
+            cout << "";
             j = 0;
         };
         P = next(P);
@@ -103,7 +104,8 @@ void printInfoRChild(list_relasi L) {
         };
         cout << "\n        -> Pasien: " << info(info(P));
         if (i == -1) {
-        DONTPRINTRC:cout << "";
+        DONTPRINTRC:
+            cout << "";
         };
         P = next(P);
     };
@@ -123,8 +125,8 @@ void printInfoRFChild(list_relasi L, int& RF_max) {
         cout << "Pasien: " << info(info(P)) << "\n";
         j++;
         if (i == -1) {
-        DONTPRINTRF:cout << "";
-            j = 0;
+        DONTPRINTRF:
+            cout << "";
         };
         P = next(P);
     };
@@ -144,8 +146,9 @@ void printBusy(list_relasi L, int& i_max) {
             goto TOZERO;
         };
         i++;
-    TOZERO:if (i == -1) {
-        i = 0;
+        if (i == -1) {
+        TOZERO:
+            i = 0;
         };
         P = next(P);
     };

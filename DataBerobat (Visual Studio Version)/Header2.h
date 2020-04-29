@@ -29,7 +29,7 @@ struct list_parent {
 
 // all procedure //
 void createListParent(list_parent& L);
-void insertFirstParent(list_parent& L, address_parent P);
+void insertFirstParent(list_parent& L, address_parent P, int& nisf);
 void insertAfterParent(list_parent& L, address_parent Prec, address_parent P);
 void insertLastParent(list_parent& L, address_parent P);
 void deleteFirstParent(list_parent& L, address_parent& P);

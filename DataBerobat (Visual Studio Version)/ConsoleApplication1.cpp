@@ -48,13 +48,15 @@ int main() {
     int cntDok;
     int cntPas;
     int Rdpd;
+    int wq;
 
     // main algorithm started //
     createListParent(LP);
     createListChild(LC);
 
     // menu of program //
-PROGMENU:while (true) {
+PROGMENU:
+    while (true) {
     cout << "Menu Program\n1. -->> Tambah Dokter.\n2. -->> Tambah Pasien.\n3. -->> Tambah relasi Dokter dengan Pasien.\n4. -->> Hapus Dokter.\n5. -->> Hapus Pasien.\n6. -->> Tampilkan seluruh data Dokter dan Pasien.\n7. -->> Tampilkan Dokter yang menangani Pasien.\n8. -->> Tampilkan Pasien yang ditangani Dokter.\n9. -->> Tampilkan status Dokter.\n99.-->> Ganti nama Pasien.\n0. -->> Exit (Program)\nPilih -->> ";
 
     if (!(cin >> choose)) {
@@ -97,13 +99,16 @@ PROGMENU:while (true) {
     cout << endl;
 
     // switch case of choosing menu //
-CHOOSEMENU:switch (choose) {
-LOOPCASE1:case 1:
+CHOOSEMENU:
+    switch (choose) {
+    LOOPCASE1:
+    case 1:
     // adding doctor //
     int i;
 
     system("CLS");
-ADDDOK:cout << "-->> Program penambah data Dokter <<--";
+ADDDOK:
+    cout << "-->> Program penambah data Dokter <<--";
     cout << "\n-->> Input 0 to back <<--";
     cout << "\n\nBerapa Dokter? (1-6): ";
 
@@ -134,12 +139,16 @@ ADDDOK:cout << "-->> Program penambah data Dokter <<--";
             cout << "\n\nInput nama Dokter " << i << ": ";
             cin >> nDok;
             P = alokasi_parent("dr." + nDok);
-            insertFirstParent(LP, P);
+            insertFirstParent(LP, P, wq);
+            if (wq == 1) {
+                i = i - 1;
+            };
         };
     };
 
     system("CLS");
     cout << "\n" << i - 1 << " Dokter telah ditambahkan.\n";
+    wq = 0;
     system("TIMEOUT /T 7");
     system("CLS");
 
@@ -154,7 +163,8 @@ ADDDOK:cout << "-->> Program penambah data Dokter <<--";
     system("CLS");
 
     break;
-LOOPCASE2:case 2:
+LOOPCASE2:
+    case 2:
     // adding patient //
     system("CLS");
 ADDPAS:cout << "-->> Program penambah data Pasien <<--";
@@ -188,7 +198,10 @@ ADDPAS:cout << "-->> Program penambah data Pasien <<--";
             cout << "\n\nInput nama Pasien " << i << ": ";
             cin >> nPas;
             C = alokasi_child("ps." + nPas);
-            insertFirstChild(LC, C);
+            insertFirstChild(LC, C, wq);
+            if (wq == 1) {
+                i = i - 1;
+            };
         };
     };
 
@@ -208,7 +221,8 @@ ADDPAS:cout << "-->> Program penambah data Pasien <<--";
     system("CLS");
 
     break;
-LOOPCASE3:case 3:
+LOOPCASE3:
+    case 3:
     // adding relation (reversing) //
     if (first(LP) == NULL && first(LC) == NULL) {
         system("CLS");
@@ -307,7 +321,8 @@ LOOPCASE3:case 3:
     goto LOOPCASE3;
 
     break;
-LOOPCASE4:case 4:
+LOOPCASE4:
+    case 4:
     // delete doctor //
     if (first(LP) == NULL) {
         system("CLS");
@@ -355,7 +370,8 @@ LOOPCASE4:case 4:
     system("CLS");
 
     break;
-LOOPCASE5:case 5:
+LOOPCASE5:
+    case 5:
     // delete patient //
     if (first(LC) == NULL) {
         system("CLS");
@@ -452,7 +468,8 @@ case 9:
 case 99:
     // swipe patient (additional) //
     system("CLS");
-CHANGEPAS:cout << "-->> Program Ganti Pasien dengan nama Pasien baru! <<--";
+CHANGEPAS:
+    cout << "-->> Program Ganti Pasien dengan nama Pasien baru! <<--";
     cout << "\n-->> Input 0 to back <<--";
     cout << "\n\nInput nama Pasien: ";
     cin >> rPas;
