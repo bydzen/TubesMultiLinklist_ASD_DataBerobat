@@ -53,9 +53,6 @@ void printInfoParent(list_parent L) {
             };
             cout << "Dokter: " << info(P);
             printInfoRChild(child(P));
-            if (P != first(L)) {
-                cout << endl;
-            };
         DONTPRINTRPAR:P = next(P);
         } while ((P) != first(L));
         if (info(P) == "") {
@@ -97,9 +94,6 @@ void printInfoCRel(list_parent L) {
                         goto MAXDOC;
                     };
                 };
-                cout << endl;
-            }
-            if (P != first(L)) {
                 cout << endl;
             }
             P = next(P);
@@ -156,10 +150,12 @@ void printBusyParent(list_parent L) {
         } while ((P) != first(L));
 
         if (temp_max == 0) {
-            cout << "Tidak ada dokter yang sibuk.\n";
+            NOBUSY:cout << "Tidak ada dokter yang sibuk.\n";
             goto ENDBUSY;
         }
-
+        if (info(Q) == "") {
+            goto NOBUSY;
+        }
         cout << "Dokter: " << info(Q);
         cout << "\nSibuk dengan: " << temp_max << " aksi.";
         printInfoRChild(child(Q));
