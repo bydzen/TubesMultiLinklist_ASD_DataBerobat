@@ -15,27 +15,27 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ConsoleApplication1.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source1.cpp">
+    <ClCompile Include="list_child.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source2.cpp">
+    <ClCompile Include="list_parent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source3.cpp">
+    <ClCompile Include="list_relation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Header1.h">
+    <ClInclude Include="list_child.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Header2.h">
+    <ClInclude Include="list_parent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Header3.h">
+    <ClInclude Include="list_relation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -148,15 +148,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ConsoleApplication1.cpp" />
-    <ClCompile Include="Source1.cpp" />
-    <ClCompile Include="Source2.cpp" />
-    <ClCompile Include="Source3.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="list_child.cpp" />
+    <ClCompile Include="list_parent.cpp" />
+    <ClCompile Include="list_relation.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Header1.h" />
-    <ClInclude Include="Header2.h" />
-    <ClInclude Include="Header3.h" />
+    <ClInclude Include="list_child.h" />
+    <ClInclude Include="list_parent.h" />
+    <ClInclude Include="list_relation.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
