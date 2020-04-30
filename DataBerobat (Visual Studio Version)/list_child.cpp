@@ -1,6 +1,5 @@
 // include needed //
 #include "list_child.h"
-int maxRelPar = 0;
 
 void createListChild(list_child& L) {
     // create new child list //
@@ -93,9 +92,11 @@ void printInfoChildSHOW5(list_child L, int& maxChi) {
     while (P != NULL) {
         cout << "Pasien: " << info(P) << endl;
         i++;
+
         if (i >= 5) {
             goto STSHOWCHI;
         };
+
         P = next(P);
     };
 

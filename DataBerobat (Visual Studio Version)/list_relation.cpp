@@ -80,12 +80,6 @@ void printInfoZeroChild(list_relasi L, int& RC_max) {
     int i = 0;
     int j = 0;
 
-    if (first(L) == NULL || info(info(first(L))) == "") {
-        j = 99;
-        first(L) = NULL;
-        goto RCNN;
-    };
-
     while (P != NULL) {
         if (info(info(P)) == "") {
             goto NEXIT;

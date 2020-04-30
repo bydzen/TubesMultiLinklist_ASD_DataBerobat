@@ -27,6 +27,7 @@ int main() {
 
     // all address //
     address_child C;
+    address_child MAX;
     address_parent P;
     address_relasi R;
 
@@ -286,8 +287,7 @@ LOOPCASE3:
     
     if (maxRel == 5) {
         cout << "\n\nPerhatian!\n";
-        cout << "Ada Pasien yang telah mencapai limit relasi Dokter (5/5)!\nJika ingin menambah relasi, maka Dokter dan Pasien akan melepaskan relasi\ndan digantikan dengan relasi baru.";
-
+        cout << "Ada Pasien yang telah mencapai limit relasi Dokter (5/5)!";
     };
 
     cout << "\n\n1. Dokter - Pasien\n2. Pasien - Dokter\n0. Back\nPilih -->> ";
@@ -334,7 +334,7 @@ LOOPCASE3:
 
         system("CLS");
         cout << "-->> Program penambah relasi Dokter dengan Pasien <<--";
-        cout << "\n\nList data Pasien";
+        cout << "\n\nList data Pasien terbaru";
         cout << "\n\n------PASIEN------\n" << endl;
         printInfoChildSHOW5(LC, wq);
 
@@ -365,7 +365,7 @@ LOOPCASE3:
     else if (Rdpd == 2) {
         system("CLS");
         cout << "-->> Program penambah relasi Pasien dengan Dokter <<--";
-        cout << "\n\nList data Pasien";
+        cout << "\n\nList data Pasien terbaru";
         cout << "\n\n------PASIEN------\n" << endl;
         printInfoChildSHOW5(LC, wq);
 

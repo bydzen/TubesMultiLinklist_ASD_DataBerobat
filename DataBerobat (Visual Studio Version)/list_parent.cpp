@@ -75,7 +75,7 @@ INSERTF:
 void printInfoParent(list_parent L) {
     // print info parent list //
     address_parent P = first(L);
-    int z;
+    int z = 1;
 
     if (first(L) != NULL) {
         do {
@@ -86,7 +86,7 @@ void printInfoParent(list_parent L) {
 
                 printInfoZeroChild(child(P), z);
                 if (z == 99) {
-                    goto DONTPRINTRPAR;
+                    goto NORPAR;
                 };
 
                 printInfoZeroChild(child(P), z);
@@ -94,8 +94,10 @@ void printInfoParent(list_parent L) {
                     goto DONTPRINTRPAR;
                 };
 
-                cout << "Dokter: " << info(P);
-                printInfoRChild(child(P));
+                if (info(P) != "") {
+                    cout << "Dokter: " << info(P);
+                    printInfoRChild(child(P));
+                };
             };
 
         DONTPRINTRPAR:
@@ -107,6 +109,9 @@ void printInfoParent(list_parent L) {
         };
     }
     else {
+        cout << "";
+    };
+    if (z == -9) {
     NORPAR:
         cout << "";
     };
@@ -129,10 +134,6 @@ void printInfoCRel(list_parent L) {
                     goto NEXTEX;
                 };
 
-                if (z == 99) {
-                    goto MININE;
-                };
-
                 if (info(P) != "") {
                     cout << "Dokter: " << info(P);
                 };
@@ -148,7 +149,7 @@ void printInfoCRel(list_parent L) {
     if (z == -9) {
     MININE:
         cout << "";
-    }
+    };
 };
 
 void printInfoParentOnly(list_parent L) {
@@ -199,6 +200,7 @@ void printInfoParentOnlySHOW5(list_parent L, int& maxPar) {
                     goto STSHOWPAR;
                 };
             };
+
             P = next(P);
         } while ((P) != first(L));
 
