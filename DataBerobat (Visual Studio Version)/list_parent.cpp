@@ -85,11 +85,6 @@ void printInfoParent(list_parent L) {
                 };
 
                 printInfoZeroChild(child(P), z);
-                if (z == 99) {
-                    goto NORPAR;
-                };
-
-                printInfoZeroChild(child(P), z);
                 if (z == 0) {
                     goto DONTPRINTRPAR;
                 };
@@ -144,11 +139,6 @@ void printInfoCRel(list_parent L) {
         NEXTEX:
             P = next(P);
         } while (P != first(L));
-    };
-
-    if (z == -9) {
-    MININE:
-        cout << "";
     };
 };
 
@@ -242,10 +232,6 @@ void maxRelChildPar(list_parent L, int& fullRel) {
                     goto NEXTEX;
                 };
 
-                if (z == 99) {
-                    goto MININE;
-                };
-
                 if (info(P) != "") {
                     i++;
                     if (i > 4) {
@@ -266,11 +252,6 @@ void maxRelChildPar(list_parent L, int& fullRel) {
     MAXDOC:
         fullRel = 5;
     };
-
-    if (i == -9) {
-    MININE:
-        cout << "";
-    }
 };
 
 void printBusyParent(list_parent L) {
