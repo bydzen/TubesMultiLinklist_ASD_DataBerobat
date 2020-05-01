@@ -1,2 +1,10 @@
-﻿  main.cpp
-  ConsoleApplication1.vcxproj -> C:\Users\svnte\Documents\Temporary Projects\Tubes Multilist Data Berobat\Data Berobat\TubesMultiLinklist_ASD_DataBerobat\DataBerobat (Visual Studio Version)\Debug\ConsoleApplication1.exe
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(467,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (ConsoleApplication1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  main.cpp
+C:\Users\svnte\Documents\Temporary Projects\Tubes Multilist Data Berobat\Data Berobat\TubesMultiLinklist_ASD_DataBerobat\DataBerobat (Visual Studio Version)\main.cpp(30,19): warning C4101: 'MAX': unreferenced local variable
+  list_child.cpp
+  list_parent.cpp
+C:\Users\svnte\Documents\Temporary Projects\Tubes Multilist Data Berobat\Data Berobat\TubesMultiLinklist_ASD_DataBerobat\DataBerobat (Visual Studio Version)\list_parent.cpp(150,11): warning C4102: 'MININE': unreferenced label
+  list_relation.cpp
+C:\Users\svnte\Documents\Temporary Projects\Tubes Multilist Data Berobat\Data Berobat\TubesMultiLinklist_ASD_DataBerobat\DataBerobat (Visual Studio Version)\list_relation.cpp(98,5): warning C4102: 'RCNN': unreferenced label
+  Generating Code...
+  ConsoleApplication1.vcxproj -> C:\Users\svnte\Documents\Temporary Projects\Tubes Multilist Data Berobat\Data Berobat\TubesMultiLinklist_ASD_DataBerobat\DataBerobat (Visual Studio Version)\Debug\data_berobat.exe
