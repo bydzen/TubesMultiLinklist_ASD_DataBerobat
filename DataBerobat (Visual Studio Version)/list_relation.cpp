@@ -95,7 +95,6 @@ void printInfoZeroChild(list_relasi L, int& RC_max) {
         P = next(P);
     };
 
-RCNN:
     RC_max = j;
 };
 

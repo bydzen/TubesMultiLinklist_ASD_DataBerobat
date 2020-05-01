@@ -85,11 +85,6 @@ void printInfoParent(list_parent L) {
                 };
 
                 printInfoZeroChild(child(P), z);
-                if (z == 99) {
-                    goto NORPAR;
-                };
-
-                printInfoZeroChild(child(P), z);
                 if (z == 0) {
                     goto DONTPRINTRPAR;
                 };

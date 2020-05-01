@@ -181,3 +181,31 @@
 1587947752 c:\users\svnte\documents\temporary projects\+v20\data berobat\notfive.h
 	<iostream>
 
+1588311784 source:d:\basedata - sultan kautsar\2. sultan kautsar - documents\programming\c++\project tubes data berobat\data berobat\list_child.cpp
+	"list_child.h"
+
+1588311740 d:\basedata - sultan kautsar\2. sultan kautsar - documents\programming\c++\project tubes data berobat\data berobat\list_child.h
+	<iostream>
+
+1588311978 source:d:\basedata - sultan kautsar\2. sultan kautsar - documents\programming\c++\project tubes data berobat\data berobat\list_relasi.cpp
+	"list_relasi.h"
+
+1588311847 d:\basedata - sultan kautsar\2. sultan kautsar - documents\programming\c++\project tubes data berobat\data berobat\list_relasi.h
+	<iostream>
+	"list_relasi.h"
+	"list_child.h"
+
+1588314368 source:d:\basedata - sultan kautsar\2. sultan kautsar - documents\programming\c++\project tubes data berobat\data berobat\list_parent.cpp
+	"list_parent.h"
+
+1588311840 d:\basedata - sultan kautsar\2. sultan kautsar - documents\programming\c++\project tubes data berobat\data berobat\list_parent.h
+	<iostream>
+	"list_relasi.h"
+
+1588312219 source:d:\basedata - sultan kautsar\2. sultan kautsar - documents\programming\c++\project tubes data berobat\data berobat\main.cpp
+	<iostream>
+	<iomanip>
+	"list_child.h"
+	"list_parent.h"
+	"list_relasi.h"
+

@@ -27,7 +27,6 @@ int main() {
 
     // all address //
     address_child C;
-    address_child MAX;
     address_parent P;
     address_relasi R;
 
@@ -51,7 +50,6 @@ int main() {
     int cntPas;
     int Rdpd;
     int wq;
-    int maxRel;
 
     // main algorithm started //
     createListParent(LP);
@@ -279,17 +277,8 @@ LOOPCASE3:
         goto PROGMENU;
     }
 
-    // checking relation with patient max or not //
-    maxRelChildPar(LP, maxRel);
-
     system("CLS");
     cout << "-->> Program penambah relasi Dokter dengan Pasien (dan sebaliknya) <<--";
-    
-    if (maxRel == 5) {
-        cout << "\n\nPerhatian!\n";
-        cout << "Ada Pasien yang telah mencapai limit relasi Dokter (5/5)!";
-    };
-
     cout << "\n\n1. Dokter - Pasien\n2. Pasien - Dokter\n0. Back\nPilih -->> ";
 
     if (!(cin >> Rdpd)) {
