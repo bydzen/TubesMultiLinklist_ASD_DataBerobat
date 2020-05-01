@@ -40,6 +40,8 @@ int main() {
     string delDoc;
     string delPas;
     string yn;
+     string stopDok [MAX_LOAD];
+    string machDok [MAX_LOAD];
 
     // character //
     char authGit;
@@ -50,6 +52,12 @@ int main() {
     int cntPas;
     int Rdpd;
     int wq;
+    int stp = 0;
+    int cStp;
+    int mStp = 0;
+    int mCtp = 0;
+    int mCtpC;
+    int cekJump = 0;
 
     // main algorithm started //
     createListParent(LP);
@@ -321,6 +329,10 @@ LOOPCASE3:
             goto LOOPCASE3;
         };
 
+
+
+
+
         system("CLS");
         cout << "-->> Program penambah relasi Dokter dengan Pasien <<--";
         cout << "\n\nList data Pasien terbaru";
@@ -348,9 +360,52 @@ LOOPCASE3:
             goto LOOPCASE3;
         };
 
+        stopDok[stp] = nRelPas;
+                    stp++;
+                    cStp = 0;
+
+                    if (cekJump == 0) {
+                        goto WHILE1;
+                    } else {
+                        goto IF1;
+                    };
+
+                    IF1:if (true) {
+                        mCtpC = 0;
+                        while (mCtpC <= MAX_LOAD) {
+                            if (machDok[mCtpC] == nRelPas) {
+                                system("CLS");
+                                cout << "\nTerlalu banyak relasi!\n";
+                                system("TIMEOUT /T 7");
+                                system("CLS");
+                                goto PROGMENU;
+                            } else {
+                                mCtpC++;
+                            };
+                        };
+                    };
+
+                    WHILE1:while (cStp <= MAX_LOAD) {
+                        if (stopDok[cStp] == nRelPas) {
+                            mStp++;
+                            cStp++;
+                            if (mStp > 15) {
+                                machDok[mCtp] = nRelPas;
+                                mCtp++;
+                                stp = 0;
+                                mStp = 0;
+                                cekJump = 1;
+                                nRelPas = "";
+                                goto IF1;
+                            };
+                        } else {
+                            cStp++;
+                        };
+                    };
+
         R = alokasi(C);
         insertFirstPar(child(P), R, nRelDoc, nRelPas);
-    }
+    }//================================================== INPUT 2 ================================//
     else if (Rdpd == 2) {
         system("CLS");
         cout << "-->> Program penambah relasi Pasien dengan Dokter <<--";
@@ -378,6 +433,50 @@ LOOPCASE3:
             system("CLS");
             goto LOOPCASE3;
         };
+
+       stopDok[stp] = nRelPas;
+                    stp++;
+                    cStp = 0;
+
+                    if (cekJump == 0) {
+                        goto WHILE2;
+                    } else {
+                        goto IF2;
+                    };
+
+                    IF2:if (true) {
+                        mCtpC = 0;
+                        while (mCtpC <= MAX_LOAD) {
+                            if (machDok[mCtpC] == nRelPas) {
+                                system("CLS");
+                                cout << "\nTerlalu banyak relasi!\n";
+                                system("TIMEOUT /T 7");
+                                system("CLS");
+                                goto PROGMENU;
+                            } else {
+                                mCtpC++;
+                            };
+                        };
+                    };
+
+                    WHILE2:while (cStp <= MAX_LOAD) {
+                        if (stopDok[cStp] == nRelPas) {
+                            mStp++;
+                            cStp++;
+                            if (mStp > 15) {
+                                machDok[mCtp] = nRelPas;
+                                mCtp++;
+                                stp = 0;
+                                mStp = 0;
+                                cekJump = 1;
+                                nRelPas = "";
+                                goto IF2;
+                            };
+                        } else {
+                            cStp++;
+                        };
+                    };
+
 
         system("CLS");
         cout << "-->> Program penambah relasi Pasien dengan Dokter <<--";
