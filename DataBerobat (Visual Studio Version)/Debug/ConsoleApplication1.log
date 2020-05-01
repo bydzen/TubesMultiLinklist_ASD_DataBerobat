@@ -1,2 +1,7 @@
-﻿  ConsoleApplication1.cpp
-  ConsoleApplication1.vcxproj -> D:\BASEDATA - SULTAN KAUTSAR\2. Sultan Kautsar - Documents\Programming\Cpp\ConsoleApplication1\Debug\ConsoleApplication1.exe
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(467,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (ConsoleApplication1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  main.cpp
+  list_child.cpp
+  list_parent.cpp
+  list_relation.cpp
+  Generating Code...
+  ConsoleApplication1.vcxproj -> D:\BASEDATA - SULTAN KAUTSAR\2. Sultan Kautsar - Documents\Programming\C++\Project Tubes Data Berobat\DataBerobat (Visual Studio Version)\Debug\data_berobat.exe

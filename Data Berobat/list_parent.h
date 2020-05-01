@@ -14,7 +14,7 @@ using namespace std;
 
 // define a parent type //
 typedef string infotype_parent;
-typedef struct elmlist_parent *address_parent;
+typedef struct elmlist_parent* address_parent;
 
 // component in parent struct //
 struct elmlist_parent {
@@ -28,17 +28,19 @@ struct list_parent {
 };
 
 // all procedure //
-void createListParent(list_parent &L);
-void insertFirstParent(list_parent &L, address_parent P);
-void insertAfterParent(list_parent &L, address_parent Prec, address_parent P);
-void insertLastParent(list_parent &L, address_parent P);
-void deleteFirstParent(list_parent &L, address_parent &P);
-void deleteLastParent(list_parent &L, address_parent &P);
-void deleteAfterParent(list_parent &L, address_parent &P, address_parent Q);
-void dealokasiParent(address_parent &P);
+void createListParent(list_parent& L);
+void insertFirstParent(list_parent& L, address_parent P, int& nisf);
+void insertAfterParent(list_parent& L, address_parent Prec, address_parent P);
+void insertLastParent(list_parent& L, address_parent P);
+void deleteFirstParent(list_parent& L, address_parent& P);
+void deleteLastParent(list_parent& L, address_parent& P);
+void deleteAfterParent(list_parent& L, address_parent& P, address_parent Q);
+void dealokasiParent(address_parent& P);
 void printInfoParent(list_parent L);
-void removeParent(list_parent &L, infotype_parent x);
+void removeParent(list_parent& L, infotype_parent x);
 void printInfoParentOnly(list_parent L);
+void printInfoParentOnlySHOW5(list_parent L, int& maxPar);
+void maxRelChildPar(list_parent L, int& fullRel);
 void printBusyParent(list_parent L);
 void printInfoCRel(list_parent L);
 

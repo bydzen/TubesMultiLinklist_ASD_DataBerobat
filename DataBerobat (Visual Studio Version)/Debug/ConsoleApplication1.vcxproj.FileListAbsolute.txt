@@ -1,2 +1,6 @@
 D:\BASEDATA - SULTAN KAUTSAR\2. Sultan Kautsar - Documents\Programming\Cpp\ConsoleApplication1\Debug\ConsoleApplication1.exe
 D:\BASEDATA - SULTAN KAUTSAR\2. Sultan Kautsar - Documents\Programming\Cpp\ConsoleApplication1\Debug\ConsoleApplication1.pdb
+C:\Users\svnte\Documents\Temporary Projects\Tubes Multilist Data Berobat\Data Berobat\TubesMultiLinklist_ASD_DataBerobat\DataBerobat (Visual Studio Version)\Debug\data_berobat.exe
+C:\Users\svnte\Documents\Temporary Projects\Tubes Multilist Data Berobat\Data Berobat\TubesMultiLinklist_ASD_DataBerobat\DataBerobat (Visual Studio Version)\Debug\data_berobat.pdb
+D:\BASEDATA - SULTAN KAUTSAR\2. Sultan Kautsar - Documents\Programming\C++\Project Tubes Data Berobat\DataBerobat (Visual Studio Version)\Debug\data_berobat.exe
+D:\BASEDATA - SULTAN KAUTSAR\2. Sultan Kautsar - Documents\Programming\C++\Project Tubes Data Berobat\DataBerobat (Visual Studio Version)\Debug\data_berobat.pdb
