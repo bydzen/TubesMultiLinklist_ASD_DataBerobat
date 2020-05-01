@@ -1,0 +1,17 @@
+Judul : Data Berobat
+
+Descripsi : implementasikan multi linked-list yang memodelkan data dokter dan
+data pasien beserta relasi keduanya. Seorang dokter bisa mengobati banyak pasien,
+sedangkan sorang pasien bisa request untuk di obati oleh banyak dokter, maksimal 5
+orang dokter.
+
+Fungsionalitas :
+a. Penambahan dokter. 
+b. Penambahan pasien. 
+c. Penentuan relasi dokter dan pasien (dan sebalikknya). 
+d. Menghapus data dokter tertentu. X
+e. Manghapus data pasien tertentu. X
+f. Menampilkan data keseluruhan pasien beserta data dokternya. 
+g. Menampilkan data pasien yang ditangani dokter tertentu. 
+h. Menampilkan data dokter yang menangani seorang pasien tertentu. 
+i. Menampilkan data dokter yang tidak sibuk dan yang paling sibuk. X
