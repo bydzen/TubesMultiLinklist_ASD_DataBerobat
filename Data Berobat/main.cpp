@@ -389,7 +389,7 @@ LOOPCASE3:
                         if (stopDok[cStp] == nRelPas) {
                             mStp++;
                             cStp++;
-                            if (mStp > 15) {
+                            if (mStp > 25) {
                                 machDok[mCtp] = nRelPas;
                                 mCtp++;
                                 stp = 0;
