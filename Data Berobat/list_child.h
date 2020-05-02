@@ -45,5 +45,6 @@ void removeChild(list_child& L, infotype_child x);
 // all function //
 address_child findElmChild(list_child L, infotype_child x);
 address_child alokasi_child(infotype_child x);
+address_child maxFive(list_child& L, infotype_child x);
 
 #endif // LIST_CHILD_H_INCLUDED

@@ -1,5 +1,8 @@
 // include needed //
 #include "list_child.h"
+int countArr = 0;
+int jum = 0;
+string arrFive[999];
 
 void createListChild(list_child& L) {
     // create new child list //
@@ -121,6 +124,35 @@ address_child findElmChild(list_child L, infotype_child x) {
         if (info(P) == x) {
             return P;
         };
+        P = next(P);
+    };
+
+    return NULL;
+};
+
+address_child maxFive(list_child& L, infotype_child x) {
+    // child must <= 5 relation //
+    address_child P = first(L);
+    address_child Q = P;
+
+    for (int z = 0; z <= 999; z++) {
+        if (arrFive[z] == x) {
+            return Q;
+        };
+    };
+
+    while (P != NULL) {
+        if (info(P) == x) {
+            jum++;
+        };
+
+        if (jum > 5) {
+            arrFive[countArr] = x;
+            countArr++;
+            jum = 0;
+            return Q;
+        };
+
         P = next(P);
     };
 

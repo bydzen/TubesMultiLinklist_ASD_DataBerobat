@@ -27,6 +27,7 @@ int main() {
 
     // all address //
     address_child C;
+    address_child MAX;
     address_parent P;
     address_relasi R;
 
@@ -52,12 +53,6 @@ int main() {
     int cntPas;
     int Rdpd;
     int wq;
-    int stp = 0;
-    int cStp;
-    int mStp = 0;
-    int mCtp = 0;
-    int mCtpC;
-    int cekJump = 0;
 
     // main algorithm started //
     createListParent(LP);
@@ -286,6 +281,7 @@ LOOPCASE3:
 
     system("CLS");
     cout << "-->> Program penambah relasi Dokter dengan Pasien (dan sebaliknya) <<--";
+    cout << "\n\nNote: Pasien yang lebih dari 5 relasinya, tidak bisa ditambah lagi.";
     cout << "\n\n1. Dokter - Pasien\n2. Pasien - Dokter\n0. Back\nPilih -->> ";
 
     if (!(cin >> Rdpd)) {
@@ -356,48 +352,15 @@ LOOPCASE3:
         };
 
         // counter if patient relation above 5 //
-        stopDok[stp] = nRelPas;
-                    stp++;
-                    cStp = 0;
+        MAX = maxFive(LC, "ps." + nRelPas);
 
-                    if (cekJump == 0) {
-                        goto WHILE1;
-                    } else {
-                        goto IF1;
-                    };
-
-                    IF1:if (true) {
-                        mCtpC = 0;
-                        while (mCtpC <= MAX_LOAD) {
-                            if (machDok[mCtpC] == nRelPas) {
-                                system("CLS");
-                                cout << "\nTerlalu banyak relasi!\n";
-                                system("TIMEOUT /T 7");
-                                system("CLS");
-                                goto PROGMENU;
-                            } else {
-                                mCtpC++;
-                            };
-                        };
-                    };
-
-                    WHILE1:while (cStp <= MAX_LOAD) {
-                        if (stopDok[cStp] == nRelPas) {
-                            mStp++;
-                            cStp++;
-                            if (mStp > 15) {
-                                machDok[mCtp] = nRelPas;
-                                mCtp++;
-                                stp = 0;
-                                mStp = 0;
-                                cekJump = 1;
-                                nRelPas = "";
-                                goto IF1;
-                            };
-                        } else {
-                            cStp++;
-                        };
-                    };
+        if (MAX != NULL) {
+            system("CLS");
+            cout << "\nPasien ps." << nRelPas << " sudah terlalu banyak relasi.\n";
+            system("TIMEOUT /T 7");
+            system("CLS");
+            goto LOOPCASE3;
+        };
 
         R = alokasi(C);
         insertFirstPar(child(P), R, nRelDoc, nRelPas);
@@ -430,49 +393,16 @@ LOOPCASE3:
             goto LOOPCASE3;
         };
 
-       stopDok[stp] = nRelPas;
-                    stp++;
-                    cStp = 0;
+        // counter if patient relation above 5 //
+        MAX = maxFive(LC, "ps." + nRelPas);
 
-                    if (cekJump == 0) {
-                        goto WHILE2;
-                    } else {
-                        goto IF2;
-                    };
-
-                    IF2:if (true) {
-                        mCtpC = 0;
-                        while (mCtpC <= MAX_LOAD) {
-                            if (machDok[mCtpC] == nRelPas) {
-                                system("CLS");
-                                cout << "\nTerlalu banyak relasi!\n";
-                                system("TIMEOUT /T 7");
-                                system("CLS");
-                                goto PROGMENU;
-                            } else {
-                                mCtpC++;
-                            };
-                        };
-                    };
-
-                    WHILE2:while (cStp <= MAX_LOAD) {
-                        if (stopDok[cStp] == nRelPas) {
-                            mStp++;
-                            cStp++;
-                            if (mStp > 15) {
-                                machDok[mCtp] = nRelPas;
-                                mCtp++;
-                                stp = 0;
-                                mStp = 0;
-                                cekJump = 1;
-                                nRelPas = "";
-                                goto IF2;
-                            };
-                        } else {
-                            cStp++;
-                        };
-                    };
-
+        if (MAX != NULL) {
+            system("CLS");
+            cout << "\nPasien ps." << nRelPas << " sudah terlalu banyak relasi.\n";
+            system("TIMEOUT /T 7");
+            system("CLS");
+            goto LOOPCASE3;
+        };
 
         system("CLS");
         cout << "-->> Program penambah relasi Pasien dengan Dokter <<--";
