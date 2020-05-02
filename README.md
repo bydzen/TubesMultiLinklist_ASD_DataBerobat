@@ -4,10 +4,7 @@
 
 This project was created to fulfill a large assignment in an algorithm and data structure course. Where is our job to make medical data that is based on multiple lists. This project is carried out by two people to complete a program.
 
-![00](https://github.com/svzax/idtool/blob/master/Screenshot%20(60).png)
-
 - [x] Data Berobat: File in Code Blocks.
-- [x] DataBerobat (Visual Studio Version): File in Visual Studio.
 
 ## Developed By
 

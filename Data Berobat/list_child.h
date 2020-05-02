@@ -31,8 +31,8 @@ struct list_child {
 
 // all procdeure //
 void createListChild(list_child& L);
-void insertFirstChild(list_child& L, address_child P, int& nifc);
-void insertLastChild(list_child& L, address_child P);
+void insertFirstChild(list_child& L, address_child P);
+void insertLastChild(list_child& L, address_child P, int& nifc);
 void insertAfterChild(address_child Prec, address_child P);
 void deleteFirstChild(list_child& L, address_child& P);
 void deleteLastChild(list_child& L, address_child& P);
@@ -45,5 +45,6 @@ void removeChild(list_child& L, infotype_child x);
 // all function //
 address_child findElmChild(list_child L, infotype_child x);
 address_child alokasi_child(infotype_child x);
+address_child maxFive(list_child& L, infotype_child x);
 
 #endif // LIST_CHILD_H_INCLUDED
