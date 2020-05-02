@@ -18,9 +18,10 @@ address_child alokasi_child(infotype_child x) {
     return P;
 };
 
-void insertFirstChild(list_child& L, address_child P, int& nifc) {
-    // insert first child list //
+void insertLastChild(list_child& L, address_child P, int& nifc) {
+    // insert last child list //
     address_child S = first(L);
+    address_child Q = first(L);
     int i = 0;
 
     if (first(L) == NULL) {
@@ -53,9 +54,12 @@ INSERTC:
         first(L) = P;
     }
     else {
-        next(P) = first(L);
-        prev(first(L)) = P;
-        first(L) = P;
+        while (next(Q) != NULL) {
+            Q = next(Q);
+        };
+        next(Q) = P;
+        prev(P) = Q;
+        last(L) = P;
     };
 
     nifc = 0;

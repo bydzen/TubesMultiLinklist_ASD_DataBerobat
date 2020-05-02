@@ -116,7 +116,6 @@ void printInfoCRel(list_parent L) {
     // print info parent list with list child relation //
     address_parent P = first(L);
     int z = 1;
-    int i = 0;
 
     if (first(L) != NULL) {
         do {
@@ -132,10 +131,6 @@ void printInfoCRel(list_parent L) {
 
                 if (info(P) != "") {
                     cout << "Dokter: " << info(P);
-                    i++;
-                    if (i > 4) {
-                        goto MAXDOC;
-                    };
                 };
 
                 cout << endl;
@@ -144,12 +139,6 @@ void printInfoCRel(list_parent L) {
         NEXTEX:
             P = next(P);
         } while (P != first(L));
-    };
-
-    if (i == -1) {
-        MAXDOC:
-            cout << "\n\nAda Pasien yang telah mencapai limit dokter (5/5)!\nJika ingin menambah relasi, maka Dokter dan Pasien akan melepaskan relasi\ndan digantikan dengan relasi baru.\n";
-            first(child(P)) = NULL;
     };
 };
 
