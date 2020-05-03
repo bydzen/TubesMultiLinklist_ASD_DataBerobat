@@ -103,15 +103,6 @@ Other requirements:
 * [Code::Blocks](http://www.codeblocks.org/home) - The IDE with all the features.
 * [GitHubDesktop](https://desktop.github.com/) - For commite with my team remotely.
 
-## Screenshot menu program running.
-![02](https://github.com/svzax/TubesMultiLinklist_ASD_DataBerobat/blob/master/Data%20Berobat/img/2.png)
-> Pros:
-- User can choose which one to do;
-- make it easy (interactive).
-> Cons:
-- Too long (not auto generated);
-- Must be careful when inputting.
-
 ## Versioning
 
 We use [GitHubDesktop](https://desktop.github.comg/) for versioning.
@@ -128,40 +119,5 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 ## Acknowledgments
 
 * Level: (5/5) - Hard.
-* this program is currently under developing!
-
-## Additional Screenshot
-
-* Screenshot greeting program running.
-![01](https://github.com/svzax/TubesMultiLinklist_ASD_DataBerobat/blob/master/Data%20Berobat/img/1.png)
-> Purpose:
-- To tell, that this is the identity of the maker.
-
----
-
-* Screenshot menu program running. <br>
-![02](https://github.com/svzax/TubesMultiLinklist_ASD_DataBerobat/blob/master/Data%20Berobat/img/2.png)
-> Pros:
-- User can choose which one to do;
-- make it easy (interactive).
-> Cons:
-- Too long (not auto generated);
-- Must be careful when inputting.
-
----
-
-* Screenshot busy status program running. <br>
-![03](https://github.com/svzax/TubesMultiLinklist_ASD_DataBerobat/blob/master/Data%20Berobat/img/3.png)
-
----
-
-* Screenshot doctor & patient data program running. <br>
-![04](https://github.com/svzax/TubesMultiLinklist_ASD_DataBerobat/blob/master/Data%20Berobat/img/4.png)
-
----
-
-* Screenshot relation doctor-patient program running. <br>
-![05](https://github.com/svzax/TubesMultiLinklist_ASD_DataBerobat/blob/master/Data%20Berobat/img/5.png)
-
-End.
+* this program is completely done.
 
