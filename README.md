@@ -8,7 +8,7 @@ This project was created to fulfill a large assignment in an algorithm and data 
 
 ## Developed By
 
-Sultan Kautsar - *1303194010* - [Sultan Kautsar](https://github.com/svzax)<br>
+Sultan Kautsar - *1303194010* - [Sultan Kautsar](https://github.com/bydzen)<br>
 Bagas Alfito Prismawan - *1303193027* - [Bagas Mahier](https://github.com/BagasMahier12a)
 
 <p align="center">
@@ -109,12 +109,12 @@ We use [GitHubDesktop](https://desktop.github.comg/) for versioning.
 
 ## Authors
 
-* **Sultan Kautsar** - *1303194010* - [Sultan Kautsar](https://github.com/svzax)
+* **Sultan Kautsar** - *1303194010* - [Sultan Kautsar](https://github.com/bydzen)
 * **Bagas Alfito Prismawan** - *1303193027* - [Bagas Mahier](https://github.com/BagasMahier12a)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/svzax/TubesMultiLinklist_ASD_DataBerobat/blob/master/LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/bydzen/TubesMultiLinklist_ASD_DataBerobat/blob/master/LICENSE) file for details
 
 ## Acknowledgments
 
