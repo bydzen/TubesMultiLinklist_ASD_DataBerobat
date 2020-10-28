@@ -105,7 +105,7 @@ Other requirements:
 
 ## Versioning
 
-We use [GitHubDesktop](https://desktop.github.comg/) for versioning.
+We use [GitHubDesktop](https://desktop.github.com/) for versioning.
 
 ## Authors
 
